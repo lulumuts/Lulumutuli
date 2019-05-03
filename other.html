@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Anton|Fredericka+the+Great" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="reverse">
+    <svg height="210" width="500" id="star-svg">
+      <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+    </svg>
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.6 107.6" id="star-svg">
+    	<path fill="none" stroke="white" stroke-width="1" id="star-path" d="M 7.7423617,6.5524041 C 0.14213171,13.241204 -0.28352929,25.218399 6.5488487,32.446038 13.237649,40.04627 24.578354,40.568996 32.442483,33.639553 39.813699,26.434583 40.216105,14.96193 33.635997,7.7459191 26.935569,0.39795815 15.101951,-0.40029585 7.7423617,6.5524041 Z"/>
+    </svg> -->
+  </div>
+
+<h1>lulumutuli</h1>
+<div id="rotate-text">
+<nav>
+	<ul>		<li><a href="#">FASHION PROJECTS</a></li>		<li><a href="#">WEB DESIGN PROJECTS</a></li>	<li><a href="#">CONTACT US</a></li>	</ul>
+</nav>
+<nav id="right-nav">
+	<ul>		<li><a href="#">GITHUB</a></li>		<li><a href="#">LINKEDIN</a></li>	<li><a href="#">CONTACT US</a></li>	</ul>
+</nav>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/parallax.js"></script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
+<script src="js/anime.min.js"></script>
+<!-- <script src="js/scripts.js"></script> -->
+<script>
+  var path = document.querySelector('#star-path');
+  var pathLength = path.getTotalLength();
+  path.style.strokeDasharray = pathLength + ' ' + pathLength;
+  path.style.strokeDashoffset = pathLength;
+  path.getBoundingClientRect();
+  window.addEventListener("scroll", function(e) {
+  var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+    // Length to offset the dashes
+    var drawLength = pathLength * scrollPercentage;
+
+    // Draw in reverse
+    path.style.strokeDashoffset = pathLength - drawLength;
+
+  if (scrollPercentage >= 0.99) {
+      path.style.strokeDasharray = "none";
+
+    } else {
+      path.style.strokeDasharray = pathLength + ' ' + pathLength;
+    }
+
+  });
+
+  var winHeight = $(window).innerHeight();
+  $(document).ready(function () {
+    $("body").height(winHeight*$(".reverse").children("*").size());
+  });
+
+  $(window).on('scroll',function(){
+    $(".reverse").css('bottom',$(window).scrollTop()*-1);
+  });
+  console.log($(".reverse").size());
+
+
+</script>
+
+
+</body>
+</html>

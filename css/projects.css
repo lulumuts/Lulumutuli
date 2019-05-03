@@ -1,0 +1,147 @@
+body {
+  margin:0;
+  font-family:Georgia;
+}
+#container .box {
+  width:80vw;
+  height:100vh;
+  display:inline-block;
+  position:relative;
+}
+#container .box> div {
+  width:72%;
+  height:72%;
+  font-size:96px;
+  color:#FFF;
+  position:absolute;
+  top:22%;
+  left:20%;
+  margin:-5% 0 0 6%;
+  line-height:.7;
+  font-weight:bold;
+}
+.card{
+  display:flex;
+  margin:auto;
+
+
+}
+p{
+  font-size: 7vh;
+  margin-left: 3%;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.card {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+
+  padding:5%;
+}
+.overlay .card-title{
+  font-size: 10vh;
+  font-family: 'Oswald', sans-serif;
+}
+
+.card:hover .overlay {
+  opacity: 0.7;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#container {
+  overflow-y:scroll;
+  overflow-x:hidden;
+  transform: rotate(270deg) translateX(-100%);
+  transform-origin: top left;
+  background-color:#999;
+  position:absolute;
+  width:100vh;
+  height:100vw;
+}
+#container2 {
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+  white-space:nowrap;
+  font-size:0;
+}
+
+.one {
+
+  background-color:#ededed;
+  /* background-image: url("../img/wall.jpeg"); */
+  background-size: cover;
+  background-position: top center;
+}
+.two {
+  background-color:#ededed;
+  /* background-image: url("../img/dry-wall.jpeg"); */
+  background-size: cover;
+  background-position: bottom center;
+
+}
+.three {
+  background-color:#ededed;
+  /* background-image: url("../img/dry-wall.jpeg"); */
+  background-size: cover;
+  background-position: top center;
+
+}
+.four {
+  background-color:#ededed;
+  /* background-image: url("../img/dry-wall.jpeg"); */
+  background-size: cover;
+  background-position: bottom center;
+
+}
+
+nav li{
+  font-family: 'Oswald', sans-serif;
+  color:darkgrey;
+  font-size: 5vh;
+}
+.navbar { box-shadow: none !important; } .btn { box-shadow: none !important; }
+/* Translating the content's X ruines the scrollbar length. */
+/*
+#container {
+  overflow:scroll;
+  transform: rotate(90deg) translateY(-100%);
+  transform-origin: top left;
+  background-color:#999;
+  position:absolute;
+  width:100vh;
+  height:100vw;
+}
+#container2 {
+  transform: rotate(-90deg) translateX(-100vw);
+  transform-origin: top left;
+  white-space:nowrap;
+}
+*/

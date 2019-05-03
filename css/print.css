@@ -1,0 +1,195 @@
+body{
+  font-family: 'Major Mono Display', monospace;
+  font-size: 3vh;
+
+}
+h1{
+  font-size: 8vh;
+  font-family: 'Oswald', sans-serif;
+  text-align: left;
+  color:white;
+}
+p{
+  text-align: left;
+  /* color:white; */
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.text{
+  padding:6%;
+}
+.text p{
+  color:white;
+}
+h4{
+  font-family: 'Oswald', sans-serif;
+  font-size: 5.5vh;
+  color:grey;
+  padding:3%;
+}
+.navbar { box-shadow: none !important; } .btn { box-shadow: none !important; }
+
+.jumbotron h2{
+  text-align: left;
+}
+.jumbotron {
+  color:yellow;
+}
+.jumbotron p{
+  font-size: 2vh;
+  justify-content: flex-end;
+}
+
+
+.parallax-window {
+    min-height: 550px;
+    background: transparent;
+    margin-top: -1.8vh;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-auto-rows: 1fr;
+}
+
+.grid::before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.grid > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+/* Just to make the grid visible */
+
+.grid > * {
+  background: rgba(0,0,0,0.1);
+  border: 1px white solid;
+}
+
+.modal .modal-dialog .modal-content{
+  width:14.25em;
+  height:97vh;
+  margin-left:-30vh;
+  display:flex;
+  margin:auto;
+
+}
+.jumbotron{
+  height:100vh;
+}
+.jumbotron h2{
+  font-size: 9vh;
+}
+.jumbotron p{
+  width:60%;
+}
+.scrollbar-deep-purple::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-deep-purple::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-deep-purple::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #512da8; }
+
+.scrollbar-cyan::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-cyan::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-cyan::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #00bcd4; }
+
+.scrollbar-dusty-grass::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-dusty-grass::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-dusty-grass::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-image: -webkit-linear-gradient(330deg, #d4fc79 0%, #96e6a1 100%);
+background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); }
+
+.scrollbar-ripe-malinka::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-ripe-malinka::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-ripe-malinka::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-image: -webkit-linear-gradient(330deg, #f093fb 0%, #f5576c 100%);
+background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); }
+
+.bordered-deep-purple::-webkit-scrollbar-track {
+-webkit-box-shadow: none;
+border: 1px solid #512da8; }
+
+.bordered-deep-purple::-webkit-scrollbar-thumb {
+-webkit-box-shadow: none; }
+
+.bordered-cyan::-webkit-scrollbar-track {
+-webkit-box-shadow: none;
+border: 1px solid #00bcd4; }
+
+.bordered-cyan::-webkit-scrollbar-thumb {
+-webkit-box-shadow: none; }
+
+.square::-webkit-scrollbar-track {
+border-radius: 0 !important; }
+
+.square::-webkit-scrollbar-thumb {
+border-radius: 0 !important; }
+
+.thin::-webkit-scrollbar {
+width: 6px; }
+
+.example-1 {
+position: relative;
+overflow-y: scroll;
+height: 100vh; }
+
+
+
+@media only screen and (max-width: 600px) {
+  body {
+
+  }
+  .modal .modal-dialog .modal-content{
+    width:13.25em;
+    height:97vh;
+    margin-left:-30vh;
+    display:flex;
+    margin:auto;
+
+  }
+  .modal-body{
+    width:1.1em;
+  }
+
+}
