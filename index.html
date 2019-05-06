@@ -12,9 +12,64 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/projects.css">
 </head>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 <body>
-
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <img class="rounded-circle" id="image"src="img/profile.jpeg" style="width:15%;">
+    <br>
+    <br>
+    <div class="about">
+    <h1>Lulu Mutuli</h1>
+    <h2>Junior Web Designer</h2>
+    <p style="font-size:2.4vh;color:grey;">With a background and diploma in Fashion Design from The Savannah College of Art & Design, I participated in a coding Bootcamp that specialized in Full Stack Web Development. <br>The projects that you see in this porfolio range from prior fashion projects to the most recent work related projects done at my previous company in Nairobi, Kenya.<br>I am now based out of Singapore, and am interested in getting involved with the local market!<br><br>Feel free to contact me at lulumutuli24@gmail.com if you would like to get in touch!</p>
+  </div>
+  </div>
   <div id="container">
 
     <nav class="navbar fixed-top navbar-expand-xl navbar-light scrolling-navbar" style="position:fixed;">
@@ -24,16 +79,21 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto" style="margin-left:16vh;">
+        <ul class="navbar-nav mr-auto" style="margin-left:15vh;">
 
           <li class="nav-item">
-            <a class="nav-link" href="https://lulumuts.github.io/Lulumutuli/">- PROJECTS</a>
+            <a class="nav-link" onclick="openNav()">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://lulumuts.github.io/Lulumutuli/">PROJECTS</a>
+          </li>
+
+
+          <li class="nav-item" >
+            <a class="nav-link" href="https://www.linkedin.com/in/lulumutuli/">LINKEDIN</a>
           </li>
           <li class="nav-item" >
-            <a class="nav-link" href="https://www.linkedin.com/in/lulumutuli/">- LINKEDIN</a>
-          </li>
-          <li class="nav-item" >
-            <a class="nav-link" href="https://github.com/lulumuts" >- GITHUB</a>
+            <a class="nav-link" href="https://github.com/lulumuts" >GITHUB</a>
           </li>
         </ul>
       </div>
@@ -43,8 +103,8 @@
         <div class="card" style="background-image:url('img/abcexpats.png');background-size:cover;background-repeat:no-repeat;background-position:center center;">
           <div class="view overlay">
               <div class="card-body  white-text rounded-bottom">
-                <a class="nav-link" href="https://www.abcexpat.com/en/" target="_blank" style="color:white;"><h4 class="card-title">ABCEXPATS</h4></a>
-                <p>Django <span style="font-size:4vh;">(work project)</span></p>
+                <a class="nav-link" href="https://www.abcexpat.com/en/" target="_blank" style="color:white;"><h4 class="card-title" style="font-size:80%;">ABCEXPATS</h4></a>
+                <p class="subtitle">Django <span style="font-size:50%;">(work project)</span></p>
               </div>
           </div>
         </div>
@@ -54,8 +114,8 @@
           <div class="view overlay">
               <div class="card-body white-text rounded-bottom">
 
-                  <a class="nav-link" href="https://lulumuts.github.io/Vue-hair/" target="_blank"style="color:white;"><h4 class="card-title">HAIRSPIRATION</h4></a>
-                  <p>Vue.js + Django <span style="font-size:4vh;">(personal project)</span></p>
+                  <a class="nav-link" href="https://lulumuts.github.io/Vue-hair/" target="_blank"style="color:white;"><h6 class="card-title" style="font-size:80%;">HAIRSPIRATION</h6></a>
+                  <p class="subtitle">Vue.js + Django <span style="font-size:50%;">(personal project)</span></p>
 
               </div>
           </div>
@@ -65,8 +125,8 @@
         <div class="card" style="background-image:url('img/kinyozi.png');background-size:cover;background-repeat:no-repeat;background-position:center center;">
           <div class="view overlay">
               <div class="card-body  white-text rounded-bottom">
-                <a class="nav-link" href="https://lulumuts.github.io/KINYOZI-NAI" target="_blank" style="color:white;"><h4 class="card-title">KINYOZI</h4></a>
-                <p>Angular + Django <span style="font-size:4vh;">(personal project)</span></p>
+                <a class="nav-link" href="https://lulumuts.github.io/KINYOZI-NAI" target="_blank" style="color:white;"><h4 class="card-title" style="font-size:80%;">KINYOZI</h4></a>
+                <p class="subtitle">Angular + Django <span style="font-size:50%;">(personal project)</span></p>
               </div>
           </div>
         </div>
@@ -80,8 +140,8 @@
           <div class="view overlay">
               <div class="card-body white-text rounded-bottom">
 
-                  <a class="nav-link" href="mockups.html" ><h4 class="card-title" style="color:white;">WEBSITE MOCKUPS</h4></a>
-                  <p style="font-size:4vh;">Adobe Creative Suite + Sketch + Figma</p>
+                  <a class="nav-link" href="mockups.html" ><h4 class="card-title" style="color:white;font-size:70%;">WEBSITE MOCKUPS</h4></a>
+                  <p style="font-size:50%;">Adobe Creative Suite + Sketch + Figma</p>
               </div>
           </div>
         </div>
@@ -91,8 +151,8 @@
         <div class="card" style="background-image:url('img/AGCOVERPAGE2.jpg');background-size:cover;background-repeat:no-repeat;background-position:top center;">
           <div class="view overlay">
               <div class="card-body  white-text rounded-bottom">
-                <a class="nav-link" href="glitch.html" ><h4 class="card-title" style="color:white;">AFROGLITCH</h4></a>
-                <p style="font-size:4vh;">DANIDA Funded Fashion project</p>
+                <a class="nav-link" href="glitch.html" ><h4 class="card-title" style="color:white;font-size:90%;">AFROGLITCH</h4></a>
+                <p style="font-size:35%;">DANIDA Funded Fashion project</p>
               </div>
           </div>
         </div>
@@ -103,8 +163,8 @@
         <div class="card" style="background-image:url('img/LOOK3FLATS.jpg');background-size:cover;background-repeat:no-repeat;background-position:top center;">
           <div class="view overlay">
               <div class="card-body  white-text rounded-bottom">
-                  <a class="nav-link" href="afronauts.html" ><h4 class="card-title" style="color:white;">AFRONAUTS</h4></a>
-                  <p style="font-size:4vh;">Senior Fashion Collection</p>
+                  <a class="nav-link" href="afronauts.html" ><h4 class="card-title" style="color:white;font-size:90%;">AFRONAUTS</h4></a>
+                  <p style="font-size:35%;">Senior Fashion Collection</p>
               </div>
           </div>
         </div>
@@ -114,8 +174,8 @@
         <div class="card" style="background-image:url('img/octoprint3(1).jpg');background-size:cover;background-repeat:no-repeat;background-position:top center;">
           <div class="view overlay">
               <div class="card-body  white-text rounded-bottom">
-                <a class="nav-link" href="prints.html" ><h4 class="card-title" style="color:white;">OCTO PRINTS</h4></a>
-                <p style="font-size:4vh;">Hand drawn prints on Adobe Creative Suite</p>
+                <a class="nav-link" href="prints.html" ><h4 class="card-title" style="color:white;font-size:80%;">OCTO PRINTS</h4></a>
+                <p style="font-size:35%;">Hand drawn prints on Adobe Creative Suite</p>
 
               </div>
           </div>
@@ -190,6 +250,14 @@ $(document).keydown(function(e){
 
 </script>
 
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100vw";
+}
 
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 </body>
 </html>

@@ -26,6 +26,7 @@ body {
 
 
 }
+
 p{
   font-size: 7vh;
   margin-left: 3%;
@@ -95,31 +96,46 @@ p{
 
 .one {
 
-  background-color:#ededed;
+  background-color:white;
   /* background-image: url("../img/wall.jpeg"); */
   background-size: cover;
   background-position: top center;
 }
 .two {
-  background-color:#ededed;
+  background-color:white;
   /* background-image: url("../img/dry-wall.jpeg"); */
   background-size: cover;
   background-position: bottom center;
 
 }
 .three {
-  background-color:#ededed;
+  background-color:white;
   /* background-image: url("../img/dry-wall.jpeg"); */
   background-size: cover;
   background-position: top center;
 
 }
 .four {
-  background-color:#ededed;
+  background-color:white;
   /* background-image: url("../img/dry-wall.jpeg"); */
   background-size: cover;
   background-position: bottom center;
 
+}
+.about h1 {
+  color:grey;
+  font-size:420%;
+  font-family: 'Oswald', sans-serif;
+}
+.about h2 {
+  color:grey;
+}
+.about p{
+  padding:3%;
+}
+#image{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 
 nav li{
@@ -127,6 +143,10 @@ nav li{
   color:darkgrey;
   font-size: 5vh;
 }
+.card p{
+  font-size:60%;
+}
+
 .navbar { box-shadow: none !important; } .btn { box-shadow: none !important; }
 /* Translating the content's X ruines the scrollbar length. */
 /*
