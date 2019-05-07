@@ -96,30 +96,27 @@ p{
 
 .one {
 
-  background-color:white;
-  /* background-image: url("../img/wall.jpeg"); */
+  /* background-color:#e6c3cc; */
+  background-image: url("../img/lines.jpg");
   background-size: cover;
   background-position: top center;
 }
 .two {
-  background-color:white;
-  /* background-image: url("../img/dry-wall.jpeg"); */
+  background-image: url("../img/lines.jpg");
   background-size: cover;
-  background-position: bottom center;
+  background-position: top center;
 
 }
 .three {
-  background-color:white;
-  /* background-image: url("../img/dry-wall.jpeg"); */
+  background-image: url("../img/lines.jpg");
   background-size: cover;
   background-position: top center;
 
 }
 .four {
-  background-color:white;
-  /* background-image: url("../img/dry-wall.jpeg"); */
+  background-image: url("../img/lines.jpg");
   background-size: cover;
-  background-position: bottom center;
+  background-position: top center;
 
 }
 .about h1 {
