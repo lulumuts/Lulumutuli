@@ -267,11 +267,12 @@ body {
   bottom: 5px;
   left: 5px;
   background-color: #000;
-  background-image: url('../img/kinyozi.jpeg');
+  /* background-image: url('../img/kinyozi.jpeg'); */
+  background-image: url('../img/chewa.jpg');
   opacity:0.8;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
   mix-blend-mode: multiply;
   animation: blobber 20s 0s ease-in-out infinite, wobbler 15s 0s linear infinite alternate;
 }
