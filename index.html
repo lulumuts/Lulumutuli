@@ -1,243 +1,519 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Anton|Fredericka+the+Great" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/projects.css">
-</head>
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
+  <head>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <title>Lulu Mutuli Portfolio</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton|Fredericka+the+Great"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/projects.css" />
+  </head>
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  text-align:center;
-}
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      text-align: center;
+    }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
 
-}
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
 
-.sidenav a:hover{
-  color: #f1f1f1;
-}
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    .about p,
+    h1,
+    h2 {
+      font-family: "Sora", sans-serif;
+    }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
-<style>
-
-
-</style>
-<body>
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <img class="rounded-circle" id="image"src="img/profile.jpeg" style="width:15%;">
-    <br>
-    <br>
-    <div class="about">
-    <h1>Lulu Mutuli</h1>
-    <h2>Junior Web Designer</h2>
-    <p style="font-size:2.4vh;color:grey;text-align:center;">I'm Lulu Mutuli, I graduated from Moringa school in 2018 having done a Full Stack web development course, and before that got my B.F.A from The Savannah College of Art and Design in Fashion Design.<br>In my web development experience, I have worked as a web developer/designer at Jenga Agency in Nairobi, taking care of the UI of various projects as well as developing websites and web apps. <br>I have been working in Singapore for a SaaS travel company called BeMyGuest as a frontend web developer/UI Designer for the past year.<br>The projects on here consist of my time in fashion design, showcasing my design sensibilities, as well as my time at Moringa School (an intensive project based learning accelerator) and my time in Jenga Agency.<br>Feel free to contact me at luluhmutuli@gmail.com if you would like to get in touch!</p>
-  </div>
-  </div>
-  <!-- Modal -->
-<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document" style="margin-top:10vh;">
-    <div class="modal-content">
-      <p style="font-size:2.4vh;padding:2%;">To get a quick overview of the functionality of Chewa, press play!</p>
-      <video class="video-fluid z-depth-1" autoplay controls>
-  <source src="img/Chewa.webm" />
-</video>
-  <a href="http://chewa.herokuapp.com/" target="_blank" style="color:white;margin:auto;display:flex;"><button type="button" class="btn btn-outline-dark waves-effect">Go to Website</button></a>
-    </div>
-  </div>
-</div>
-  <div id="container">
-
-    <nav class="navbar fixed-top navbar-expand-xl navbar-light scrolling-navbar" style="position:fixed;">
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto" style="margin-left:15vh;">
-
-          <li class="nav-item">
-            <a class="nav-link" onclick="openNav()">ABOUT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://lulumuts.github.io/Lulumutuli/">PROJECTS</a>
-          </li>
-
-
-          <li class="nav-item" >
-            <a class="nav-link" href="https://www.linkedin.com/in/lulumutuli/">LINKEDIN</a>
-          </li>
-          <li class="nav-item" >
-            <a class="nav-link" href="https://github.com/lulumuts" >GITHUB</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div id="container2" style="background-color: #ededed;">
-
-      <div class="box two">
-        <div class="main">
-          <div class="blob d-flex justify-content-top"><h1>ABCEXPATS<br></h1><p> A project made under Jenga Agency.<br> It is a client project that was built on Django for customers looking to relocate to east africa, <br> and receive a quote of estimation on how much it would cost them to relocate.<br><a class="nav-link" href="https://www.abcexpat.com/en/" target="_blank" style="color:white;"><button type="button" class="btn btn-outline-light waves-effect">SEE MORE</button></a></p></div>
-        </div>
-
-      </div>
-      <div class="box one">
-        <div class="main">
-          <div class="blob2 d-flex justify-content-top"><h1>HAIRSPIRATION<br></h1><p>This was a personal project made with Vue.js front end and Django Rest Framework as a backend.<br>The concept is to consume a REST API that gives its users african hair inspiration.<br><a class="nav-link" href="https://lulumuts.github.io/Vue-hair/" target="_blank" style="color:white;"><button type="button" class="btn btn-outline-light waves-effect">SEE MORE</button></a></p></div>
-        </div>
-
-      </div>
-      <div class="box two">
-        <div class="main">
-          <div class="blob3 d-flex justify-content-top"><h1>CHEWA<br></h1><p>Moringa Final Project - Local Language learning web application built in Django/HTML/CSS. <br>Modeled after the likes of Duolingo, you can go through steps of learning starting with Beginner level.<br> Languages offered are Swahili, Luo, Kikuyu and KSL, all with listening functionality.<br><br> <a class="nav-link" href="chewa.html" target="_blank" style="color:white;"><button type="button" class="btn btn-outline-light waves-effect">SEE MORE</button></a></p></div>
-        </div>
-      </div>
-
-
-      <div class="box two">
-        <div class="main">
-          <div class="blob4 d-flex justify-content-top"><h1>MOCKUPS<br></h1><p>Website Mockups done for Jenga Agency, made with Sketch + Figma and Adobe Creative Suite <br> <br><a class="nav-link" href="mockups.html" target="_blank" style="color:white;"><button type="button" class="btn btn-outline-light waves-effect">SEE MORE</button></a></p></div>
-        </div>
-      </div>
-
-      <div class="box three">
-        <div class="main">
-          <div class="blob5 d-flex justify-content-top"><h1>AFROGLITCH<br></h1><p>A Seven Look DANIDA Funded Fashion project. <br> <br><a class="nav-link" href="glitch.html" target="_blank" style="color:white;"><button type="button" class="btn btn-outline-light waves-effect">SEE MORE</button></a></p></div>
-        </div>
-
-    </div>
-      <div class="box three">
-        <div class="main">
-          <div class="blob6 d-flex justify-content-top"><h1>AFRONAUTS<br></h1><p> Senior Fashion Collection (Savannah College of Art and Design) <br> <br><a class="nav-link" href="afronauts.html" target="_blank" style="color:white;"><button type="button" class="btn btn-outline-light waves-effect">SEE MORE</button></a></p></div>
-        </div>
-
-      </div>
-      <div class="box four">
-        <div class="main">
-          <div class="blob7 d-flex justify-content-top"><h1>OCTO PRINTS<br></h1><p>Hand drawn prints on Adobe Creative Suite <br> <br><a class="nav-link" href="prints.html" target="_blank" style="color:white;"><button type="button" class="btn btn-outline-light waves-effect">SEE MORE</button></a></p></div>
-        </div>
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+  </style>
+  <style></style>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <img
+        class="rounded-circle"
+        id="image"
+        src="img/profile.jpeg"
+        style="width: 15%"
+      />
+      <br />
+      <br />
+      <div class="about">
+        <h1>Lulu Mutuli</h1>
+        <h2>Frontend UI Developer</h2>
+        <p
+          style="
+            font-size: 2vh;
+            color: grey;
+            text-align: left;
+            margin: 0 25% 0 25%;
+          "
+        >
+          I am a UI Developer with a passion for designing and developing
+          engaging and interactive interfaces to consumer facing products. While
+          having past experience in Python, Django more specifically, I have
+          most experience in using Vue.js to build web apps and PWA's for
+          companies in Kenya and Singapore. I have a keen interest in learning
+          new technologies, particularly flutter for its versatility and
+          efficiency, and Three.js for its ability to bring a web design to
+          life. <br /><br />The projects reflected here showcase my User
+          Interface Developer interests, ranging from recent projects (personal
+          and professional) as well as past fashion design projects. I have
+          recently relocated to London, UK and am looking for a UI Developer
+          role locally. <br />Feel free to contact me at luluhmutuli@gmail.com
+          if you would like to get in touch!
+        </p>
       </div>
     </div>
-  </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="basicExampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg"
+        role="document"
+        style="margin-top: 10vh"
+      >
+        <div class="modal-content">
+          <p style="font-size: 2.4vh; padding: 2%">
+            To get a quick overview of the functionality of Chewa, press play!
+          </p>
+          <video class="video-fluid z-depth-1" autoplay controls>
+            <source src="img/Chewa.webm" />
+          </video>
+          <a
+            href="http://chewa.herokuapp.com/"
+            target="_blank"
+            style="color: white; margin: auto; display: flex"
+            ><button type="button" class="btn btn-outline-dark waves-effect">
+              Go to Website
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <nav
+        class="navbar fixed-top navbar-expand-xl navbar-light scrolling-navbar"
+        style="position: fixed"
+      >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto" style="margin-left: 15vh">
+            <li class="nav-item">
+              <a class="nav-link" onclick="openNav()">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://lulumuts.github.io/Lulumutuli/"
+                >PROJECTS</a
+              >
+            </li>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/parallax.js"></script>
-<script src="js/dist/swup.js"></script>
-  <!-- JQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
-<script src="js/anime.min.js"></script>
-<script src="js/scripts.js"></script>
-<script>
-var lastScrollTop = 0;
-var roadLength = $(".road").width();
-//alert(roadLength);
-$("body").css("height",roadLength);
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/lulumutuli/"
+                >LINKEDIN</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/lulumuts">GITHUB</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-$(window).scroll(function(){
-  var wWidth = $(window).width();
-  var wHeight = $(window).height();
-  var scrollTop = $(window).scrollTop();
-  var dHeight = $("body").height() - wHeight;
-  var wRoad =  roadLength - wWidth;
-  var step =  wRoad/dHeight;
-  var goLeft = scrollTop * step;
-  $(".road").css({ "transform":"translateX(-"+goLeft+"vw)" });
+      <div id="container2" style="background-color: #ededed">
+        <div class="box two">
+          <div class="main">
+            <div class="blob0 d-flex justify-content-top">
+              <h1>Hati<br /></h1>
+              <p>
+                An LMS prototype made under Qhala Limited<br />
+                in collaboration with the Ministry of Health During Covid-19.<br />
+                Prototype made with Figma.
+                <br />
+                <br /><a
+                  class="nav-link"
+                  href="hati.html"
+                  target="_blank"
+                  style="color: white"
+                  ><button
+                    type="button"
+                    class="btn btn-outline-light waves-effect"
+                  >
+                    SEE MORE
+                  </button></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="box two">
+          <div class="main">
+            <div class="blob1 d-flex justify-content-top">
+              <h1>Qhala Website<br /></h1>
+              <p>
+                Built Qhala's website using Tailwind.css, <br />and Vue.js that
+                fueled online exposure, resulting in an<br />
+                increase in client acquisition.
+                <a
+                  class="nav-link"
+                  href="https://qhala.com/"
+                  target="_blank"
+                  style="color: white"
+                  ><button
+                    type="button"
+                    class="btn btn-outline-light waves-effect"
+                  >
+                    SEE MORE
+                  </button></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
 
-  clearTimeout($.data(this,"scrollCheck"));
+        <div class="box two">
+          <div class="main">
+            <div class="blob d-flex justify-content-top">
+              <h1>ABCEXPATS<br /></h1>
+              <p>
+                A project made under Jenga Agency.<br />
+                Built on Django for customers looking to relocate to East
+                Africa, and receive<br />
+                a quote of estimation on how much it would cost them to
+                relocate.<br /><a
+                  class="nav-link"
+                  href="https://www.abcexpat.com/en/"
+                  target="_blank"
+                  style="color: white"
+                  ><button
+                    type="button"
+                    class="btn btn-outline-light waves-effect"
+                  >
+                    SEE MORE
+                  </button></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="box one">
+          <div class="main">
+            <div class="blob2 d-flex justify-content-top">
+              <h1>HAIRSPIRATION<br /></h1>
+              <p>
+                This was a personal project made with Vue.js front end <br />and
+                Django Rest Framework as a backend. The concept is to<br />
+                consume a REST API that gives its users african hair
+                inspiration.<br /><a
+                  class="nav-link"
+                  href="https://lulumuts.github.io/Vue-hair/"
+                  target="_blank"
+                  style="color: white"
+                  ><button
+                    type="button"
+                    class="btn btn-outline-light waves-effect"
+                  >
+                    SEE MORE
+                  </button></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="box two">
+          <div class="main">
+            <div class="blob3 d-flex justify-content-top">
+              <h1>CHEWA<br /></h1>
+              <p>
+                Moringa Final Project - Local Language learning web
+                application<br />
+                built in Django/HTML/CSS. Modeled after Duolingo,<br />
+                you can go through steps of learning starting with Beginner
+                level.<br />
+                Languages offered are Swahili, Luo, Kikuyu and KSL,
+                <br />all with listening functionality.<br /><br />
+                <a
+                  class="nav-link"
+                  href="chewa.html"
+                  target="_blank"
+                  style="color: white"
+                  ><button
+                    type="button"
+                    class="btn btn-outline-light waves-effect"
+                  >
+                    SEE MORE
+                  </button></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
 
-  $.data(this,"scrollCheck", setTimeout(function(){
-    $(".character").removeClass("walking");
-  },100));
+        <div class="box two">
+          <div class="main">
+            <div class="blob4 d-flex justify-content-top">
+              <h1>MOCKUPS<br /></h1>
+              <p>
+                Website Mockups done for Jenga Agency, <br />made with Sketch +
+                Figma and Adobe Creative Suite <br />
+                <br /><a
+                  class="nav-link"
+                  href="mockups.html"
+                  target="_blank"
+                  style="color: white"
+                  ><button
+                    type="button"
+                    class="btn btn-outline-light waves-effect"
+                  >
+                    SEE MORE
+                  </button></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
 
-  if(scrollTop > lastScrollTop){
-    $(".character").removeClass("left");
-    $(".character").addClass("walking");
-  }else{
-    $(".character").addClass("left");
-    $(".character").addClass("walking");
-  }
+        <div class="box three">
+          <div class="main">
+            <div class="blob5 d-flex justify-content-top">
+              <h1>AFROGLITCH<br /></h1>
+              <p>
+                A Seven Look DANIDA Funded Fashion project. <br />
+                <br /><a
+                  class="nav-link"
+                  href="glitch.html"
+                  target="_blank"
+                  style="color: white"
+                  ><button
+                    type="button"
+                    class="btn btn-outline-light waves-effect"
+                  >
+                    SEE MORE
+                  </button></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="box three">
+          <div class="main">
+            <div class="blob6 d-flex justify-content-top">
+              <h1>AFRONAUTS<br /></h1>
+              <p>
+                Senior Fashion Collection (Savannah College of Art and Design)
+                <br />
+                <br /><a
+                  class="nav-link"
+                  href="afronauts.html"
+                  target="_blank"
+                  style="color: white"
+                  ><button
+                    type="button"
+                    class="btn btn-outline-light waves-effect"
+                  >
+                    SEE MORE
+                  </button></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="box four">
+          <div class="main">
+            <div class="blob7 d-flex justify-content-top">
+              <h1>OCTO PRINTS<br /></h1>
+              <p>
+                Hand drawn prints on Adobe Creative Suite <br />
+                <br /><a
+                  class="nav-link"
+                  href="prints.html"
+                  target="_blank"
+                  style="color: white"
+                  ><button
+                    type="button"
+                    class="btn btn-outline-light waves-effect"
+                  >
+                    SEE MORE
+                  </button></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  lastScrollTop = scrollTop;
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/dist/swup.js"></script>
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+    ></script>
+    <!-- MDB core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"
+    ></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+      var lastScrollTop = 0;
+      var roadLength = $(".road").width();
+      //alert(roadLength);
+      $("body").css("height", roadLength);
 
-  //$(".top").text(scrollTop);
+      $(window).scroll(function () {
+        var wWidth = $(window).width();
+        var wHeight = $(window).height();
+        var scrollTop = $(window).scrollTop();
+        var dHeight = $("body").height() - wHeight;
+        var wRoad = roadLength - wWidth;
+        var step = wRoad / dHeight;
+        var goLeft = scrollTop * step;
+        $(".road").css({ transform: "translateX(-" + goLeft + "vw)" });
 
-  //motion
-  if(scrollTop > 500){
-    $(".road2 h1").addClass("show");
-  }
+        clearTimeout($.data(this, "scrollCheck"));
 
-});
+        $.data(
+          this,
+          "scrollCheck",
+          setTimeout(function () {
+            $(".character").removeClass("walking");
+          }, 100)
+        );
 
-$(document).keydown(function(e){
-  if(e.which == 39){
-    var scrollTop = $(document).scrollTop();
-    $(window).scrollTop(scrollTop+50);
-  }
-  if(e.which == 37){
-    var scrollTop = $(document).scrollTop();
-    $(window).scrollTop(scrollTop-50);
-  }
-});
+        if (scrollTop > lastScrollTop) {
+          $(".character").removeClass("left");
+          $(".character").addClass("walking");
+        } else {
+          $(".character").addClass("left");
+          $(".character").addClass("walking");
+        }
 
-</script>
+        lastScrollTop = scrollTop;
 
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "100vw";
-}
+        //$(".top").text(scrollTop);
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-</body>
+        //motion
+        if (scrollTop > 500) {
+          $(".road2 h1").addClass("show");
+        }
+      });
+
+      $(document).keydown(function (e) {
+        if (e.which == 39) {
+          var scrollTop = $(document).scrollTop();
+          $(window).scrollTop(scrollTop + 50);
+        }
+        if (e.which == 37) {
+          var scrollTop = $(document).scrollTop();
+          $(window).scrollTop(scrollTop - 50);
+        }
+      });
+    </script>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "100vw";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+  </body>
 </html>
