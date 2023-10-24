@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Phudu:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;600&family=Shrikhand&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/print.css">
+<link rel="icon" type="image/x-icon" href="/Users/lulumutuli/Documents/Other/portfolio/img/favicon-four.png">
+</head>
+<style>
+.btn {
+    color: #D2C2BB;
+  font-family: "Poppins";
+  font-size: 24px;
+  text-transform: capitalize;
+  font-weight:200;
+  text-align: center;
+}
+
+.btn:hover {
+    color: #D2C2BB!important;
+    font-weight: 600;
+}
+
+.active {
+    font-weight: 600;
+}
+
+h1 {
+    position: relative;
+    z-index: 1!important;
+    text-align:left;
+    font-family: 'Shrikhand', serif;
+    font-size: 56px;
+    margin-left: 16px;
+    bottom: 180px;
+    color: #D2C2BB;
+}
+
+h2 {
+    position: relative;
+}
+
+p {
+    z-index: 1!important;
+    position: relative;
+    align-self: center;
+    margin: 0 20px;
+    bottom: 160px;
+    font-size: 18px;
+    text-align: justify;
+    color: #D2C2BB;
+}
+
+span {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+img {
+    position: relative;
+    width: 250px;
+    bottom: 100px;
+    right: 1px;
+    left: 1px;
+    border-radius: 180px;
+    border: 8px #DAFD06 solid;
+    float: right;
+}
+
+.blob {
+  display: block;
+  left: 200px;
+  overflow: hidden;
+  background: #F5EEEB;
+ margin: 8%;
+ z-index: -1;
+ width: 100px;
+}
+
+.blob:before {
+  padding: 30px 0;
+  content: '';
+  display: block;
+  position: absolute;
+  align-self: center;
+  top: 150px;
+  right: 10px;
+  bottom: 116px;
+  left: 20px;
+  width: 65vw;
+  margin: auto;
+  background: #faf7f5;
+  animation: blobber 50s 0s linear infinite, cobler 4s 0s linear infinite alternate;
+}
+
+@keyframes blobber {
+  0% {
+    border-radius: 28% 22% 68% 32% / 42% 28% 72% 58%;
+  }
+  5% {
+    border-radius: 48% 52% 41% 29% / 66% 37% 63% 34%;
+  }
+  10% {
+    border-radius: 69% 31% 71% 29% / 67% 31% 69% 33%;
+  }
+  15% {
+    border-radius: 60% 40% 71% 29% / 63% 65% 35% 37%;
+  }
+  20% {
+    border-radius: 61% 39% 51% 49% / 57% 58% 42% 43%;
+  }
+  25% {
+    border-radius: 66% 34% 25% 75% / 47% 30% 70% 53%;
+  }
+  30% {
+    border-radius: 32% 68% 38% 62% / 65% 60% 40% 35%;
+  }
+  35% {
+    border-radius: 63% 37% 41% 59% / 35% 38% 62% 65%;
+  }
+  40% {
+    border-radius: 57% 43% 49% 51% / 55% 71% 29% 45%;
+  }
+  45% {
+    border-radius: 47% 53% 34% 66% / 65% 36% 64% 35%;
+  }
+  50% {
+    border-radius: 44% 56% 32% 68% / 69% 26% 74% 31%;
+  }
+  55% {
+    border-radius: 28% 72% 37% 63% / 71% 44% 56% 29%;
+  }
+  60% {
+    border-radius: 38% 62% 35% 65% / 74% 53% 47% 26%;
+  }
+  65% {
+    border-radius: 73% 27% 46% 54% / 54% 47% 53% 46%;
+  }
+  70% {
+    border-radius: 75% 25% 47% 53% / 49% 53% 47% 51%;
+  }
+  75% {
+    border-radius: 62% 38% 43% 57% / 85% 60% 40% 45%;
+  }
+  80% {
+    border-radius: 41% 59% 65% 35% / 73% 50% 50% 27%;
+  }
+  85% {
+    border-radius: 55% 45% 57% 43% / 73% 61% 39% 27%;
+  }
+  90% {
+    border-radius: 74% 26% 33% 67% / 40% 65% 35% 60%;
+  }
+  95% {
+    border-radius: 58% 42% 57% 43% / 53% 45% 55% 47%;
+  }
+  100% {
+    border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%;
+  }
+}
+
+@keyframes cobler {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.main .container-fluid {
+    margin: 20px;
+}
+.about {
+  align-self: flex-start;
+  width: 30vh;
+}
+
+.nav {
+    width: 100vw;
+}
+.nav .btn {
+    width: 110px;
+    padding: 20px 0;
+}
+
+.container-fluid {
+    width: 800px;
+}
+
+
+body{
+    justify-content: center;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeInAnimation 3s ease;
+}
+body {
+  transition: opacity 3s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+
+@media (max-width: 1300px) {
+  .blob:before {
+    width: 95vw;
+}
+
+.about {
+  width: 60vw;
+}
+}
+
+@media (max-width: 850px) {
+  .blob:before {
+    width: 95vw;
+}
+
+img {
+    width: 180px;
+    margin-top: 90px;
+    margin-bottom: 0;
+}
+
+h1{
+    font-size: 48px;
+    padding: 40px 0;
+    bottom: 160px!important;
+}
+
+.about {
+  width: 75vw;
+}
+
+p {
+    bottom: 200px;
+    font-size: 16px;
+}
+.container-fluid {
+    width: 400px;
+}
+}
+
+</style>
+<body>
+    <div id="main">
+    <div class="container-fluid nav d-flex justify-content-center">
+        <div class="row">
+            <div class="col-3">
+                <button class="btn active">About</button>
+            </div>
+            <div class="col-3">
+                <a href="work.html"><button class="btn">Work</button></a>
+            </div>
+            <div class="col-3">
+                <a href="/Users/lulumutuli/Documents/Other/portfolio/img/LuluMutuliCV2023.pdf" target="_blank" download><button class="btn">Resume</button></a>
+            </div>
+            <div class="col-3">
+                <button class="btn">Contact</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid about">
+        <div class="blob"></div>
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 image-container">
+                <img src="/Users/lulumutuli/Documents/Other/portfolio/img/profilepicture.jpeg"/>
+            </div>
+
+        <div class="col-md-12 m-0 p-0">   <h1>About Me</h1></div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    I believe my commercial experience as a Frontend developer and User Interface designer, as well as my background in Fashion Design, have been instrumental in helping me build beautiful and seamless online experiences , always aligning them with business objectives.
+        <br/><br/>
+        I have international experience working in London to Nairobi and now Singapore, in the tech industry however previously lived and worked in New York City in the Fashion Industry. All of these experiences   have given me the ability to adapt and communicate better as a designer and developer.
+                </p>
+                <p>
+                    <br>
+                    <span>Design Skills:</span><br/>
+                    UI Design | Prototyping | Wireframes | Mockups | Figma | Photoshop<br><br>
+                    <span>Frontend development Skills:</span><br/>
+Javascript | HTML5 | CSS3 | SCSS | Vue | React | Storybook | Tailwind | Jest | Git | Bootstrap | Tailwind | Illustrator | Agile | Scrum
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+</script>
+</body>
+</html>
