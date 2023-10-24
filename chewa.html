@@ -1,167 +1,882 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
+<head>
     <title>Chewa</title>
-    <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Google Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-<style>
-h2, p{
-  font-family: 'Zilla Slab', serif;
-  color: #d8d8d8;
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Phudu:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;600&family=Shrikhand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/device.min.css" type="text/css">
+<link rel="icon" type="image/x-icon" href="/Users/lulumutuli/Documents/Other/portfolio/img/favicon-four.png">
+</head>
+<body>
+    <style>
+        body {
+            font-family: "Poppins";
+            color: #7E7D7D;
+            line-height: 32px;
+        }
+        .image{
+            background-image: url('/Users/lulumutuli/Documents/Other/portfolio/img/chewa-hero-1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: -20px -20px;
+            height: 1000px;
+        }
+
+        .container-fluid {
+            padding:0;
+            overflow: hidden;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 200;
+        }
+
+        .hero-title{
+            margin: auto 0;
+            padding: 80px;
+        }
+  
+
+        .hero-title h1 {
+            font-size: 82px;
+            font-family: 'Shrikhand', serif;
+        }
+
+        .hero-title p {
+            font-size: 24px;
+            width: 400px;
+            line-height: 40px;
+        }
+
+        h1 {
+            font-family: 'Shrikhand', serif;
+        }
+        
+        h2 {
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .objectives, .role, .statement {
+            font-family: "Poppins";
+            width: 75%;
+            display: block;
+            margin: auto 160px;
+            position: relative;
+        }
+
+        .results {
+            margin: auto 4vh;
+            position: relative;
+        }
+
+        .results img {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            position: relative;
+        }
+
+        .wikipedia-screenshot {
+            width: 450px!important;
+            position: relative;
+            left: 10px;
+        }
+
+        .wikipedia-text{
+            width: 500px;
+            display: grid;
+            justify-content: center;
+            font-family: "Poppins";
+            font-size: 24px;
+            font-weight: 100;
+            line-height: 40px;
+        }
+
+        .wikipedia-body{
+            width: 40vw;
+            font-family: "Poppins";
+            text-align: justify;
+            font-size: 24px;
+            font-weight: 100;
+            line-height: 40px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .wireframes {
+            margin: auto 20vw;
+        }
+
+        .wireframes img{
+            width: 100%;
+            position: relative;
+            margin: auto;
+            display: flex;
+            justify-self: center;
+        }
+
+        .intro {
+            margin: 0 100px;
+        }
+
+        .objectives li {
+            font-size: 18px;
+            font-weight: 200;
+        }
+        .research {
+            width: 100%;
+        }
+
+        .results-container {
+            max-width: 75vw;
+        }
+
+        .introduction {
+            margin-top: 140px;
+            margin-bottom: 140px;
+        }
+
+        .sketches img{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-self: center;
+        }
+
+
+.research-section, .research-section-two{
+    margin: 160px 100px;
 }
-h2{
-  font-size: 55px;
+
+.research-section p {
+    width: 100px;
+}
+
+
+.card {
+    box-shadow: none;
+    font-family: "Poppins";
+    color: #868383!important;
+    margin: auto;
+}
+
+.card .content{
+    margin: 10px 0;
+}
+
+.card .content h5 {
+    margin: 0;
+}
+
+.card-text{
+    width: 100%;
+    font-weight: 200!important;
+    font-size: 16px!important;
+}
+
+.card-title{
+    font-weight: 600!important;
+}
+
+.user-personas{
+    margin: auto 200px;
+}
+
+.marvel-device.iphone8 {
+    height: 649px;
+    width: 375px;
+    position: relative;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    left: 16vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.marvel-device .screen {
+    -webkit-box-shadow: none!important;
+}
+
+.gif-description {
+    margin: auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.gif-description2 p {
+    width:100%;
+    text-align: justify;
+}
+
+.final-designs {
+    margin: auto;
+    position: relative;
+}
+
+.screen img {
+    width: 100%;
+}
+
+.chewa-authentication-A, .chewa-authentication-B{
+    position: relative;
+    right: 8vw;
+}
+
+.lesson .marvel-device.iphone8 {
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    left: 0;
+    height: 962px;
+}
+
+.user-personas,
+.wireframes {
+    margin-top: 40px!important;
+    margin-bottom: 140px;
+}
+
+.wireframes h1,  .sketches h1{
+    margin-bottom: 70px;
+}
+
+.testing-flow,
+.landing-page, 
+.learning-flow, 
+.authentication, 
+.lesson-content, 
+.lesson-audio {
+    margin-top: 140px!important;
+    margin-bottom: 140px; 
+}
+
+.testing-flow p,
+.landing-page p, 
+.learning-flow p, 
+.authentication p, 
+.lesson-content p, 
+.lesson-audio p{
+ text-align: justify;
+ width: 80%;
+}
+
+
+.lesson-audio  .marvel-device.iphone8 {
+    height: 969px!important;
+    margin: auto;
+    display: flex;
+    left: 0;
+}
+
+.authentication .marvel-device.iphone8 {
+    height: 70%;
+}
+
+.lesson-audio p {
+    width: 50%;
+    display: flex;
+    margin: auto;
+    padding-bottom: 120px;
+}
+
+   .back {
+     font-family: 'Shrikhand', serif;
+     position: fixed;
+     top: 24px;
+     right: 24px;
+     width: 100vw;
+     display: grid;
+     grid-template-columns: auto auto;
+     z-index:1;
+     justify-content: end;
+        }
+
+        .back h4 {
+            position: fixed;
+            color: #7E7D7D;
+            left: 75px;
+        }
+
+        .back-svg {
+            left: 24px;
+            top: 16px;
+            position: fixed;
+            margin-right: 200px;
+            width: 40px;
+            color: #7E7D7D;
+        }
+
+        i {
+            width: 20px;
+            position: fixed;
+            top: 30px;
+            padding-right: 200px;
+        }
+
+.back button {
+            border: none;
+            display: grid;
+            grid-template-columns: auto auto;
+            color: #7E7D7D;
+            font-size: 20px;
+            background-color: transparent;
+        }
+        .back button:hover {
+            color: #D2C2BB;
+        }
+
+        .back button:focus {
+            outline: none;
+        }
+
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeInAnimation 6s ease;
+}
+body {
+  transition: opacity 6s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+@media (min-width: 1625px) {
+    .landing-page  .marvel-device.iphone8, 
+    .testing-flow  .marvel-device.iphone8, 
+.learning-flow .marvel-device.iphone8,
+.authentication .marvel-device.iphone8 {
+    left: 35%!important;
+}
 
 }
-p{
-  font-size:20px;
+@media (max-width: 1190px) {
+        .wikipedia-body, .wikipedia-text{
+            font-size: 16px;
+            font-weight: 200;
+            line-height: 32px;
+        }
+    .chewa-authentication-A, .chewa-authentication-B{
+    position: relative;
+ }
+
+.testing-flow  .marvel-device.iphone8, 
+.learning-flow .marvel-device.iphone8,
+.authentication .marvel-device.iphone8 {
+    left: 30%!important;
 }
-#permanent-marker p{
-  font-family: 'Permanent Marker', cursive;
+.lesson-audio {
+    margin-top: 30px!important;
 }
-video{
-  width:50%;
+.lesson-audio p {
+    width: 80%;
+    text-align: justify;
+    margin: auto;
+    padding-bottom: 64px;
 }
-footer{
-  text-align: center;
-  background-color: #F6F6F6;
+
+.lesson-content {
+    margin-bottom: 80px;
+}
+.lesson-content .marvel-device.iphone8 {
+    left: 30%;
+}
+
+.testing-flow .content, .landing-page .content, .learning-flow .content {
+    margin-top: 8%;
+ }
+
+ .landing-page, .learning-flow {
+    margin-bottom: 10px;
+ }
+}
+
+
+@media (max-width: 765px) {
+.results-container {
+    margin: 10px 0;
+    position: relative;
+    left: 80px;
+}
+.wikipedia-text {
+    position: relative;
+    right: 80px;
+}
+
+.chewa-authentication-A, .chewa-authentication-B{
+    position: relative;
+    margin-bottom: 20px;
+}
+.gif-description p {
+    width: 100%;
+}
+.user-personas {
+    margin:auto;
+}
+.landing-page .marvel-device.iphone8 {
+    position: relative;
+    left: -6%!important;
+    margin: auto;
+}
+
+.testing-flow  .marvel-device.iphone8 {
+    left: -3%!important;
+}
+
+.learning-flow .marvel-device.iphone8 {
+    left: -3%!important;
+} 
+.authentication .marvel-device.iphone8 {
+    left: 12%!important;
+}
+
+.lesson-content .marvel-device.iphone8 {
+    left: -3vw;
+    right: 100vw!important;
+}
 
 }
-</style>
-  </head>
-  <body>
+    </style>
+  <div class="chewa">
+    <div class="back">
+        <a href="work.html"> 
+            <button>
+                <i class="fa fa-arrow-left"></i>&nbsp;&nbsp;
+                Back to Work
+            </button>
+        </a>
+    </div>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="container-fluid hero">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-4 col-md-7 col-sm-12 image">
+                        </div>
+                        <div class="col-xl-6 col-lg-8 col-md-5 col-sm-12 hero-title">
+                            <h1>Chewa</h1>
+                            <p>A Language Learning Application for Native Kenyan Languages.
+                            </p>
+                        </div>
+                        
+                        <div class="container-fluid intro">
+                            <div class="col-md-12 introduction">
+                                <div class="role my-5">
+                                    <h2>Context</h2>
+                                    <p>This project was our final project in a Coding Bootcamp based in Nairobi, Kenya called Moringa School and took us three weeks to complete. The Objective was to demonstrate an understanding of the full end to end process of development, from user research, all the way to building a minimal viable product in whatever technology we were comfortable with. Ours was built in Django framework. The iteration below is a redesign I did in my own time which helped me refine my prototyping skills.</p>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-12 introduction">
+                                <div class="role my-5">
+                                    <h2>My Role</h2>
+                                    <p> UI Design, Team Lead, Prototyping</p>
+                                </div>
+                 
+                            </div>
+    
+                            <div class="col-md-12 introduction mb-5">
+                                <div class="objectives my-5">
+                                    <h2>Problem Statement</h2>
+                                    <p>Kenya is a multicultural country, with two Lingua Francas, English and Kiswahili, and has up to 44 ethnic languages spoken across the country. Many like myself and my team in this project grew up with some level of understanding of our mother tongues but felt a missed opportunity to learn it. We proposed “Chewa” as our final project in our 6 month bootcamp at Moringa to address this problem.</p>
+    
+                                </div>
+                            </div>
+    
+                            <div class="col-md-12 introduction mb-5">
+                                <div class="objectives my-5">
+                                    <h2>Goals</h2>
+                                    <p>Create a language learning platform for young Kenyans or curious expatriates by building an inventory of local ethnic languages to help with their learning and track their progress with quizzes, thus promoting multiculturalism in the younger generation.
+                                    </p>
+                                </div>
+                            </div>
+    
+    
+                            <div class="col-md-12 introduction mb-5">
+                                <div class="objectives mb-5">
+                                    <h2>Research & Understanding</h2>
+                                    <p>We started our research by sending out a survey amongst our cohort to establish the demographic of our user, how many if any local languages were spoken in their home, how they learnt that language and whether an app, web or otherwise was the appropriate platform to advance their learning. Below are the results:.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <div class="container results-container">
+                            <div class="col-md-12 mb-5 mt-5 results">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="/Users/lulumutuli/Documents/Other/portfolio/img/Questionnaire-1.png" />
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="/Users/lulumutuli/Documents/Other/portfolio/img/Questionnaire-2.png" />
+                                    </div>
+    
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="/Users/lulumutuli/Documents/Other/portfolio/img/Questionnaire-3.png" />
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="/Users/lulumutuli/Documents/Other/portfolio/img/Questionnaire-4.png" />
+                                    </div>
+                                </div>
+                        </div>
 
-    <div class="container-fluid" >
-    <div class="text">
-      <div class="row">
-        <div class="col-md-5" style="background-image:url('img/Group 58 (1).png');background-size:contain;background-repeat: no-repeat;height:100vh;">
-          </div>
+                          
+                                <div class="col-lg-12 my-5">
+                                    <div class="row">
+                                        <div class="col-lg-12 my-5">
+                                        <div class="card wikipedia-text">
+                                            <div class="card-body text-center my-5">
+                                               According to Wikipedia, these are the most widely spoken languages based on the 2019 Census.
+                                          </div>
+                                    </div>
+                                 </div>
+                             </div>
+                        </div>
+                    
+                     
+                                  
+                              <div class="container-fluid mx-lg-5 mx-sm-0 mb-5">
+                                <div class="row mx-lg-5 mx-sm-0">
+                                    <div class="col-lg-2 col-md-6">
+                                    </div>
+                                    <div class="col-lg-4 col-md-12">
+                                        <img class="wikipedia-screenshot" src="/Users/lulumutuli/Documents/Other/portfolio/img/wikipedia.png" />
+                                    </div>
+                                    <div class="col-lg-4 col-md-12">
+                                        <img class="wikipedia-screenshot second-screenshot" src="/Users/lulumutuli/Documents/Other/portfolio/img/wikipedia2.png" />
+                                    </div>
+                                    <div class="col-lg-2 col-md-6">
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
 
-          <div class="col-md-6" style="padding:12vh;padding-bottom:0;">
-          <h2 class="text-black"><strong>THE CONCEPT</strong></h2>
-          <p>A language learning app for local Kenyan languages, initially developed as a Django MVP.
-Chewa solves the need for identity among the youth, as well as presents new opportunities. Furthermore it solves the lack of learning resources for local languages.
-</p>
-          <br>
-          <hr>
-          <br>
-          <h2 class="text-black"><strong>COLOURS</strong></h2>
-          <br>
-          <div class="row">
-            <div class="col-md-3">
-              <svg height="120" width="120">
-            <circle cx="50" cy="50" r="50" fill="#43EAD3" />
-          </svg>
-          <p>#43EAD3</p>
+                <div class="container">
+                    <div class="card wikipedia-body">
+                        <div class="card-body my-5">
+                            We used this information to prioritise which language we would offer in the MVP. The most widely spoken language is Kiswahili as one of the Lingua Franca languages of the country. The ethnic languages offerered for the POC are based on the largest groups represented in the census.
+                        </div>
+                      </div>
+
+                </div>
+            
+
             </div>
-            <div class="col-md-3">
-              <svg height="120" width="120">
-            <circle cx="50" cy="50" r="50" fill="#E3BB43" />
-          </svg>
-          <p>#E3BB43</p>
-            </div>
-            <div class="col-md-3">
-              <svg height="120" width="120">
-            <circle cx="50" cy="50" r="50" fill="#3C3C44" />
-          </svg>
-          <p>#3C3C44</p>
-            </div>
-            <div class="col-md-3">
-              <svg height="120" width="120">
-            <circle cx="50" cy="50" r="50" fill="#E1E1DB" />
-          </svg>
-          <p>#E1E1DB</p>
-            </div>
-          </div>
-          <hr>
-          <h2 class="text-black"><strong>TYPOGRAPHY</strong></h2>
-          <br>
-          <div class="row">
-          <div class="col-md-6">
-          <p>Raleway Regular</p>
-          <p>Aa Bb Cc Dd Ee Fe Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-          </div>
+        </div>
 
-          <div class="col-md-6" id="permanent-marker">
-          <p>Permanent Marker</p>
-          <p>Aa Bb Cc Dd Ee Fe Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-          </div>
-          </div>
-          <br>
-          <hr>
+        <div class="row research-section-two user-personas my-5">
+            <div class="col-md-12">
+                <div class="mb-5">
+                    <h1 class="text-center my-5">User Personas</h1>
+                    <p class="text-center mb-5">The research above led us to two types of personas that we felt might use our products. </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="/Users/lulumutuli/Documents/Other/portfolio/img/userPersonaChewa.png" class="card-img" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <p class="card-text mb-0"><strong>Age:</strong>  19</p>
+                          <p class="card-text mb-0"><strong>Profession:</strong>  Student</p>
+                          <p class="card-text"><strong>Pain point:</strong>  Was  not raised with their mother tongue and wants to learn the basics.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="/Users/lulumutuli/Documents/Other/portfolio/img/userPersonaChewa2.png" class="card-img" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <p class="card-text mb-0"><strong>Age:</strong>  36</p>
+                          <p class="card-text mb-0"><strong>Profession:</strong>  Project Manager</p>
+                          <p class="card-text"><strong>Pain point:</strong> Has expatriated to Kenya from abroad and wants to learn Swahili.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="container sketches mt-5">
+            <div class="row">
+                <div class="col-12 my-5 text-center">
+                    <h1 class="mb-5 mt-5">Initial Sketches</h1>
+                    <p>The following screens highlight the initial flow and the important features to demonstrate in POC. There will be a generic authentication flow as the app will include user management. They will also include an opportunity to select the languages of preference, and will take you on to the lessons and quizzes.</p>
+                </div>
+                <div class="col-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/SketchesA.png" />
+                </div>
 
-          </div>
-          <div class="row" style="padding-left:12vh;">
-              <div class="col-md-12">
-                <h2>THE PROCESS</h2>
-                <br>
+                <div class="col-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/SketchesB.png" />
+                </div>
+
+
+                <div class="col-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/SketchesC.png" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row wireframes">
+             <div class="col-md-12 my-5">
+                <div class="my-5 text-center">
+                     <h1>Wireframes</h1>
+                </div>
               </div>
-          <div class="col-md-6">
-            <img src="img/Questionnaire-1.png" style="width:100%;">
-          </div>
-          <div class="col-md-6">
-            <img src="img/Questionnaire-2.png" style="width:100%;">
-          </div>
-          <div class="col-md-6">
-            <img src="img/Questionnaire-3.png" style="width:100%;">
-          </div>
-          <div class="col-md-6">
-            <img src="img/Questionnaire-4.png" style="width:100%;">
-          </div>
-          </div>
-          <div class="row" style="background-color:#F6F6F6;padding-left:10vh;">
-            <div class="col-md-4">
+                <div class="col-lg-4 col-md-6 mb-3 col-sm-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/iPhone 13 mini - 1.svg" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 col-sm-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/iPhone 13 mini - 2.svg" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 col-sm-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/iPhone 13 mini - 3.svg" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 col-sm-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/iPhone 13 mini - 4.svg" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 col-sm-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/iPhone 13 mini - 5.svg" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 col-sm-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/iPhone 13 mini - 6.svg" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 col-sm-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/iPhone 13 mini - 7.svg" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 col-sm-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/iPhone 13 mini - 8.svg" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 col-sm-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/iPhone 13 mini - 9.svg" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 col-sm-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/iPhone 13 mini - 10.svg" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 col-sm-12">
+                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/iPhone 13 mini - 11.svg" />
+                </div>
+            </div>
+        </div>
 
-              <h2 style="line-height:480px;margin:auto;text-align:center;">ONBOARDING</h2>
-            </div>
-            <div class="col-md-8">
-              <img src="img/Group 59.png" style="width:95%;line-height:480px;">
-            </div>
-          </div>
-          <div class="row" style="background-color:#E3BB43;padding-left:10vh;">
-            <div class="col-md-6">
-              <img src="img/Group 60.png" style="width:95%;line-height:480px;">
-            </div>
-            <div class="col-md-6">
-              <h2 style="line-height:35vw;margin:auto;text-align:left;color:#AD8F33;">SIGN UP/ SIGN IN</h2>
+        <div class="container-fluid final-designs">
+            <div class="row mx-5">
+             <div class="col-md-12">
+                <div class="text-center">
+                     <h1>Final Designs</h1>
+                </div>
+              </div>
+                <div class="col-lg-6 col-md-12 mb-3 col-sm-12 landing-page">
+                    <div class="marvel-device iphone8 silver">
+                        <div class="top-bar"></div>
+                        <div class="sleep"></div>
+                        <div class="volume"></div>
+                        <div class="camera"></div>
+                        <div class="sensor"></div>
+                        <div class="speaker"></div>
+                        <div class="screen">
+                            <img src="/Users/lulumutuli/Documents/Other/portfolio/img/gifmock@3x.gif" />
+                        </div>
+                        <div class="home"></div>
+                        <div class="bottom-bar"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-3 col-sm-12 d-flex justify-content-center">
+                    <div class="gif-description mx-lg-5 d-flex align-items-center">
+                        <div class="mx-5 mt-sm-5 landing-page">
+                            <h2>Landing Page</h2>
+                            <p>In addition to the wireframes, Chewa needed a landing page that explained more about the mission of the app. Furthermore, the landing page  would allow the app to be discoverable via
+                                a Google search.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-          </div>
-          <div class="row" style="padding-left:10vh;">
-            <div class="col-md-4">
-
-              <h2 style="line-height:500px;margin:auto;text-align:center;">LEARNING</h2>
+            <div class="row mx-5 my-5 authentication">
+                <div class="col-lg-4 col-md-12 mb-3 col-sm-12 d-flex justify-content-center">
+                    <div class="gif-description2 mx-lg-5 d-flex align-items-center">
+                        <div class="mx-5 mt-sm-5 content">
+                            <h2>Authentication</h2>
+                            <p>Given this app is information centric, the general layout is clean and light, however I wanted to add some texture to the onboarding screens, specifically where it aids in setting the tone of the colour schemes used across the app. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 mb-3 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6 d-flex justify-content-lg-end justify-content-sm-start chewa-authentication-A">
+                            <div class="marvel-device iphone8 silver">
+                                <div class="top-bar"></div>
+                                <div class="sleep"></div>
+                                <div class="volume"></div>
+                                <div class="camera"></div>
+                                <div class="sensor"></div>
+                                <div class="speaker"></div>
+                                <div class="screen">
+                                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/gifmock@3x (1).gif" />
+                                </div>
+                                <div class="home"></div>
+                                <div class="bottom-bar"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex  justify-content-sm-start chewa-authentication-B">
+                            <div class="marvel-device iphone8 silver">
+                                <div class="top-bar"></div>
+                                <div class="sleep"></div>
+                                <div class="volume"></div>
+                                <div class="camera"></div>
+                                <div class="sensor"></div>
+                                <div class="speaker"></div>
+                                <div class="screen">
+                                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/gifmock@3x (2).gif" />
+                                </div>
+                                <div class="home"></div>
+                                <div class="bottom-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-8">
-              <img src="img/Group 61.png" style="width:95%;line-height:480px;">
-            </div>
-          </div>
 
-      </div>
+            <div class="row mx-5 learning-flow">
+                   <div class="col-lg-6 col-md-12 mb-3 col-sm-12">
+                       <div class="marvel-device iphone8 silver">
+                           <div class="top-bar"></div>
+                           <div class="sleep"></div>
+                           <div class="volume"></div>
+                           <div class="camera"></div>
+                           <div class="sensor"></div>
+                           <div class="speaker"></div>
+                           <div class="screen">
+                               <img src="/Users/lulumutuli/Documents/Other/portfolio/img/gifmock@3x (3).gif" />
+                           </div>
+                           <div class="home"></div>
+                           <div class="bottom-bar"></div>
+                       </div>
+                   </div>
+                   <div class="col-lg-6 col-md-12 mb-3 col-sm-12 d-flex justify-content-center">
+                       <div class="gif-description mx-lg-5 d-flex align-items-center">
+                           <div class="mx-5 mt-sm-5 content">
+                               <h2>Learning Flow</h2>
+                               <p>The user selects the language based on what their languages of interest choices, and then will progress to their level of fluency. For the Proof of Concept, we decided to select the languages that members of the group had access to and were familiar enough to verify. That consisted of Kiswahili, Dholuo and Kikuyu. These are representative of some of the most widely spoken languages and will </p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+
+
+               <div class="row mx-5 lesson-content">
+                <div class="col-lg-6 col-md-12 mb-3 col-sm-12 d-flex justify-content-center">
+                    <div class="gif-description mx-lg-5 d-flex align-items-center">
+                        <div class="mx-5">
+                            <p>The design here uses a lot more white space, as there is a lot of information to take in, and the simplicity in the learning style is taken from children’s language books. The benefit of a learning app is we can take it further with audio capability which is included in this flow.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-3 col-sm-12">
+                    <div class="marvel-device iphone8 silver">
+                        <div class="top-bar"></div>
+                        <div class="sleep"></div>
+                        <div class="volume"></div>
+                        <div class="camera"></div>
+                        <div class="sensor"></div>
+                        <div class="speaker"></div>
+                        <div class="screen">
+                            <img src="/Users/lulumutuli/Documents/Other/portfolio/img/gifmock@3x (4).gif" />
+                        </div>
+                        <div class="home"></div>
+                        <div class="bottom-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mx-5 my-5 lesson-audio">
+                <div class="col-lg-12 col-md-12 mb-3 col-sm-12">
+                    <div class="row">
+                        <div>
+                            <p>Many of the languages on offer will need audio support within the lesson, to not only encourage correct pronounciation but also because many are tonal, and meaning may differ depending on the tone. We included visual queues with the audio for those who are visual learners.  </p>
+
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-sm-start">
+                   
+                            <div class="marvel-device iphone8 silver" style="height: 962px">
+                                <div class="top-bar"></div>
+                                <div class="sleep"></div>
+                                <div class="volume"></div>
+                                <div class="camera"></div>
+                                <div class="sensor"></div>
+                                <div class="speaker"></div>
+                                <div class="screen">
+                                    <img src="/Users/lulumutuli/Documents/Other/portfolio/img/gifmock@3x (5).gif" />
+                                </div>
+                                <div class="home"></div>
+                                <div class="bottom-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mx-5 my-5 testing-flow">
+                <div class="col-lg-6 col-md-12 mb-3 col-sm-12">
+                    <div class="marvel-device iphone8 silver">
+                        <div class="top-bar"></div>
+                        <div class="sleep"></div>
+                        <div class="volume"></div>
+                        <div class="camera"></div>
+                        <div class="sensor"></div>
+                        <div class="speaker"></div>
+                        <div class="screen">
+                            <img src="/Users/lulumutuli/Documents/Other/portfolio/img/gifmock@3x (6).gif" />
+                        </div>
+                        <div class="home"></div>
+                        <div class="bottom-bar"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-3 col-sm-12 d-flex justify-content-center">
+                    <div class="gif-description mx-lg-5 d-flex align-items-center">
+                        <div class="mx-5 mt-sm-5 content">
+                            <h2>Testing Flow</h2>
+                            <p>Beyond the capability of being able to hear the way the word sounds, the user can test their new knowledge with a quick quiz. If they are unfamiliar, they can get a hint, which gives them a visual prompt from the previous lesson. This takes in to account accessibility for those that not only learn in different formats but also for those that have different styles of learning e.g visual learners. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   </div>
-
-
-<footer class="p-5">Thanks for visiting! This is an exisiting Django Web App created as a final project for Moringa School. Take a look at the original project <a href="http://chewa.herokuapp.com/">here</a>. <br><br> <video class="video-fluid z-depth-1" autoplay controls>
-<source src="img/Chewa.webm" />
-</video> </footer>
-  </body>
-
-  <!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/js/mdb.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/js/mdb.min.js"></script>
+</body>
 </html>
