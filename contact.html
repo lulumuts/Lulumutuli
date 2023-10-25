@@ -13,7 +13,7 @@
 </head>
 <style>
 .btn {
-    color: #ab9d97;
+    color: #D2C2BB;
   font-family: "Poppins";
   font-size: 24px;
   text-transform: capitalize;
@@ -22,7 +22,7 @@
 }
 
 .btn:hover {
-    color: #ab9d97!important;
+    color: #D2C2BB!important;
     font-weight: 600;
 }
 
@@ -33,12 +33,12 @@
 h1 {
     position: relative;
     z-index: 1!important;
-    text-align:left;
+    text-align:center;
     font-family: 'Shrikhand', serif;
     font-size: 56px;
     margin-left: 16px;
-    bottom: 180px;
-    color: #ab9d97;
+    padding-bottom: 16px;
+    color: #D2C2BB;
 }
 
 h2 {
@@ -47,13 +47,11 @@ h2 {
 
 p {
     z-index: 1!important;
-    position: relative;
     align-self: center;
-    margin: 0 20px;
-    bottom: 160px;
-    font-size: 18px;
-    text-align: justify;
-    color: #ab9d97;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 100;
+    color: #D2C2BB;
 }
 
 span {
@@ -61,40 +59,26 @@ span {
     font-weight: 400;
 }
 
-img {
-    position: relative;
-    width: 250px;
-    bottom: 100px;
-    right: 1px;
-    left: 1px;
-    border-radius: 180px;
-    border: 8px #DAFD06 solid;
-    float: right;
-}
-
 .blob {
   display: block;
-  left: 200px;
   overflow: hidden;
   background: #F5EEEB;
- margin: 8%;
  z-index: -1;
- width: 100px;
 }
 
 .blob:before {
-  padding: 30px 0;
   content: '';
   display: block;
   position: absolute;
-  align-self: center;
-  top: 10px;
-  right: 10px;
-  bottom: 16px;
-  left: 20px;
-  width: 65vw;
+  align-self: start;
+  top: -200px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 1500px;
+  transform: translateY(-1%);
   margin: auto;
-  background: #faf7f5;
+  background: #fff;
   animation: blobber 50s 0s linear infinite, cobler 4s 0s linear infinite alternate;
 }
 
@@ -173,36 +157,54 @@ img {
   }
 }
 
-.main .container-fluid {
-    margin: 20px;
+
+#main {
+    height: 100vh;
 }
-.about {
-  align-self: flex-start;
-  width: 30vh;
+.contact {
+  align-self: center;
+  margin: 14% auto;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .nav {
     width: 100vw;
-    z-index: 1!important;
+    z-index: 1;
+    position: relative;
 }
 .nav .btn {
     width: 110px;
     padding: 20px 0;
 }
 
-.container-fluid {
+.nav {
     width: 800px;
 }
 
-body{
-    justify-content: center;
-}
 
 body{
     justify-content: center;
     background: radial-gradient(circle, rgba(225,255,0,1) 19%, rgba(245,238,235,1) 48%, rgba(250,247,245,1) 66%, rgba(255,255,255,1) 89%);
 }
 
+svg {
+    width: 43px;
+    fill: #D2C2BB;
+    margin-right: 10px;
+
+}
+
+.contact a {
+    color: #D2C2BB;
+}
+.contact .email:hover {
+    color: #7E7D7D;
+}
+.contact svg:hover {
+    fill: #7E7D7D;
+}
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -222,71 +224,58 @@ body {
 body.loaded {
   opacity: 1;
 }
-/* .skills-section {
-  color: #ab9d97!important;
-} */
-
 
 @media (max-width: 1300px) {
-  .blob:before {
-    width: 95vw;
-}
 
-.about {
-  width: 60vw;
+.contact {
+  align-self: center;
+  margin: 24% auto;
+  max-width: 70%;
 }
 }
 
 @media (max-width: 850px) {
-#main {
-  height: 100vh;
-}
-.nav .btn {
-  font-size: 20px;
-}
 
-  .blob:before {
-    bottom: 0;
-    padding: 0;
-    left: 0;
-    right: 0;
-}
-
+    .nav .btn {
+        font-size: 20px;
+    }
 img {
     width: 180px;
-    margin-top: 80px;
+    margin-top: 90px;
     margin-bottom: 0;
 }
 
 h1{
-    font-size: 40px;
-    padding: 32px 0;
-    bottom: 160px!important;
+    font-size: 48px;
+    padding: 40px 0;
+    text-align: left;
 }
 
-.about {
-  width: 88vw;
+p{
+    font-size: 24px;
+    text-align: left;
 }
 
-p {
-    font-size: 16px;
-}
-
-.skills-section {
-  height: 100px;
-}
 .container-fluid {
     width: 400px;
+}
+svg {
+    width: 40px;
+}
+
+.contact {
+    margin: 32% auto;
+    padding-left: 20px;
 }
 }
 
 </style>
 <body>
     <div id="main">
-    <div class="container-fluid nav d-flex justify-content-center">
-        <div class="row nav">
+    <div class="container-fluid nav d-flex justify-content-center nav">
+        <div class="row">
             <div class="col-3">
-                <button class="btn active">About</button>
+                <a href="about.html"><button class="btn">About</button></a>
             </div>
             <div class="col-3">
                 <a href="work.html"><button class="btn">Work</button></a>
@@ -295,35 +284,21 @@ p {
                 <a href="img/LuluMutuliCV2023.pdf" target="_blank" download><button class="btn">Resume</button></a>
             </div>
             <div class="col-3">
-              <a href="contact.html"><button class="btn">Contact</button></a>
+                <a href="contact.html"><button class="btn active">Contact</button></a>
             </div>
         </div>
     </div>
-    <div class="container-fluid about">
+    <div class="container-fluid contact">
         <div class="blob"></div>
-        <div class="container-fluid">
+    
         <div class="row">
-            <div class="col-md-12 image-container">
-                <img src="img/profilepicture.jpeg"/>
-            </div>
-
-        <div class="col-md-12 m-0 p-0">   <h1>About Me</h1></div>
-        </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 content text-center">
+                <h1>Get in Touch.</h1>
                 <p>
-                    I believe my commercial experience as a Frontend developer and User Interface designer, as well as my background in Fashion Design, have been instrumental in helping me build beautiful and seamless online experiences , always aligning them with business objectives.
-        <br/><br/>
-        I have international experience working in London to Nairobi and now Singapore, in the tech industry however previously lived and worked in New York City in the Fashion Industry. All of these experiences   have given me the ability to adapt and communicate better as a designer and developer.
+                    Email me on <a href="mailto:luluhmutuli@gmail.com" class="email">luluhmutuli@gmail.com</a><br/>
+                    Follow me on <a href="https://www.linkedin.com/in/lulumutuli/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>linkedin</title><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" /></svg></a><a href="https://github.com/lulumuts" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a> <a href="https://dribbble.com/lulumuts" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-6.953.666-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z"/></svg></a>
                 </p>
-                <p class="skills-section">
-                    <br>
-                    <span>Design Skills:</span><br/>
-                    UI Design &#8226; Prototyping &#8226; Wireframes &#8226; Mockups &#8226; Figma &#8226; Photoshop<br><br>
-                    <span>Frontend development Skills:</span><br/>
-Javascript &#8226; HTML5 &#8226; CSS3 &#8226; SCSS &#8226; Vue &#8226; React &#8226; Storybook &#8226; Tailwind &#8226; Jest &#8226; Git &#8226; Bootstrap &#8226; Tailwind &#8226; Illustrator &#8226; Agile &#8226; Scrum
-                </p>
+
             </div>
         </div>
     </div>
