@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&family=Shrikhand&display=swap" rel="stylesheet">
+        <title>AIRBridge x Regulaition</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .hero {
+            margin: 5vh;
+            border-radius: 24px;
+            background-image: url('img/AIR-LOGIN.jpg');
+            background-position: center -20vh; 
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 70vh;
+        }
+
+        .center-img {
+            width: 50%;
+            margin: 0 auto;
+        }
+        .regulation-logo {
+            width: 250px;
+            margin: 0 auto;
+            padding-bottom: 10px;
+        }
+
+        .info {
+            padding: 36px 0;
+            display: block;
+            margin: auto 16vw;
+            color: #757575;
+        }
+
+        .info p{
+            text-align: justify;
+        }
+
+        h1 {
+            padding: 36px 0;
+        }
+
+        .pill {
+            border: 1.5px solid #757575;
+            border-radius: 24px;
+            padding: 8px 16px;
+            margin: 8px;
+        }
+
+        .market-research img{
+            width: 100%;
+        }
+
+        .market-research .card {
+            box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.09);
+            border-radius: 16px;
+            border: 3px solid #EDEFF1;
+            background: #FFF;
+            padding: 20px;
+            height: 100%;
+        }
+
+        .market-research .info-card {
+            box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.09);
+            border-radius: 16px;
+            border: 3px solid #EDEFF1;
+            color: #fff;
+            background: #112E45;
+            padding: 56px;
+        }
+
+        .market-research p {
+            text-align: center;
+        }
+
+        .market-research .enlarged-text {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .ui-path {
+            width: 80%!important;
+            margin: 10%;
+        }
+
+        .wireframe .card {
+            background-image: url('img/low-fidelity-wireframe.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.09);
+            height: 400px;
+            width: auto;
+            margin: 24px;
+            border-radius: 16px;
+            border: 3px solid #EDEFF1;
+            background-position: -1px 0;
+        }
+        
+        .wireframe{
+            width: auto;
+            height: 60vh;
+            margin: 0;
+            background-image: url('img/wireframes.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+
+        .title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .personas-container {
+            background-color: #E3F2FD;
+            margin-bottom: 10vh;
+        }
+        .personas img {
+            width: 100%;
+        }
+
+        .typography {
+            font-family: "Roboto", sans-serif;
+            font-size: 64px;
+            color: #D9D9D9;
+            margin: 72px 0;
+
+        }
+        
+        .medium {
+            font-weight: 500;
+            font-size: 64px;
+        }
+
+        .regular {
+            font-weight: 400;
+            font-size: 64px;
+        }
+
+        .light {
+            font-weight: 300;
+            font-size: 64px;
+        }
+
+        .colours, .components {
+            margin: 72px 0;
+        }
+        .colours img{
+            width: 100%;
+        }
+
+        .components img {
+            width: 100%;
+        }
+
+        .components-img{
+            width: 50%;
+        }
+
+        .design-library {
+            width: 80%;
+            padding: 8vw;
+            margin: auto;
+            box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.09);
+            border-radius: 16px;
+            border: 3px solid #EDEFF1;   
+            color: #757575;
+        }
+
+        .design-library .info{
+            display: block;
+            margin: auto 8vw;
+        }
+
+        .design-library h1{
+            color: #757575;
+            padding-top: 0!important;
+        }
+
+
+        .high-fidelity img {
+            width: 100%;
+        }
+
+        .high-fidelity-background {
+            height: 48vh;
+            background-color:#E3F2FD;
+            z-index: -1;
+            position: absolute;
+            display: block;
+            margin-top: -60vw;
+        }
+
+        .market-placement-research img{
+            width: 75%;
+        }
+
+        .outro {
+            background-color: #E3F2FD;
+        }
+
+        .outro h1 {
+            color: #112E45;
+        }
+
+        .back a {
+            text-decoration: none;
+        }
+        .back {
+     font-family: 'Shrikhand', serif;
+     position: fixed;
+     top: 24px;
+     right: 24px;
+     width: 100vw;
+     display: grid;
+     grid-template-columns: auto auto;
+     z-index:1;
+     justify-content: end;
+        }
+
+        .back h4 {
+            position: fixed;
+            color: #7E7D7D;
+            left: 75px;
+        }
+
+        .back-svg {
+            left: 24px;
+            top: 16px;
+            position: fixed;
+            margin-right: 200px;
+            width: 40px;
+            color: #7E7D7D;
+        }
+
+        i {
+            width: 20px;
+            position: fixed;
+            top: 30px;
+            padding-right: 200px;
+        }
+
+.back button {
+            border: none;
+            display: grid;
+            grid-template-columns: auto auto;
+            color: #7E7D7D;
+            font-size: 20px;
+            background-color: transparent;
+        }
+        .back button:hover {
+            color: #D2C2BB;
+        }
+
+        .back button:focus {
+            outline: none;
+        }
+     
+        @media (max-width: 700px) {
+            .hero {
+            height: 60vh;
+            background-position: center; 
+        }
+        .personas-container img {
+            margin-top: 20px;
+        }
+
+        }
+    </style>
+
+<div class="back">
+    <a href="work.html"> 
+        <button>
+            <i class="fa fa-arrow-left"></i>&nbsp;&nbsp;
+            Back to Work
+        </button>
+    </a>
+</div>
+      <div class="card hero mb-3 d-flex justify-content-center">
+        <img class="regulation-logo" src="img/RegulAItion_Logo_RGB_WhiteandRed.png" />
+     <img class="center-img" src="img/LOGIN (1).png" />
+      </div>
+
+      <div class="intro">
+        <div class="info">
+            <h1>
+                The Problem
+              </h1>
+              <p>Organisations wanting to collaborate need to share their data with each other securely 
+                and efficiently, however depending on the type of system, this can take a long time due 
+                to miscommunication, siloed ways of working or analogue processes. 
+                </p>
+        </div>
+      </div>
+     
+      <div class="intro">
+        <div class="info">
+            <h1>
+                The Solution
+              </h1>
+              <p>AIR Bridge leverages Robotic Processing Automation on top of a federated learning software (LLMs)
+                to automate repetitive processes across boundaries in a safe and secure manner. It gives uses 
+                a dashboard with key stakeholders in each organisation that oversea the processes and are 
+                alerted to the RPA’s progress.
+                </p>
+        </div>
+      </div>
+
+      <div class="intro">
+        <div class="info">
+            <h1>
+                My Role
+              </h1>
+              <div class="d-flex flex-wrap">
+                <span class="pill">UI Design</span>
+                <span class="pill">UX Research</span>
+                <span class="pill">design system</span>
+                <span class="pill">component library</span>
+                <span class="pill">wireframes</span>
+                <span class="pill">clickable prototype</span>
+                <span class="pill">High Fidelity mockup</span>
+              </div>
+              
+        </div>
+      </div>
+
+      <div class="intro market-research">
+        <div class="info">
+            <div class="mb-2 title d-inline-flex p-2">
+                <h1>
+                    Market Research
+                  </h1>
+            </div>
+         
+              <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                          <h6 class="card-subtitle mb-2 text-body-secondary">Partners</h6>
+                            <img class="mt-4 ui-path" src="https://companieslogo.com/img/orig/PATH_BIG-212c4d26.png?t=1720244493"/>
+                        </div>
+                      </div>
+
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card info-card">
+                        <div class="card-body text-center">
+                           <p>Federated learning was valued at <br><span class="enlarged-text">127 million </span><br>in 2023</p>
+                        </div>
+                      </div>
+                </div>
+                </div>
+                <div class="row mt-lg-3">
+                    <div class="col-lg-6 col-md-12 ">
+                        <div class="card info-card">
+                            <div class="card-body text-center">
+                               <p>RPA Market is estimated to be worth <br><span>3.7 billion</span><br>USD in 2022. </p>
+                               <p> Expected to grow by<br><span class="enlarged-text"> 10.6% </span><br>by 2028.</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 order-lg-last order-sm-first">
+                        <div class="card">
+                            <div class="card-body">
+                              <h6 class="card-subtitle mb-2 text-body-secondary">Competitors</h6>
+                                <img src="img/airbridge-competitors.png"/>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+
+        <div class="intro">
+            <div class="info designing-airbridge">
+                <div class="mb-2 title d-inline-flex p-2">
+                    <h1>
+                        Designing AirBridge
+                      </h1>
+                 
+                </div>
+                <p>
+                    The initial team consisted of myself (Lead UI/UX Designer), our Full Stack Developer and our Product Manager. We started the process with a vague idea of the system. We used low fidelity wireframes to kick off the conversation and to validate our understanding. 
+Once we all agreed on the general understanding, we moved to high fidelity wireframes, which included more detailed information, in order to move on to the mockups 
+                </p>
+            </div>
+         </div>
+         <div class="container-fluid wireframe">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                 </div>
+
+                <div class="col-6">
+                    <div class="card info-card">
+                        <div class="card-body text-center">
+                        </div>
+                      </div>
+                </div>
+                </div>
+        </div>
+
+        <div class="personas-container">
+            <div class="intro">
+                <div class="info personas">
+                    <div class="mb-2 title d-inline-flex p-2">
+                        <h1>
+                            User Personas
+                          </h1>
+                    </div>
+                    <p class="mb-4">
+                        The wireframes helped us as a team test our understanding about our user personas. Given AIR Bridge is a B2B software, our users will be representatives from each respective organisation. 
+    The two most important will be technical and project admin.
+                    </p>
+    
+                    <div class="container-fluid my-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/user-persona-one.png"/>
+                            </div>
+    
+                            <div class="col-md-6">
+                                <img src="img/user-persona-two.png"/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="img/user-persona-three.png"/>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="img/user-persona-four.png"/>
+                            </div>
+    
+                            <div class="col-md-4">
+                                <img src="img/user-persona-five.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+        <div class="container-fluid design-library">
+            
+        <div class="intro">
+            <div>
+                <div class="mb-2 title d-inline-flex p-2">
+                    <h1>
+                        Design System + Component Library
+                      </h1>
+                </div>
+                <p>Design assets and styles were built on top of Vuetify design library, as this 
+                    was most compatible with the existing codebase, and updated with certain functionality to meet our needs. 
+                    <br><br>
+                    I not only updated the Figma component library but I built these components 
+                    in Vuejs and linked linked the design system to Storybook.
+                </p>
+                <div class="typography">
+                    <h2 class="medium">Roboto Medium</h2>
+                    <h2 class="regular">Roboto regular</h2>
+                    <h2 class="light">Roboto light</h2>
+                </div>
+              
+                <div class="colours">
+                    <img src="img/Colors.svg" />
+                </div>
+
+                <div class="components">
+                    <img src="img/Multi-Email Input.svg"/>
+                    <div class="row my-3">
+                        <div class="col-4">
+                            <img src="img/Workflow Action Button.svg"/>
+                        </div>
+                        <div class="col-4">
+                            <img src="img/Workflow Configuration Proposal Status.svg"/>
+                        </div>
+                        <div class="col-4">
+                            <img src="img/Dot Status.svg"/>
+                        </div>
+                    </div>
+           
+                    <img src="img/Global Workflow Status.svg"/>
+                    <div class="row my-3">
+                        <div class="col-6">
+                            <img src="img/Dashboard Buttons.svg"/>
+                        </div>
+                        <div class="col-6">
+                            <img src="img/Workflows Toggle.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+        </div>
+
+        <div class="intro">
+            <div class="info designing-airbridge">
+                <div class="mb-2 title d-inline-flex p-2">
+                    <h1>
+                        High-Fidelity Mockups
+                      </h1>
+                 
+                </div>
+                <p>After multiple iterations, we finalised designs to the following screens. Some of the key functionality of AirBridge includes backend operations that are not visible to the user. Status indicators are some of the most useful components in our library as they communicate the progress of the RPA robots.
+                </p>
+            </div>
+         </div>
+
+         <div class="container-fluid high-fidelity">
+            <img src="img/high-fidelity-mockups.png"/>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                 </div>
+
+                <div class="col-6">
+        
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid high-fidelity-background">
+        </div>
+
+        <div class="intro market-placement-research">
+            <div class="info">
+                <h1>
+                    Market Placement Research
+                  </h1>
+                  <p>We had an opportunity to test our assumptions with clients once we had a better idea of the user flow. We built a POC after building a clickable prototype, and this gave us some perspective. 
+                    <br>
+                    <br>
+                    We looked at the healthcare space, specifically the Revenue Cycle Management part of the health insurance industry. We did extensive research and reached out to people in the industry. We sent out the following messages.
+                    </p>
+                    <img src="img/questions.png" />
+            </div>
+          </div>
+
+          <div class="outro">
+            <div class="info">
+                <h1 class="text-center">
+                    Thanks for viewing!
+                  </h1>
+             
+            </div>
+          </div>
+      </div>
+    </div>
+</body>
+</html>
