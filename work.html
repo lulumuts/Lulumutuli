@@ -128,7 +128,7 @@
 
 
 img {
-  max-width: 80vh;
+  max-width: 70vh;
   position: relative;
   z-index: 1;
   display: block;
@@ -136,7 +136,7 @@ img {
 }
 
 .hati-image {
-    max-width: 72vh;
+    max-width: 65vh;
 }
 
 .container-fluid {
@@ -163,12 +163,12 @@ p {
   flex-direction: column;
   position: absolute;
   top: 25%;
-  left: 60%;
+  left: 58%;
   margin-left: 16%;
 }
 
 .chewa .contents {
-    padding-top: 10%;
+    padding-top: 8%;
 }
 
 .redlandroses img {
@@ -225,7 +225,7 @@ h1 {
 .work .btn {
     color: #D2C2BB;
   font-family: "Poppins";
-  font-size: 24px;
+  font-size: 21px;
   text-transform: capitalize;
   font-weight:200;
   text-align: center;
@@ -265,6 +265,21 @@ body.loaded {
   opacity: 1;
 }
 
+.nav {
+    width: 100vw;
+    z-index: 1!important;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.nav .btn {
+  color: #8a7f7a;
+}
+.btn:hover {
+  font-family: 'Shrikhand', serif;
+}
 
 @media (max-width: 1100px) {
   .contents {
@@ -301,7 +316,7 @@ p{
     width: 70vh;
 }
 .redlandroses h2 {
- max-width: 50%;
+ max-width: 40%;
 }
 
 .air-bridge-image {
@@ -325,32 +340,30 @@ p{
  }
 
  .work .btn {
-  font-size: 20px;
+  font-size: 23px;
  }
 
  .nav .btn {
-  width: 100px;
+  width: 120px;
  }
+}
+
+@media (max-width: 850px) {
+  .air-bridge-image {
+  max-width: 60vh;
+}
 }
 </style>
 <body>
   <div class="work">
     <div class="container nav d-flex justify-content-center fade-in-element">
-        <div class="row">
-            <div class="col-3">
-              <a href="about.html"><button class="btn">About</button></a>
-            </div>
-            <div class="col-3">
-                <a   href="work.html"><button class="btn active">Work</button></a>
-            </div>
-            <div class="col-3">
-              <a href="img/LuluMutuliCV2023.pdf" target="_blank" download><button class="btn">Resume</button></a>
-            </div>
-            <div class="col-3">
-                <a href="contact.html"><button class="btn">Contact</button></a>
-            </div>
-        </div>
+      <a href="index.html"><button class="btn">Home</button></a>
+      <a href="about.html"><button class="btn">About</button></a>
+      <a href="work.html"><button class="btn active">Work</button></a>
+      <a href="img/LuluMutuli-CV.pdf" target="_blank" download><button class="btn">Resume</button></a>
+      <a href="contact.html"><button class="btn">Contact</button></a>
     </div>
+    
 
     <div class="container-fluid air-bridge">
       <div class="row ">

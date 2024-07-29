@@ -12,23 +12,6 @@
 <link rel="icon" type="image/x-icon" href="img/favicon-four.png">
 </head>
 <style>
-.btn {
-    color: #ab9d97;
-  font-family: "Poppins";
-  font-size: 24px;
-  text-transform: capitalize;
-  font-weight:200;
-  text-align: center;
-}
-
-.btn:hover {
-    color: #ab9d97!important;
-    font-weight: 600;
-}
-
-.active {
-    font-weight: 600;
-}
 
 h1 {
     position: relative;
@@ -82,116 +65,16 @@ img {
  width: 100px;
 }
 
-.blob:before {
-  padding: 30px 0;
-  content: '';
-  display: block;
-  position: absolute;
-  align-self: center;
-  top: 10px;
-  right: 10px;
-  bottom: 16px;
-  left: 20px;
-  width: 65vw;
-  margin: auto;
-  background: #faf7f5;
-  animation: blobber 50s 0s linear infinite, cobler 4s 0s linear infinite alternate;
-}
-
-@keyframes blobber {
-  0% {
-    border-radius: 28% 22% 68% 32% / 42% 28% 72% 58%;
-  }
-  5% {
-    border-radius: 48% 52% 41% 29% / 66% 37% 63% 34%;
-  }
-  10% {
-    border-radius: 69% 31% 71% 29% / 67% 31% 69% 33%;
-  }
-  15% {
-    border-radius: 60% 40% 71% 29% / 63% 65% 35% 37%;
-  }
-  20% {
-    border-radius: 61% 39% 51% 49% / 57% 58% 42% 43%;
-  }
-  25% {
-    border-radius: 66% 34% 25% 75% / 47% 30% 70% 53%;
-  }
-  30% {
-    border-radius: 32% 68% 38% 62% / 65% 60% 40% 35%;
-  }
-  35% {
-    border-radius: 63% 37% 41% 59% / 35% 38% 62% 65%;
-  }
-  40% {
-    border-radius: 57% 43% 49% 51% / 55% 71% 29% 45%;
-  }
-  45% {
-    border-radius: 47% 53% 34% 66% / 65% 36% 64% 35%;
-  }
-  50% {
-    border-radius: 44% 56% 32% 68% / 69% 26% 74% 31%;
-  }
-  55% {
-    border-radius: 28% 72% 37% 63% / 71% 44% 56% 29%;
-  }
-  60% {
-    border-radius: 38% 62% 35% 65% / 74% 53% 47% 26%;
-  }
-  65% {
-    border-radius: 73% 27% 46% 54% / 54% 47% 53% 46%;
-  }
-  70% {
-    border-radius: 75% 25% 47% 53% / 49% 53% 47% 51%;
-  }
-  75% {
-    border-radius: 62% 38% 43% 57% / 85% 60% 40% 45%;
-  }
-  80% {
-    border-radius: 41% 59% 65% 35% / 73% 50% 50% 27%;
-  }
-  85% {
-    border-radius: 55% 45% 57% 43% / 73% 61% 39% 27%;
-  }
-  90% {
-    border-radius: 74% 26% 33% 67% / 40% 65% 35% 60%;
-  }
-  95% {
-    border-radius: 58% 42% 57% 43% / 53% 45% 55% 47%;
-  }
-  100% {
-    border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%;
-  }
-}
-
-@keyframes cobler {
-  0% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 100% 0%;
-  }
-}
-
 .main .container-fluid {
     margin: 20px;
 }
 .about {
   align-self: flex-start;
-  width: 30vh;
-}
-
-.nav {
-    width: 100vw;
-    z-index: 1!important;
-}
-.nav .btn {
-    width: 110px;
-    padding: 20px 0;
+  width: 40vh;
 }
 
 .container-fluid {
-    width: 800px;
+    width: 74vw;
 }
 
 body{
@@ -201,15 +84,6 @@ body{
 body{
     justify-content: center;
     background: radial-gradient(circle, rgba(225,255,0,1) 19%, rgba(245,238,235,1) 48%, rgba(250,247,245,1) 66%, rgba(255,255,255,1) 89%);
-}
-
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 body {
@@ -222,9 +96,36 @@ body {
 body.loaded {
   opacity: 1;
 }
-/* .skills-section {
-  color: #ab9d97!important;
-} */
+
+.nav {
+    width: 100vw;
+    z-index: 1!important;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+  align-items: center;
+  margin-bottom: 100px;
+  padding-top: 2%;
+}
+
+.nav .btn {
+  color: #8a7f7a!important;
+  font-family: "Poppins";
+  font-size: 21px;
+  text-transform: capitalize;
+  font-weight:200;
+  text-align: center;
+  padding: 0 10px;
+  width: 110px;
+}
+.btn:hover {
+  color: #8a7f7a!important;
+  font-family: 'Shrikhand', serif;
+}
+
+.active {
+    margin-top: 1%;
+    font-weight: 600;
+}
 
 
 @media (max-width: 1300px) {
@@ -232,18 +133,13 @@ body.loaded {
     width: 95vw;
 }
 
-.about {
-  width: 60vw;
-}
 }
 
 @media (max-width: 850px) {
 #main {
   height: 100vh;
 }
-.nav .btn {
-  font-size: 20px;
-}
+
 
   .blob:before {
     bottom: 0;
@@ -264,10 +160,6 @@ h1{
     bottom: 160px!important;
 }
 
-.about {
-  width: 88vw;
-}
-
 p {
     font-size: 16px;
 }
@@ -284,20 +176,11 @@ p {
 <body>
     <div id="main">
     <div class="container-fluid nav d-flex justify-content-center">
-        <div class="row nav">
-            <div class="col-3">
-                <button class="btn active">About</button>
-            </div>
-            <div class="col-3">
-                <a href="work.html"><button class="btn">Work</button></a>
-            </div>
-            <div class="col-3">
-                <a href="img/Lulu-Mutuli-CV-UI-Designer.pdf" target="_blank" download><button class="btn">Resume</button></a>
-            </div>
-            <div class="col-3">
-              <a href="contact.html"><button class="btn">Contact</button></a>
-            </div>
-        </div>
+      <a href="index.html"><button class="btn">Home</button></a>
+      <button class="btn active">About</button>
+      <a href="work.html"><button class="btn">Work</button></a>
+      <a href="img/LuluMutuli-CV.pdf" target="_blank" download><button class="btn">Resume</button></a>
+      <a href="contact.html"><button class="btn">Contact</button></a>
     </div>
     <div class="container-fluid about">
         <div class="blob"></div>

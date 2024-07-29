@@ -25,7 +25,6 @@
   right: 10px;
   bottom: 3px;
   left: 40px;
-  background-color: #e1ff00;
   mix-blend-mode: multiply;
   animation: blobber 20s 0s linear infinite, cobler 2s 0s linear infinite alternate;
 }
@@ -109,17 +108,18 @@
 
 
 .container-fluid {
-    margin:  100px 0;
     width: 80vw;
     position: relative;
     text-align: left;
 }
 
 p {
-  color:#c7c99e;
+  color:#D2C2BB;
   font-family: "Poppins";
-  font-size: 20px;
-  width: 75%;
+  text-align: left;
+  font-size: 110%;
+  font-weight: 200;
+  line-height: 64px;
 }
 
 .contents {
@@ -159,37 +159,12 @@ p {
     padding: 1px;
 }
 
-.hero {
-    color: #C0A79B;
-    display: flex; 
-    justify-content: center; 
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100vw;
-    height: 80vh;
-    opacity: 1;
-  transition: opacity 10s ease;
-}
 
-.hero  h1{
+ h1{
   font-family: 'Shrikhand', serif;
-    font-size: 96px;
-    color:#c7c99e;
-    text-align: center;
-    font-size: 76px;
-}
-.hero p {
-  width: 100%;
-  font-weight:200;
-}
-
-.hero .blob:before {
-    width: 90vh;
-    margin: auto;
-    background: rgb(225,255,0);
-    background: radial-gradient(circle, rgba(225,255,0,1) 19%, rgba(245,238,235,1) 48%, rgba(250,247,245,1) 66%, rgba(255,255,255,1) 89%);
-    animation: blobber 20s 0s ease-in-out infinite, wobbler 15s 0s linear infinite alternate;
+    color:#D2C2BB;
+    text-align: left;
+    font-size: 4.5vw;
 }
 
 .hero .blob:after {
@@ -197,23 +172,31 @@ p {
 }
 
 .hero .container {
-    height: 200px;
-    width: 550px;
+  position: absolute;
+    height: 100px;
 }
 
 .intro {
     font-size: 32px;
     font-weight: 100;
-    text-align:center;
+    text-align:left;
+}
+
+.content {
+  margin-left: 20%;
 }
 
 .hero .btn{
-    color: #D2C2BB;
+  color: #8a7f7a;
   font-family: "Poppins";
-  font-size: 24px;
+  font-size: 22px;
   text-transform: capitalize;
   padding: 0;
-  font-weight:100;
+  font-weight:200;
+}
+
+.hero .btn:hover {
+  font-family: 'Shrikhand', serif;
 }
 
 .hero .btn:hover{
@@ -224,7 +207,7 @@ span {
   font-weight: 400;
 }
 span:hover {
-    color: #C8A292;
+    color: #e1ff00;;
 }
   
   svg {
@@ -249,21 +232,22 @@ span:hover {
     height: 70vh;
     width: 100vw;
     padding: 0 10%;
-    overflow: hidden;
+    margin: auto;
 }
  .main {
   width: 100vw;
  }
 
- .hero  h1{
-    font-size: 66px;
-}
+ .resume-btn {
+  right: 20px;
+ }
+
 .hero p {
   font-size:24px;
 }
 
 .hero .container {
-    width: 450px;
+    width: 80vw;
 }
 
 .blob:before {
@@ -271,35 +255,245 @@ span:hover {
   left: 1px;
 }
 }
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.circle {
+  background: #e1ff00;
+  width: 600px;
+  height: 600px;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  overflow: hidden;
+  animation: blobber 20s 0s linear infinite, cobler 2s 0s linear infinite alternate;
+}
+
+.circle:before {
+  padding: 0 2%;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 300px;
+  right: 10px;
+  bottom: 300px;
+  left: 1px;
+  mix-blend-mode: multiply;
+  
+}
+
+.circle:after {
+  padding: 0 2%;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 200px;
+  right: 1px;
+  bottom: 200px;
+  left: 1px;
+  border: 10px solid rgba(245,238,235,1);
+  mix-blend-mode: multiply;
+  animation: blobber 25s 0s ease-in-out infinite, wobbler 15s 0s linear infinite alternate;
+}
+
+.container-fluid {
+  height: 100%;
+}
+
+.content {
+  margin: auto;
+  padding-left: 10%;
+}
+
+.alt-text {
+  font-family: 'Shrikhand', serif;
+}
+
+.name {
+  font-size: 6.25vh;
+}
+@keyframes blobber {
+  0% {
+    border-radius: 28% 22% 68% 32% / 42% 28% 72% 58%;
+  }
+  5% {
+    border-radius: 48% 52% 41% 29% / 66% 37% 63% 34%;
+  }
+  10% {
+    border-radius: 69% 31% 71% 29% / 67% 31% 69% 33%;
+  }
+  15% {
+    border-radius: 60% 40% 71% 29% / 63% 65% 35% 37%;
+  }
+  20% {
+    border-radius: 61% 39% 51% 49% / 57% 58% 42% 43%;
+  }
+  25% {
+    border-radius: 66% 34% 25% 75% / 47% 30% 70% 53%;
+  }
+  30% {
+    border-radius: 32% 68% 38% 62% / 65% 60% 40% 35%;
+  }
+  35% {
+    border-radius: 63% 37% 41% 59% / 35% 38% 62% 65%;
+  }
+  40% {
+    border-radius: 57% 43% 49% 51% / 55% 71% 29% 45%;
+  }
+  45% {
+    border-radius: 47% 53% 34% 66% / 65% 36% 64% 35%;
+  }
+  50% {
+    border-radius: 44% 56% 32% 68% / 69% 26% 74% 31%;
+  }
+  55% {
+    border-radius: 28% 72% 37% 63% / 71% 44% 56% 29%;
+  }
+  60% {
+    border-radius: 38% 62% 35% 65% / 74% 53% 47% 26%;
+  }
+  65% {
+    border-radius: 73% 27% 46% 54% / 54% 47% 53% 46%;
+  }
+  70% {
+    border-radius: 75% 25% 47% 53% / 49% 53% 47% 51%;
+  }
+  75% {
+    border-radius: 62% 38% 43% 57% / 85% 60% 40% 45%;
+  }
+  80% {
+    border-radius: 41% 59% 65% 35% / 73% 50% 50% 27%;
+  }
+  85% {
+    border-radius: 55% 45% 57% 43% / 73% 61% 39% 27%;
+  }
+  90% {
+    border-radius: 74% 26% 33% 67% / 40% 65% 35% 60%;
+  }
+  95% {
+    border-radius: 58% 42% 57% 43% / 53% 45% 55% 47%;
+  }
+  100% {
+    border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%;
+  }
+}
+
+
+@keyframes cobler {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+.circle img {
+  width: 50vh;
+  position: relative;
+  margin-left: 2vw;
+  bottom: 10%;
+}
+.nav {
+    width: 100vw;
+    z-index: 1!important;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+  align-items: center;
+  margin-bottom: 100px;
+  color: #ab9d97;
+}
+
+.btn {
+  width: 120px;
+  color: #ab9d97;
+}
+.btn:hover {
+  font-family: 'Shrikhand', serif;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeInAnimation 3s ease;
+}
+body {
+  transition: opacity 3s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+@media (max-width: 1300px) {
+  p {
+    font-size:32px;
+    line-height: 56px;
+}
+.name {
+  font-size: 40px;
+}
+
+.circle img {
+  margin-left: -8vw; 
+}
+}
+
+@media (max-width: 850px) {
+.circle img {
+  margin-left: -32vw; 
+}
+p {
+    font-size:24px;
+    line-height: 48px;
+}
+}
 </style>
 <body>
     
   <div class="main">
-      <div class="container-fluid hero">
-        <div class="blob"></div>
-        <div class="row">
-            <div class="col-12">
-                <h1>Lulu Mutuli</h1>
-                <p class="intro">I am a <span><strong>UI Designer | Developer</strong></span> based in Singapore.</p>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-3">
-                          <a href="about.html"><button class="btn">About</button></a>
-                        </div>
-                        <div class="col-3">
-                            <a href="work.html"><button class="btn">Work</button></a>
-                        </div>
-                        <div class="col-3">
-                           <a href="img/Lulu-Mutuli-CV-UI-Designer.pdf" target="_blank" download><button class="btn">Resume</button></a>
-                        </div>
-                        <div class="col-3">
-                            <a href="contact.html"><button class="btn">Contact</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container-fluid hero">
+      <div class="blob"></div>
+      <div class="row">
+          <div class="col-12 ">
+           
+              <div class="container nav">
+                <a href="about.html"><button class="btn active">About</button></a>
+                <a href="work.html"><button class="btn">Work</button></a>
+                <a href="img/LuluMutuli-CV.pdf" target="_blank" download><button class="btn">Resume</button></a>
+                <a href="contact.html"><button class="btn">Contact</button></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 col-xs-12">
+          <div class="wrap">
+            <div class="circle">
+              <img src="img/profile-image.png"/>
+              </div>
+          </div>
         </div>
+        <div class="col-6 col-xs-12 content">
+          <p>
+            My name is <br><span class="alt-text name">Lulu Mutuli, </span> I am a <span class="alt-text"><strong>UI/UX Designer</strong></span> <br>with a background in Frontend Development based in <span class="alt-text">Singapore.</span>
+          </p>
+        </div>
+      </div>
     </div>
+ 
+
+
    
 
   </div>

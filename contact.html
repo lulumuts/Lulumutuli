@@ -13,16 +13,16 @@
 </head>
 <style>
 .btn {
-    color: #D2C2BB;
+    color: #8a7f7a;
   font-family: "Poppins";
-  font-size: 24px;
+  font-size: 20px;
   text-transform: capitalize;
   font-weight:200;
   text-align: center;
 }
 
 .btn:hover {
-    color: #D2C2BB!important;
+    color: #8a7f7a!important;
     font-weight: 600;
 }
 
@@ -163,7 +163,7 @@ span {
 }
 .contact {
   align-self: center;
-  margin: 14% auto;
+  margin: 25% auto;
   max-width: 50%;
   display: flex;
   flex-direction: column;
@@ -175,12 +175,12 @@ span {
     position: relative;
 }
 .nav .btn {
-    width: 110px;
+    width: 80px;
     padding: 20px 0;
 }
 
 .nav {
-    width: 800px;
+    width: 500px;
 }
 
 
@@ -225,20 +225,38 @@ body.loaded {
   opacity: 1;
 }
 
+.nav {
+    width: 100vw;
+    z-index: 1!important;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.btn:hover {
+  font-family: 'Shrikhand', serif;
+}
+.btn {
+  font-size: 21px;
+ }
+
+ .nav .btn {
+  width: 120px;
+ }
+.resume {
+  margin-right: 20px;
+}
 @media (max-width: 1300px) {
 
 .contact {
   align-self: center;
-  margin: 24% auto;
+  margin: 30% auto;
   max-width: 70%;
 }
 }
 
 @media (max-width: 850px) {
-
-    .nav .btn {
-        font-size: 20px;
-    }
 img {
     width: 180px;
     margin-top: 90px;
@@ -273,20 +291,11 @@ svg {
 <body>
     <div id="main">
     <div class="container-fluid nav d-flex justify-content-center nav">
-        <div class="row">
-            <div class="col-3">
-                <a href="about.html"><button class="btn">About</button></a>
-            </div>
-            <div class="col-3">
-                <a href="work.html"><button class="btn">Work</button></a>
-            </div>
-            <div class="col-3">
-                <a href="img/Lulu-Mutuli-CV-UI-Designer.pdf" target="_blank" download><button class="btn">Resume</button></a>
-            </div>
-            <div class="col-3">
-                <a href="contact.html"><button class="btn active">Contact</button></a>
-            </div>
-        </div>
+      <a href="index.html"><button class="btn">Home</button></a>
+      <a href="about.html"><button class="btn">About</button></a>
+      <a href="work.html"><button class="btn">Work</button></a>
+      <a href="img/LuluMutuli-CV.pdf" target="_blank" download><button class="btn resume">Resume</button></a>
+      <a href="contact.html"><button class="btn active">Contact</button></a>  
     </div>
     <div class="container-fluid contact">
         <div class="blob"></div>
