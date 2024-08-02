@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Shrikhand&display=swap&display=swap" rel="stylesheet">
+
+</head>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .intro {
+            height: 100vh;
+            background-image: url('img/Afroglitch-background.svg');
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+        }
+
+        #Nav{
+            height: 100vh;
+        }
+
+        .intro h1 {
+            margin-bottom: 40vh;
+            text-align: center;
+            color: #c7c3c3;
+            font-family: "Roboto Flex", sans-serif;
+            font-weight: 300;
+            font-size: 120px;
+            letter-spacing: 2vh;
+        }
+        .button-area button{
+            margin-left: 100px;
+            margin-bottom: 100px;
+            font-size: 20px;
+            border: none;
+            border-bottom: 2px solid #fff;
+            border-radius: 0%;
+        }
+        #Nav .flex-container {
+            width: 100vw;
+            display: flex;
+            overflow:scroll;
+            background-color: #fff;
+            font-family: "Roboto Flex", sans-serif;
+        }
+
+       #Nav .flex-container > div {
+        background-size: cover;
+        background-position: -390px center;
+        background-repeat: no-repeat;
+        font-size: 30px;
+        width: 100px;
+        height: 100vh;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+
+       #Nav .flex-container > *:first-child {
+         justify-content: flex-start;
+         align-items: flex-start;
+        }
+
+       #Nav button {
+        font-family: "Roboto Flex", sans-serif; 
+        border-radius: 60%;
+        padding: 16% 38%;
+        margin-left: -10px;
+        font-size: 3.5vw;
+        border: 2px solid #fff;
+        letter-spacing: 0.15vh;
+       }
+
+       #Nav button:hover {
+        color: #BECE03;
+       }
+
+       #Nav .back-svg{
+        position: absolute;
+        margin: 20px;
+       }
+
+
+       #Nav .menu-links{
+        font-family: "Roboto Flex", sans-serif; 
+        font-size: 1.2vw;
+        margin-left: 4px;
+        padding: 1vh!important;
+        text-align: left;
+        justify-self: flex-start;
+        align-self: start;
+        letter-spacing: 0.5vh;
+       }
+
+       #Nav .menu-links:hover{
+        color: #BECE03;
+       }
+
+       .lookOne .img-content {
+        width: 100%;
+        margin: auto;
+        align-self:flex-start;
+       }
+
+       .card {
+        border: 0 solid;
+        margin: 0 10%;
+        font-family: "Roboto Flex", sans-serif;
+        font-weight: 200;
+        text-align: center;
+       }
+
+       .card h1 {
+        color: #2d2d2d;
+        font-weight: 400;
+       }
+
+       .lookOne .card-image {
+        width: 75%;
+        margin: auto;
+       }
+
+       .sizes {
+        border-radius: 70%;
+        margin: 0 8px;
+        padding: 19.5px 22px;
+        font-size: 16px;
+       }
+
+       .sizes:hover {
+        background-color: #BECE03;
+        border-color: #BECE03;
+       }
+
+       h3 {
+        margin-top: 30px;
+        font-size: 100%;
+        font-weight: 400;
+        font-family: "Roboto Flex", sans-serif;
+       }
+
+       .lookOne p {
+        text-align: left;
+       }
+
+       ul {
+        padding-left: 0;
+       }
+       li {
+        list-style: none;
+        text-align: left;
+       }
+
+       .clothes-details{
+        margin: 0 16vh;
+       }
+
+       .laundry-care{
+        /* padding-left: 20px; */
+       }
+       .add-to-cart{
+        color: #2d2d2d;
+        width: 125px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 2px solid #000;
+        border-radius: 0;
+        margin-top: 32%;
+        float: right;
+        right: 0;
+       }
+       
+       .lookOne .back-svg,
+       .lookTwo .back-svg,
+       .lookThree .back-svg,
+       .lookFour .back-svg,
+       .lookFive .back-svg,
+       .lookSix .back-svg,
+       .lookSeven .back-svg,
+       .inspo .back-svg
+        {
+        float: right;
+        position: relative;
+        margin-right: 20px;
+        margin-top: 20px;
+        color: #898888;
+        text-decoration: none;
+       }
+
+       .lookOne h6,
+       .lookTwo h6,
+       .lookThree h6,
+       .lookFour h6,
+       .lookFive h6
+        {
+        font-weight: 300;
+        font-family: "Roboto Flex", sans-serif;
+       }
+
+       .lookOne .container-fluid,
+       .lookTwo .container-fluid,
+       .lookThree .container-fluid,
+       .lookFour .container-fluid,
+       .lookFive .container-fluid,
+       .lookSix .container-fluid,
+       .lookSeven .container-fluid {
+        padding: 0
+       }
+       
+       .inspo .background-A {
+        background-size: cover;
+        background-image: url('img/background_A.png');
+        height: 65vh;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .inspo .background-B {
+        background-size: cover;
+        background-image: url('img/background_B.png');
+        height: 65vh;
+        margin: 0;
+        padding: 0;
+    }
+    .inspo .container-fluid {
+        padding: 0;
+    }
+    .inspo .explanation {
+        font-family: "Roboto Flex", sans-serif;
+        display: block;
+        position: relative;
+        text-align: justify;
+        font-size: 20px;
+        font-weight: 100;
+        padding: 6% 10%;
+       }
+
+
+.back {
+     font-family: 'Shrikhand', serif;
+     position: fixed;
+     top: 24px;
+     right: 24px;
+     width: 100vw;
+     display: grid;
+     grid-template-columns: auto auto;
+     z-index:1;
+     justify-content: end;
+        }
+
+        .back h4 {
+            position: fixed;
+            color: #fff;
+            margin-right: 10px;
+            right: 1px;
+        }
+
+        .main-back-svg {
+            right: 1px;
+            top: 24px;
+            position: fixed;
+            margin-right: 180px;
+            width: 40px;
+            color: #7E7D7D;
+        }
+
+.back button {
+            border: none;
+            display: grid;
+            grid-template-columns: auto auto;
+            color: #fff;
+            font-size: 20px;
+            background-color: transparent;
+            text-decoration: none!important;
+        }
+        .back button:hover {
+            color: #BECE03;
+        }
+
+        .back button:focus {
+            outline: none;
+        }
+       @media (max-width: 1130px) {
+        .lookSeven .container {
+            max-width: 100vw!important;
+        }
+        .clothes-details{
+        margin: 0 1vh;
+       }
+
+       .sizes {
+        border-radius: 70%;
+        margin: 0 8px;
+        padding: 10.5px 12px;
+        font-size: 16px;
+       }
+
+
+       #Nav button {
+        padding: 36% 38%;
+        margin-left: -10px;
+       }
+
+       }
+    </style>
+
+<div id="app">
+<router-view></router-view>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://unpkg.com/vue-router@4"></script>
+<script>
+const { createApp, ref } = Vue;
+const { createRouter } = VueRouter;
+
+const Intro = {
+    template: `
+<div class="intro d-flex align-items-end">
+        <div class="back">
+        <a href="work.html"> 
+            <button>
+                   <svg class="main-back-svg" fill="#fff" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+              </svg>
+                <h4>Back to Work</h4>
+            </button>
+        </a>
+    </div>
+  <div class="container-fluid">
+    <h1>AFRO-GLITCH</h1>
+    <div class="row">
+      <div class="col-8"></div>
+      <div class="col-4 button-area">
+        <router-link to="/nav">
+          <button type="button" class="btn btn-outline-light align-self-center">Enter</button>
+        </router-link>
+      </div>
+    </div>
+  </div>
+</div>`
+};
+
+const Nav = {
+  setup() {
+    const navLinks = ref([
+        { url: '', path: '', number: '', menuLinks: [
+            { name: 'HOME', url: '/'},
+            { name: 'INSPO', url: '/inspo'},
+            // { name: 'PANTS', url: '/search'},
+            // { name: 'SKIRTS', url: '/search'},
+            // { name: 'DRESSES', url: '/search'},
+        ] },
+        { url: 'img/afroglitch_look_one.png', path: '/look-one', number: '01' },
+        { url: 'img/afroglitch_look_two.png', path: '/look-two', number: '02' },
+        { url: 'img/afroglitch_look_three.png', path: '/look-three', number: '03' },
+        { url: 'img/afroglitch_look_four.png', path: '/look-four', number: '04' },
+        { url: 'img/afroglitch_look_five.png', path: '/look-five', number: '05' },
+        { url: 'img/afroglitch_look_six.png', path: '/look-six', number: '06' },
+        { url: 'img/afroglitch_look_seven.png', path: '/look-seven', number: '07' },
+    ]);
+
+    return { navLinks };
+  },
+  template: `
+<div id="Nav">
+  <div class="flex-container">
+    <div class="img-container" v-for="(item, index) in navLinks" :key="index" :style="{ backgroundImage: \`url(\${item.url})\` }">
+        <div class="mt-4">
+        <div v-for="(item, index) in item.menuLinks">
+            <router-link :to="item.url">
+        <button type="button" class="btn menu-links">
+          {{item.name}}
+        </button>
+        </router-link>
+        </div>
+        </div>
+      
+     
+        <router-link :to="item.path" v-if="item.number">
+        <button type="button" class="btn btn-outline-light">
+          {{item.number}}
+        </button>
+      </router-link>
+    </div>
+  </div>
+</div>`
+
+};
+
+const LookOne = {
+    template: `
+<div class="lookOne">
+    <div class="container-fluid">
+        <router-link to="/nav" class="back-svg">
+              <svg  fill="#898888" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                </svg>
+                <h6>back</h6>
+            </router-link>
+          
+        <div class="row">
+            <div class="col-lg-3 col-md-6 p-0">
+                <img src="img/lookOne_A.png" class="card-img-top" alt="..." style="width: 99.5%;">
+                <img src="img/lookOne_B.png" class="card-img-top" alt="..."  style="width: 99.75%;">
+                <img src="img/lookOne_C.png" class="card-img-top" alt="..." style="width: 99.65%;">
+                <img src="img/lookOne_D.png" class="card-img-top" alt="...">
+         
+            </div>
+
+            <div class="col-lg-9 col-md-6">
+                <div class="card">
+                  <img src="img/cropped_jacket.png" class="card-image" alt="...">
+                  <div class="card-body">
+                    <h1>QUILTED CROPPED SWEATER</h1>
+                    <p class="card-text text-center">Cropped and structured faux suede sweater jacket, with flared sleeves.</p>
+                    <div class="container">
+                        <div class="d-flex justify-content-center">
+                          <button class="sizes btn btn-outline-dark">XS</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;S&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;M&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;L&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">XL</button>
+                        </div>
+                        <div class="row clothes-details">
+                            <div class="col-lg-6 col-md-12 text-start">
+                                <h3 >MATERIAL DETAILS</h3>
+                                <ul>
+                                  <li>Fabric: Faux Suede</li>
+                                  <li>Lining: Cotton</li>
+                                  <li>Closure: YKK Zipper</li>
+                                </ul>
+                                </div>
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                              <h3 >LAUNDRY CARE</h3>
+                              <p class="text-start">Soak in a cold water briefly, or drycleaning to avoid damage to the suede.</p>
+                              <button class="btn add-to-cart btn-outline-light">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <img src="img/flared_trousers.png" class="card-image" alt="...">
+                  <div class="card-body">
+                    <h1>FLARED PRINTED TROUSERS</h1>
+                    <p class="card-text text-center">Stretchy cotton blend, with midi 70's flared cut.</p>
+                    <div class="container">
+                        <div class="d-flex justify-content-center">
+                          <button class="sizes btn btn-outline-dark">XS</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;S&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;M&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;L&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">XL</button>
+                        </div>
+                        <div class="row clothes-details">
+                            <div class="col-lg-6 col-md-12 text-start">
+                                <h3>MATERIAL DETAILS</h3>
+                                <ul>
+                                  <li>Fabric:Printed Linen </li>
+                                  <li>Lining:Cotton</li>
+                                  <li>Closure: Front buttons + Draw string waist</li>
+                                </ul>
+                                </div>
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                              <h3 >LAUNDRY CARE</h3>
+                              <p class="text-start">Machine wash on cold to avoid shrinkage.</p>
+                              <button class="btn add-to-cart btn-outline-light">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>`
+}
+const LookTwo = {
+    template: `
+<div class="lookTwo">
+    <div class="container-fluid">
+        <router-link to="/nav" class="back-svg">
+              <svg  fill="#898888" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                </svg>
+                <h6>back</h6>
+            </router-link>
+          
+        <div class="row">
+            <div class="col-lg-3 col-md-6 p-0">
+                <img src="img/look_two_A.png" class="card-img-top" alt="...">
+                <img src="img/look_two_B.png" class="card-img-top" alt="..." >
+         
+            </div>
+
+            <div class="col-lg-9 col-md-6">
+                <div class="card">
+                  <img src="img/bell_sleeve_dress.png" class="card-image" alt="..." style="width: 80%;">
+                  <div class="card-body">
+                    <h1>BELL SLEEVE DRESS</h1>
+                    <p class="card-text text-center">Stretchy cotton blend, with midi 70's flared cut.</p>
+                    <div class="container">
+                        <div class="d-flex justify-content-center">
+                          <button class="sizes btn btn-outline-dark">XS</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;S&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;M&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;L&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">XL</button>
+                        </div>
+                        <div class="row clothes-details">
+                            <div class="col-lg-6 col-md-12 text-start">
+                                <h3>MATERIAL DETAILS</h3>
+                                <ul>
+                                  <li>Fabric: Stretchy blended Cotton </li>
+                                  <li>Lining: None</li>
+                                  <li>Closure: YKK Zipper + center button</li>
+                                </ul>
+                                </div>
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                              <h3 >LAUNDRY CARE</h3>
+                              <p class="text-start">Machine wash on cold to avoid shrinkage.</p>
+                              <button class="btn add-to-cart btn-outline-light">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>`
+}
+const LookThree = {
+    template: `
+<div class="lookThree">
+    <div class="container-fluid">
+        <router-link to="/nav" class="back-svg">
+              <svg fill="#898888" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                </svg>
+                <h6>back</h6>
+            </router-link>
+          
+        <div class="row">
+            <div class="col-lg-3 col-md-6 p-0">
+                <img src="img/look_three_A.png" class="card-img-top" alt="...">
+                <img src="img/look_three_B.png" class="card-img-top" alt="..." >
+         
+            </div>
+
+            <div class="col-lg-9 col-md-6">
+                <div class="card">
+                  <img src="img/printed_slip_dress.png" class="card-image" alt="..." style="width: 80%;">
+                  <div class="card-body">
+                    <h1>PRINTED SLIT DRESS</h1>
+                    <p class="card-text text-center">Silk blend long sleeve max length dress with slit.</p>
+                    <div class="container">
+                        <div class="d-flex justify-content-center">
+                          <button class="sizes btn btn-outline-dark">XS</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;S&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;M&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;L&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">XL</button>
+                        </div>
+                        <div class="row clothes-details">
+                            <div class="col-lg-6 col-md-12 text-start">
+                                <h3>MATERIAL DETAILS</h3>
+                                <ul>
+                                  <li>Fabric:Silk blend</li>
+                                  <li>Lining: None</li>
+                                </ul>
+                                </div>
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                              <h3 >LAUNDRY CARE</h3>
+                              <p class="text-start">Machine wash on cold to avoid shrinkage.</p>
+                              <button class="btn add-to-cart btn-outline-light">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>`
+}
+const LookFour = {
+    template: `
+<div class="lookFour">
+    <div class="container-fluid">
+        <router-link to="/nav" class="back-svg">
+              <svg  fill="#898888" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                </svg>
+                <h6>back</h6>
+            </router-link>
+          
+        <div class="row">
+            <div class="col-lg-3 col-md-6 p-0">
+                <img src="img/look_four_A.png" class="card-img-top" alt="...">
+                <img src="img/look_four_B.png" class="card-img-top" alt="..." >
+                <img src="img/look_four_C.png" class="card-img-top" alt="..." >
+                <img src="img/look_four_D.png" class="card-img-top" alt="..." >
+                
+            </div>
+
+            <div class="col-lg-9 col-md-6">
+                <div class="card">
+                  <img src="img/orange_boustier.png" class="card-image" alt="..." style="width: 80%;margin:auto;">
+                  <div class="card-body">
+                    <h1>ORANGE BOUSTIER</h1>
+                    <p class="card-text text-center">Silk blend long sleeve max length dress with slit.</p>
+                    <div class="container">
+                        <div class="d-flex justify-content-center">
+                          <button class="sizes btn btn-outline-dark">XS</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;S&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;M&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;L&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">XL</button>
+                        </div>
+                        <div class="row clothes-details">
+                            <div class="col-lg-6 col-md-12 text-start">
+                                <h3>MATERIAL DETAILS</h3>
+                                <ul>
+                                  <li>Fabric: Satin blend</li>
+                                  <li>Lining: Cotton</li>
+                                </ul>
+                                </div>
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                              <h3 >LAUNDRY CARE</h3>
+                              <p class="text-start">Soak with cold water to avoid shrinkage.</p>
+                              <button class="btn add-to-cart btn-outline-light">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                             <div class="card">
+                  <img src="img/silk_tassle_skirt.png" class="card-image" alt="..." style="width: 80%;margin:auto;">
+                  <div class="card-body">
+                    <h1>SILK TASSLE SKIRT</h1>
+                    <p class="card-text text-center">Midi length silk wrap skirt with fringe trims.</p>
+                    <div class="container">
+                        <div class="d-flex justify-content-center">
+                          <button class="sizes btn btn-outline-dark">XS</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;S&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;M&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;L&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">XL</button>
+                        </div>
+                        <div class="row clothes-details">
+                            <div class="col-lg-6 col-md-12 text-start">
+                                <h3>MATERIAL DETAILS</h3>
+                                <ul>
+                                  <li>Fabric: Silk blend</li>
+                                  <li>Lining: Polyester stretch</li>
+                                  <li>Trim: Faux hair</li>
+                                </ul>
+                                </div>
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                              <h3 >LAUNDRY CARE</h3>
+                              <p class="text-start">Dry clean as trimmings require special care.</p>
+                              <button class="btn add-to-cart btn-outline-light">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`
+}
+const LookFive = {
+    template: `
+<div class="lookFive">
+    <div class="container-fluid">
+        <router-link to="/nav" class="back-svg">
+              <svg  fill="#898888" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                </svg>
+                <h6>back</h6>
+            </router-link>
+          
+        <div class="row">
+            <div class="col-lg-3 col-md-6 p-0">
+                <img src="img/look_five_A.png" class="card-img-top" alt="...">
+                <img src="img/look_five_B.png" class="card-img-top" alt="..." >
+                <img src="img/look_five_C.png" class="card-img-top" alt="..." >
+                <img src="img/look_five_D.png" class="card-img-top" alt="..." >
+                <img src="img/look_five_E.png" class="card-img-top" alt="..." >
+                
+            </div>
+
+            <div class="col-lg-9 col-md-6">
+                <div class="card">
+                  <img src="img/double_sleeved_jacket.png" class="card-image" alt="..." style="width: 80%;margin:auto;">
+                  <div class="card-body">
+                    <h1>DOUBLE SLEEVED JACKET</h1>
+                    <p class="card-text text-center">Quilted and printed oversized double sleeve collared jacket.</p>
+                    <div class="container">
+                        <div class="d-flex justify-content-center">
+                          <button class="sizes btn btn-outline-dark">XS</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;S&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;M&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;L&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">XL</button>
+                        </div>
+                        <div class="row clothes-details">
+                            <div class="col-lg-6 col-md-12 text-start">
+                                <h3>MATERIAL DETAILS</h3>
+                                <ul>
+                                  <li>Fabric: Satin blend</li>
+                                  <li>Lining: Silk</li>
+                                </ul>
+                                </div>
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                              <h3 >LAUNDRY CARE</h3>
+                              <p class="text-start">Dryclean for best care.</p>
+                              <button class="btn add-to-cart btn-outline-light">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <img src="img/chocolate_boustier.png" class="card-image" alt="..." style="width: 55%;margin:auto;padding-top: 10%;">
+                  <div class="card-body">
+                    <h1>CHOCOLATE BOUSTIER</h1>
+                    <p class="card-text text-center">Structured satin pleated wrap boustier with double clasp.</p>
+                    <div class="container">
+                        <div class="d-flex justify-content-center">
+                          <button class="sizes btn btn-outline-dark">XS</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;S&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;M&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;L&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">XL</button>
+                        </div>
+                        <div class="row clothes-details">
+                            <div class="col-lg-6 col-md-12 text-start">
+                                <h3>MATERIAL DETAILS</h3>
+                                <ul>
+                                  <li>Fabric: Satin blend</li>
+                                  <li>Lining: Cotton</li>
+                                </ul>
+                                </div>
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                              <h3 >LAUNDRY CARE</h3>
+                              <p class="text-start">Soak in cold water.</p>
+                              <button class="btn add-to-cart btn-outline-light">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <img src="img/satin_printed_shorts.png" class="card-image" alt="..." style="width: 55%;margin:auto;padding-top: 10%;">
+                  <div class="card-body">
+                    <h1>SATIN PRINTED SHORTS</h1>
+                    <p class="card-text text-center">Princess cut satin printed shorts.</p>
+                    <div class="container">
+                        <div class="d-flex justify-content-center">
+                          <button class="sizes btn btn-outline-dark">XS</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;S&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;M&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;L&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">XL</button>
+                        </div>
+                        <div class="row clothes-details">
+                            <div class="col-lg-6 col-md-12 text-start">
+                                <h3>MATERIAL DETAILS</h3>
+                                <ul>
+                                  <li>Fabric: Satin blend</li>
+                                  <li>Lining: Cotton</li>
+                                </ul>
+                                </div>
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                              <h3 >LAUNDRY CARE</h3>
+                              <p class="text-start">Dryclean for best results.</p>
+                              <button class="btn add-to-cart btn-outline-light">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`
+}
+
+const LookSix = {
+    template: `
+<div class="lookSix">
+    <div class="container-fluid">
+        <router-link to="/nav" class="back-svg">
+              <svg  fill="#898888" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                </svg>
+                <h6>back</h6>
+            </router-link>
+          
+        <div class="row">
+            <div class="col-lg-3 col-md-6 p-0">
+                <img src="img/look_six_A.png" class="card-img-top" alt="...">
+                <img src="img/look_six_B.png" class="card-img-top" alt="..." >
+                <img src="img/look_six_C.png" class="card-img-top" alt="..." >
+         
+            </div>
+
+            <div class="col-lg-9 col-md-6">
+                <div class="card">
+                  <img src="img/silk_sleeve_jumpsuit.png" class="card-image" alt="..." style="width: 90%;margin: auto;">
+                  <div class="card-body">
+                    <h1>SILK SLEEVE JUMPSUIT</h1>
+                    <p class="card-text text-center">Linen jumpsuit with bell sleeves.</p>
+                    <div class="container">
+                        <div class="d-flex justify-content-center">
+                          <button class="sizes btn btn-outline-dark">XS</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;S&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;M&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;L&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">XL</button>
+                        </div>
+                        <div class="row clothes-details">
+                            <div class="col-lg-6 col-md-12 text-start">
+                                <h3>MATERIAL DETAILS</h3>
+                                <ul>
+                                  <li>Fabric:Linen + Silk blend</li>
+                                  <li>Lining: None</li>
+                                </ul>
+                                </div>
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                              <h3 >LAUNDRY CARE</h3>
+                              <p class="text-start">Soak in cold water for best results.</p>
+                              <button class="btn add-to-cart btn-outline-light">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>`
+}
+const LookSeven = {
+    template: `
+<div class="lookSeven">
+    <div class="container-fluid">
+        <router-link to="/nav" class="back-svg">
+              <svg  fill="#898888" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                </svg>
+                <h6>back</h6>
+            </router-link>
+          
+        <div class="row">
+            <div class="col-lg-3 col-md-6 p-0">
+                <img src="img/look_seven_A.png" class="card-img-top" alt="...">
+                <img src="img/look_seven_B.png" class="card-img-top" alt="..." >
+                <img src="img/look_seven_C.png" class="card-img-top" alt="..." >
+                <img src="img/look_seven_D.png" class="card-img-top" alt="..." >
+         
+            </div>
+
+            <div class="col-lg-9 col-md-6">
+                <div class="card">
+                  <img src="img/suede_padded_shirt.png" class="card-image" alt="..." style="width: 75%;margin: auto;">
+                  <div class="card-body">
+                    <h1>SUEDE PADDED SHIRT</h1>
+                    <p class="card-text text-center">Faux suede quilted shirt.</p>
+                    <div class="container">
+                        <div class="d-flex justify-content-center">
+                          <button class="sizes btn btn-outline-dark">XS</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;S&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;M&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;L&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">XL</button>
+                        </div>
+                        <div class="row clothes-details">
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                                <h3>MATERIAL DETAILS</h3>
+                                <ul>
+                                  <li>Fabric: Faux Suede</li>
+                                  <li>Lining: Cotton</li>
+                                </ul>
+                                </div>
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                              <h3 >LAUNDRY CARE</h3>
+                              <p class="text-start">Drycleaning for best results.</p>
+                              <button class="btn add-to-cart btn-outline-light">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <img src="img/printed_tassled_joggers.png" class="card-image" alt="..." style="width: 75%;margin: auto;">
+                  <div class="card-body">
+                    <h1>PRINTED TASSLED JOGGERS</h1>
+                    <p class="card-text text-center">Silk blend joggers with elastic waist and tassles.</p>
+                    <div class="container-fluid">
+                        <div class="d-flex justify-content-center">
+                          <button class="sizes btn btn-outline-dark">XS</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;S&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;M&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">&nbsp;L&nbsp;</button>
+                          <button class="sizes btn btn-outline-dark">XL</button>
+                        </div>
+                        <div class="row clothes-details">
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                                <h3>MATERIAL DETAILS</h3>
+                                <ul>
+                                  <li>Fabric: Silk blend + faux hair tassle</li>
+                                  <li>Lining: Polyester stretch</li>
+                                </ul>
+                                </div>
+                            <div class="col-lg-6 col-md-12 text-start laundry-care">
+                              <h3>LAUNDRY CARE</h3>
+                              <p class="text-start">Dryclean for best results.</p>
+                              <button class="btn add-to-cart btn-outline-light">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`
+}
+
+const Search= {
+    template: `
+<div class="Search">
+    <div class="container-fluid">
+        <router-link to="/nav" class="back-svg">
+              <svg  fill="#898888" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                </svg>
+                <h6>back</h6>
+            </router-link>
+    </div>
+</div>`
+}
+
+const Inspo= {
+    template: `
+<div class="inspo">
+    <div class="container-fluid background_A">
+        <router-link to="/nav" class="back-svg">
+              <svg  fill="#898888" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                </svg>
+                <h6>back</h6>
+            </router-link>
+
+            <div class="background-A">
+             </div>
+
+                <div class="explanation">
+                <p>
+                    This project was funded by DANIDA and Designing Africa
+Collective, and took place over a period of 6 months of design and fabric development. The project objectives were to create a new textile for a new collection, to tackle the problem of accessing variety fabrics in Kenya.
+Afro-glitch is hence, a sample collection consisting of 7 looks and 12 pieces that transition between fabrics and prints that are inspired by the natural textures of the Earth and traditional garments of various areas in Continental Africa. These are juxtaposed against the digital and silky smooth prints that represent the technological boom taking place within Kenya and the Diaspora.
+<br><br>It is the first collection under the brand name “AMILO” which is a brand dedicated to creating Afrofuturistic inspired pieces for the modern working woman within Africa and the d
+iaspora.</p>
+            </div>
+
+             <div class="background-B">
+             </div>
+    </div>
+</div>`
+}
+
+const routes = [
+  { path: '/', component: Intro },
+  { path: '/nav', component: Nav },
+  { path: '/look-one', component: LookOne },
+  { path: '/look-two', component: LookTwo },
+  { path: '/look-three', component: LookThree },
+  { path: '/look-four', component: LookFour },
+  { path: '/look-five', component: LookFive },
+  { path: '/look-six', component: LookSix },
+  { path: '/look-seven', component: LookSeven },
+  { path: '/search', component: Search },
+  { path: '/inspo', component: Inspo },
+];
+
+
+const router = VueRouter.createRouter({
+  history: VueRouter.createWebHashHistory(),
+  routes, 
+});
+
+createApp({})
+.component('Intro', Intro)
+.component('Nav', Nav)
+.component('LookOne', LookOne)
+.component('LookTwo', LookTwo)
+.component('LookThree', LookThree)
+.component('LookFour', LookFour)
+.component('LookFive', LookFive)
+.component('LookSix', LookSix)
+.component('LookSeven', LookSeven)
+.component('Search', Search)
+.component('Inspo', Inspo)
+.use(router)
+.mount('#app');
+</script>
+
+
+</body>
+</html>
