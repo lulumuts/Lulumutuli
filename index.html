@@ -7,14 +7,24 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Phudu:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300&family=Shrikhand&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/print.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Barrio&display=swap" rel="stylesheet">
 <link rel="icon" type="image/x-icon" href="img/favicon-four.png">
 </head>
 <style>
+  .main {
+    background-image: url('img/vector_background.svg');
+    /* background-size: cover; */
+    background-position: 30% 90%;
+    background-size: 145%;
+    background-repeat: no-repeat;
+  }
 .blob {
   display: block;
   left: 200px;
   overflow: hidden;
-  background: #F5EEEB;
+  background: #8a7f7a;
 }
 
 .blob:before {
@@ -114,12 +124,15 @@
 }
 
 p {
-  color:#D2C2BB;
-  font-family: "Poppins";
+  color:#948782;
+  font-family: "Barriecito", system-ui;
+  font-weight: 400;
+  font-style: normal;
   text-align: left;
   font-size: 110%;
   font-weight: 200;
-  line-height: 64px;
+  line-height: 75px;
+  
 }
 
 .contents {
@@ -161,10 +174,11 @@ p {
 
 
  h1{
-  font-family: 'Shrikhand', serif;
-    color:#D2C2BB;
+  /* font-family: 'Shrikhand', serif; */
+  font-family: "Barriecito", system-ui;
+    color:#948782;
     text-align: left;
-    font-size: 4.5vw;
+    font-size: 4.8vw;
 }
 
 .hero .blob:after {
@@ -176,11 +190,6 @@ p {
     height: 100px;
 }
 
-.intro {
-    font-size: 32px;
-    font-weight: 100;
-    text-align:left;
-}
 
 .content {
   margin-left: 20%;
@@ -188,7 +197,7 @@ p {
 
 .hero .btn{
   color: #8a7f7a;
-  font-family: "Poppins";
+  font-family: "Barrio", system-ui;
   font-size: 22px;
   text-transform: capitalize;
   padding: 0;
@@ -196,7 +205,7 @@ p {
 }
 
 .hero .btn:hover {
-  font-family: 'Shrikhand', serif;
+  font-family: "Barriecito", system-ui;
 }
 
 .hero .btn:hover{
@@ -294,7 +303,7 @@ span:hover {
   right: 1px;
   bottom: 200px;
   left: 1px;
-  border: 10px solid rgba(245,238,235,1);
+  border: 13px solid rgba(240, 225, 218, 0.83);
   mix-blend-mode: multiply;
   animation: blobber 25s 0s ease-in-out infinite, wobbler 15s 0s linear infinite alternate;
 }
@@ -309,7 +318,8 @@ span:hover {
 }
 
 .alt-text {
-  font-family: 'Shrikhand', serif;
+  font-family: "Barrio", system-ui;
+  /* font-family: 'Shrikhand', serif; */
 }
 
 .name {
@@ -433,6 +443,7 @@ body {
 body.loaded {
   opacity: 1;
 }
+
 @media (max-width: 1300px) {
   p {
     font-size:32px;
@@ -457,9 +468,35 @@ p {
 }
 }
 </style>
+
+<style>
+  #loader {
+      border: 12px solid #c5c2c2;
+      border-radius: 50%;
+      border-top: 12px solid #444444;
+      width: 70px;
+      height: 70px;
+      animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+
+  .center {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+</style>
 <body>
-    
-  <div class="main">
+  <div id="loader" class="center"></div>
+  <div  id="content" class="main" style="display:none;">
     <div class="container-fluid hero">
       <div class="blob"></div>
       <div class="row">
@@ -486,7 +523,7 @@ p {
         </div>
         <div class="col-6 col-xs-12 content">
           <p>
-            My name is <br><span class="alt-text name">Lulu Mutuli, </span> I am a <span class="alt-text"><strong>UI/UX Designer</strong></span> <br>with a background in Frontend Development based in <span class="alt-text">Singapore.</span>
+            My name is <br><span class="alt-text name">Lulu Mutuli,<br> </span> I am a <span class="alt-text"><strong>UI/UX Designer</strong></span> <br>with a background in Frontend Development based in <span class="alt-text">Singapore.</span>
           </p>
         </div>
       </div>
@@ -497,6 +534,18 @@ p {
    
 
   </div>
+  <script>
+    document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+            document.getElementById('content').style.display = "none";
+            document.getElementById('loader').style.display = "block";
+        } else {
+            document.getElementById('loader').style.display = "none";
+            document.getElementById('content').style.display = "block";
+        }
+    };
+    </script>
+    
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->

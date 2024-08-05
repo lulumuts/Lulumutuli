@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Phudu:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;600&family=Shrikhand&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/print.css">
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Barrio&display=swap" rel="stylesheet">
 <link rel="icon" type="image/x-icon" href="img/favicon-four.png">
 </head>
 <style>
@@ -17,7 +18,9 @@ h1 {
     position: relative;
     z-index: 1!important;
     text-align:left;
-    font-family: 'Shrikhand', serif;
+  font-family: "Barrio", system-ui;
+
+    /* font-family: 'Shrikhand', serif; */
     font-size: 56px;
     margin-left: 16px;
     bottom: 180px;
@@ -83,7 +86,10 @@ body{
 
 body{
     justify-content: center;
-    background: radial-gradient(circle, rgba(225,255,0,1) 19%, rgba(245,238,235,1) 48%, rgba(250,247,245,1) 66%, rgba(255,255,255,1) 89%);
+    background-image: url('img/vector_background.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 140%;
 }
 
 body {
@@ -109,7 +115,8 @@ body.loaded {
 
 .nav .btn {
   color: #8a7f7a!important;
-  font-family: "Poppins";
+  font-family: "Barrio", system-ui;
+  /* font-family: "Poppins"; */
   font-size: 21px;
   text-transform: capitalize;
   font-weight:200;
@@ -118,8 +125,9 @@ body.loaded {
   width: 110px;
 }
 .btn:hover {
+  font-family: "Barriecito", system-ui;
   color: #8a7f7a!important;
-  font-family: 'Shrikhand', serif;
+  /* font-family: 'Shrikhand', serif; */
 }
 
 .active {
@@ -133,6 +141,12 @@ body.loaded {
     width: 95vw;
 }
 
+body{
+    justify-content: center;
+    background-image: url('img/vector_background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 }
 
 @media (max-width: 850px) {

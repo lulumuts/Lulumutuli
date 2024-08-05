@@ -13,9 +13,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Phudu:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;600&family=Shrikhand&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/print.css">
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Barrio&display=swap" rel="stylesheet">
 <link rel="icon" type="image/x-icon" href="img/favicon-four.png">
 </head>
 <style>
+    .work {
+    background-image: url('img/vector_background.svg');
+    background-position: top top;
+    background-size: 150%;
+    background-repeat: repeat-y;
+    height: auto;
+  }
+
 .blob {
   display: block;
   left: 200px;
@@ -147,7 +156,7 @@ img {
 }
 
 h2 {
-  font-family: 'Shrikhand', serif;
+  font-family: "Barrio", system-ui;
   color: #D2C2BB;
   font-size: 64px;
 }
@@ -275,11 +284,15 @@ body.loaded {
 }
 
 .nav .btn {
+  font-family: "Barrio", system-ui;
   color: #8a7f7a;
 }
-.btn:hover {
-  font-family: 'Shrikhand', serif;
+
+.nav .btn:hover{
+  font-family: "Barriecito", system-ui;
+
 }
+
 
 @media (max-width: 1100px) {
   .contents {
@@ -335,7 +348,7 @@ p{
     overflow: hidden;
 }
  .work {
-  height: 100vh;
+  background-size: 180% auto;
   width: 100vw;
  }
 
@@ -349,6 +362,10 @@ p{
 
  .afroglitch .contents {
   top: 50%;
+ }
+
+ .body {
+  height: 100vh;
  }
 }
 
