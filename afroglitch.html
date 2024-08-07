@@ -79,6 +79,7 @@
         padding: 16% 38%;
         margin-left: -10px;
         font-size: 3.5vw;
+        font-weight: 200;
         border: 2px solid #fff;
         letter-spacing: 0.15vh;
        }
@@ -190,7 +191,8 @@
        .lookFive .back-svg,
        .lookSix .back-svg,
        .lookSeven .back-svg,
-       .inspo .back-svg
+       .inspo .back-svg,
+       .search .back-svg
         {
         float: right;
         position: relative;
@@ -216,7 +218,8 @@
        .lookFour .container-fluid,
        .lookFive .container-fluid,
        .lookSix .container-fluid,
-       .lookSeven .container-fluid {
+       .lookSeven .container-fluid,
+       .search .jumbotron {
         padding: 0
        }
        
@@ -251,7 +254,6 @@
 
 .back {
     font-family: "Barrio", system-ui;
-     /* font-family: 'Shrikhand', serif; */
      position: fixed;
      top: 24px;
      right: 24px;
@@ -297,6 +299,71 @@
         .back button:focus {
             outline: none;
         }
+
+        .search .container-fluid{
+          padding: 0;
+        }
+
+        .search .back-svg {
+          color: #fff;
+        }
+        .search img {
+            width: 600px;
+            padding: 0 24px;
+            z-index: -1;
+        }
+
+        .search .card {
+          width: auto;
+        }
+        .search .jumbotron {
+          height: 70vh;
+          background-image: url('img/afroglitch_background_2.png');
+          background-size: cover;
+          padding: 0;
+          margin: 0;
+        }
+
+        .search .btn {
+          margin: auto;
+          color: rgb(175, 175, 175);
+          display:flex;
+        }
+        
+        .search a {
+          text-decoration: none!important;
+        }
+        .search .btn {
+          font-family: "Roboto Flex", sans-serif;
+          margin-top: -320px;
+          z-index: 1;
+          position: absolute;
+          margin-left: 43%;
+        }
+        
+        .search .btn:hover {
+          background-color: #e8f83a;
+          color: grey;
+        }
+
+        .search .card {
+          height: auto;
+        }
+
+        .search .card-img-overlay {
+          position:relative;
+        }
+
+        .search h1 {
+          color: #c7c3c3;
+          font-family: "Roboto Flex", sans-serif;
+          font-weight: 200;
+          letter-spacing: 10px;
+          font-size: 10vw;
+          text-align: center;
+          text-transform: uppercase;
+        }
+
        @media (max-width: 1130px) {
         .lookSeven .container {
             max-width: 100vw!important;
@@ -352,7 +419,7 @@
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="https://unpkg.com/vue-router@4"></script>
 <script>
-const { createApp, ref } = Vue;
+const { createApp, ref, onMounted } = Vue;
 const { createRouter } = VueRouter;
 
 const Intro = {
@@ -388,9 +455,11 @@ const Nav = {
         { url: '', path: '', number: '', menuLinks: [
             { name: 'HOME', url: '/'},
             { name: 'INSPO', url: '/inspo'},
-            // { name: 'PANTS', url: '/search'},
-            // { name: 'SKIRTS', url: '/search'},
-            // { name: 'DRESSES', url: '/search'},
+            { name: 'PANTS', url: '/pants'},
+            { name: 'SKIRTS', url: '/skirts'},
+            { name: 'DRESSES', url: '/dresses'},
+            { name: 'JACKETS', url: '/jackets'},
+            { name: 'TOPS', url: '/tops'},
         ] },
         { url: 'img/afroglitch_look_one.png', path: '/look-one', number: '01' },
         { url: 'img/afroglitch_look_two.png', path: '/look-two', number: '02' },
@@ -983,15 +1052,66 @@ const LookSeven = {
 }
 
 const Search= {
+    setup() {
+      const searchItems = ref([
+        { url: 'img/printed_tassled_joggers.png', name: 'PRINTED TASSLED JOGGERS', path: '/look-seven', tag: 'pants' },
+        { url: 'img/cropped_jacket.png', name: 'CROPPED JACKET', path: '/look-one', tag: 'tops' },
+        { url: 'img/flared_trousers.png', name: 'FLARED TROUSERS', path: '/look-one', tag: 'pants' },
+        { url: 'img/bell_sleeve_dress.png', name: 'BELL SLEEVE DRESS', path: '/look-two', tag: 'dresses' },
+        { url: 'img/printed_slip_dress.png', name: 'PRINTED SLIP DRESS', path: '/look-three', tag: 'dresses' },
+        { url: 'img/orange_boustier.png', name: 'ORANGE BOUSTIER', path: '/look-four', tag: 'tops' },
+        { url: 'img/silk_tassle_skirt.png', name: 'SILK TASSLE SKIRT', path: '/look-four', tag: 'skirts' },
+        { url: 'img/double_sleeved_jacket.png', name: 'DOUBLE SLEEVED JACKET', path: '/look-five', tag: 'jackets' },
+        { url: 'img/chocolate_boustier.png', name: 'CHOCOLATE BOUSTIER', path: '/look-five', tag: 'tops' },
+        { url: 'img/satin_printed_shorts.png', name: 'SATIN PRINTED SHORTS', path: '/look-five', tag: 'pants' },
+        { url: 'img/silk_sleeve_jumpsuit.png', name: 'SILK SLEEVE JUMPSUIT', path: '/look-six', tag: 'pants' },
+        { url: 'img/suede_padded_shirt.png', name: 'SUEDE PADDED SHIRT', path: '/look-seven', tag: 'tops' },
+        { url: 'img/cropped_jacket.png', name: 'CROPPED JACKET', path: '/look-one', tag: 'jackets' },
+      ]);
+      
+   
+      const title = window.location.href.split('#/')[1]
+      const finalItems = ref([]);
+      const testFunction = () => {
+       console.log(searchItems.value.map(item =>  {
+        return this.window.location.href.includes(item.tag) ? finalItems.value.push(item) : '', title
+  
+       }))
+      };
+    onMounted(testFunction);
+    return  {testFunction,searchItems, finalItems, title};
+    
+    },
     template: `
-<div class="Search">
+<div class="search">
     <div class="container-fluid">
         <router-link to="/nav" class="back-svg">
-              <svg  fill="#898888" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+              <svg  fill="#fff" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
                 <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
                 </svg>
                 <h6>back</h6>
             </router-link>
+
+            <div class="jumbotron container-fluid">
+            </div>
+
+            <h1>{{ title }}</h1>
+            <div class="container-fluid d-flex flex-row flex-wrap justify-content-center mb-5">
+                
+              <div v-for="(item, index) in finalItems" :key="index">
+               <router-link :to="item.path">
+                <div class="card">
+                  <div class="card-img-overlay">
+                    <img :src="item.url" />
+                    <button type="button" class="btn btn-light">{{item.name}}</button>
+                  </div>
+                  </div>
+                     
+              </router-link>
+              </div>
+              </div>
+        
+            
     </div>
 </div>`
 }
@@ -1035,7 +1155,11 @@ const routes = [
   { path: '/look-five', component: LookFive },
   { path: '/look-six', component: LookSix },
   { path: '/look-seven', component: LookSeven },
-  { path: '/search', component: Search },
+  { path: '/pants', component: Search },
+  { path: '/skirts', component: Search },
+  { path: '/dresses', component: Search },
+  { path: '/jackets', component: Search },
+  { path: '/tops', component: Search },
   { path: '/inspo', component: Inspo },
 ];
 

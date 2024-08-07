@@ -165,7 +165,7 @@ p {
   color: #D2C2BB;
   font-family: "Poppins";
   font-size: 22px;
-  width: 75%;
+  width: 100%;
 }
 
 .contents {
@@ -173,11 +173,12 @@ p {
   position: absolute;
   top: 25%;
   left: 58%;
-  margin-left: 16%;
+  margin-left: 13%;
 }
 
 .chewa .contents {
     padding-top: 8%;
+    
 }
 
 .redlandroses img {
@@ -185,12 +186,14 @@ p {
 }
 
 .btn-outline-primary{
-    width: 160px;
+    width: 120px;
     font-size: 16px!important;
-    font-weight: 600!important;
+    font-weight: 400!important;
     color: #D2C2BB!important;
+    font-family: "Poppins";
     border-color: #D2C2BB!important;
     box-shadow: none;
+    padding: 0;
     border-radius: 8px;
 }
 
@@ -293,6 +296,24 @@ body.loaded {
 
 }
 
+.pill {
+  font-family: "Poppins";
+  font-size: 16px;
+  width: auto;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #D2C2BB;
+  color: #D2C2BB;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  display: block;
+  margin-right: 8px;
+ }
+
+ .job-function {
+  display: flex;
+  flex-wrap: wrap;
+ }
 
 @media (max-width: 1100px) {
   .contents {
@@ -364,6 +385,8 @@ p{
   top: 50%;
  }
 
+
+
  .body {
   height: 100vh;
  }
@@ -394,6 +417,9 @@ p{
           </div>
           <div class="col-lg-6 col-md-12 contents d-flex justify-content-center">
               <h2>AIR Bridge<br> (Regulaition)</h2>
+              <div class="job-function">
+                <span class="pill">UI Design</span> <span class="pill">UX Design</span><span class="pill">Frontend Development</span><span class="pill">Case Study</span>
+              </div>
               <p>A dashboard to monitor your RPA LLM workflows.</p>
               <a href="airbridge.html"><button type="button" class="btn btn-outline-primary">See more</button></a>
           </div>
@@ -409,6 +435,9 @@ p{
             </div>
             <div class="col-lg-6 col-md-12 contents d-flex justify-content-center">
                 <h2>Hati</h2>
+                <div class="job-function">
+                  <span class="pill">UI Design</span> <span class="pill">UX Design</span><span class="pill">Case Study</span>
+                </div>
                 <p>A Ministry of Health Learning Management System.</p>
                 <a href="hati.html"><button type="button" class="btn btn-outline-primary">See more</button></a>
             </div>
@@ -423,6 +452,9 @@ p{
             </div>
             <div class="col-lg-6 col-md-12 contents d-flex justify-content-center">
                 <h2>Chewa</h2>
+                <div class="job-function">
+                  <span class="pill">UI Design</span> <span class="pill">UX Design</span><span class="pill">Case Study</span>
+                </div>
                 <p>A Language Learning Application for Native Kenyan Languages.</p>
                 <a href="chewa.html"><button type="button" class="btn btn-outline-primary">See more</button></a>
             </div>
@@ -439,6 +471,9 @@ p{
             </div>
             <div class="col-lg-6 col-md-12 contents d-flex justify-content-center">
                 <h2>Red Lands Roses</h2>
+                <div class="job-function">
+                  <span class="pill">UI Design</span><span class="pill">UX Design</span> <span class="pill">Case Study</span>
+                </div>
                 <p>A Website redesign for a Rose farm in Ruiru, Kenya.</p>
                 <a href="redlandroses.html"><button type="button" class="btn btn-outline-primary">See more</button></a>
             </div>
@@ -450,11 +485,15 @@ p{
       <div class="row ">
           <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center image-blob">
               <div class="blob"></div>
-              <img class="redlandroses" src="img/glitch_background.png" style="width: 65vh;"/>
+              <img class="redlandroses" src="img/afroglitch_cover.png" style="width: 60vh;"/>
           </div>
           <div class="col-lg-6 col-md-12 contents d-flex justify-content-center" style="z-index: 1;">
               <h2>Afroglitch</h2>
-              <p>An e-commerce prototype built with Vuejs for a fully funded, self designed and produced, fashion capsule collection. Fashion Design + UI design.</p>
+              <div class="job-function">
+                <span class="pill">UI Design</span> <span class="pill">Fashion Design</span><span class="pill">Frontend Development</span><span class="pill">POC</span> 
+              </div>
+              
+              <p>An e-commerce proof of concept built with Vuejs for a fully funded, self designed and produced, fashion capsule collection.</p>
               <a href="afroglitch.html"><button type="button" class="btn btn-outline-primary">See more</button></a>
           </div>
       </div>
