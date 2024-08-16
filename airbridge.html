@@ -218,14 +218,26 @@
             color: #112E45;
         }
 
-        .back a {
+        .back a, .next-project a {
             text-decoration: none;
         }
         .back {
   font-family: "Barrio", system-ui;
      position: fixed;
      top: 24px;
-     right: 24px;
+     right: 40px;
+     width: 100vw;
+     display: grid;
+     grid-template-columns: auto auto;
+     z-index:1;
+     justify-content: end;
+        }
+
+        .next-project {
+     font-family: "Barrio", system-ui;
+     position: fixed;
+     bottom: 24px;
+     right: 44px;
      width: 100vw;
      display: grid;
      grid-template-columns: auto auto;
@@ -240,25 +252,33 @@
         }
 
         .back-svg {
-            font-family: 'Shrikhand', serif;
-            margin-right: 10px;
-            margin-top: 4px;
+            margin-top: 5px;
+            right: 185px;
             color: #7E7D7D;
             font-size: 24px;
+            position: fixed;
         }
 
-.back button {
+        .next-project .back-svg {
+            right: 15px;
+            margin-right: 5px;
+            position: fixed;
+            transform: scale(-1,1);
+        }
+
+  
+        .back button, .next-project button {
             border: none;
             display: grid;
-            margin-bottom: 60px;
             grid-template-columns: auto auto;
             color: #7E7D7D;
             font-size: 20px;
-            width: 180px;
             background-color: transparent;
         }
-        .back button:hover {
-  font-family: "Barriecito", system-ui;
+
+        .back button:hover, 
+        .next-project button:hover {
+          font-family: "Barriecito", system-ui;
 
         }
 
@@ -288,6 +308,19 @@
         </button>
     </a>
 </div>
+
+
+<div class="next-project">
+    <a href="hati.html"> 
+        <button>
+            Next Project
+            <svg class="back-svg" fill="#7E7D7D" width="20px" height="20px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+              </svg>
+        </button>
+    </a>
+</div>
+
       <div class="card hero mb-3 d-flex justify-content-center">
         <img class="regulation-logo" src="img/RegulAItion_Logo_RGB_WhiteandRed.png" />
      <img class="center-img" src="img/Login_page.png" />
@@ -427,24 +460,24 @@ Once we all agreed on the general understanding, we moved to high fidelity wiref
                     <div class="container-fluid my-5">
                         <div class="row">
                             <div class="col-md-6">
-                                <img src="img/user-persona-one.png"/>
+                                <img src="img/user_persona_A.png"/>
                             </div>
     
                             <div class="col-md-6">
-                                <img src="img/user-persona-two.png"/>
+                                <img src="img/user_persona_B.png"/>
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row mt-5">
                             <div class="col-md-4">
-                                <img src="img/user-persona-three.png"/>
+                                <img src="img/user_persona_C.png"/>
                             </div>
                             <div class="col-md-4">
-                                <img src="img/user-persona-four.png"/>
+                                <img src="img/user_persona_D.png"/>
                             </div>
     
                             <div class="col-md-4">
-                                <img src="img/user-persona-five.png"/>
+                                <img src="img/user_persona_E.png"/>
                             </div>
                         </div>
                     </div>

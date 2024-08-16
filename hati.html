@@ -58,17 +58,31 @@
             font-size: 64px;
             font-family: 'Shrikhand', serif;
         }
+        
+        .navigation {
+            font-family: "Barrio", system-ui;
+     position: fixed;
+     bottom: 24px;
+     display: grid;
+     grid-template-columns: auto auto;
+     z-index:1;
+     justify-content: end;
+        }
 
         .back {
-            position: fixed;
             top: 24px;
             right: 24px;
             width: 100vw;
-            display: grid;
-            grid-template-columns: auto auto;
-            z-index:1;
-            justify-content: end;
         }
+
+    .next-project {
+     right: 24px;
+     }
+
+
+    .last-project {
+     left: 24px;
+    }
 
         .back h4 {
             position: fixed;
@@ -76,25 +90,31 @@
             left: 75px;
         }
 
-        .back-svg {
-            left: 32px;
-            top: 16px;
+        .back .back-svg {
+            top: 30px;
             position: fixed;
-            margin-right: 100px;
+            right: 190px;
             width: 40px;
             color: #7E7D7D;
         }
 
-        i {
-            width: 20px;
-            position: fixed;
-            top: 30px;
-            padding-right: 200px;
+        .last-project .backk-svg {
+            margin-top: 6px;
+            margin-right: 1px;
         }
 
-        .back button {
-  font-family: "Barrio", system-ui;
+        .next-project .back-svg {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            width: 40px;
+        }
 
+
+        .back button, 
+        .next-project button, 
+        .last-project button {
+            font-family: "Barrio", system-ui;
             border: none;
             display: grid;
             grid-template-columns: auto auto;
@@ -103,11 +123,22 @@
             width: 180px;
             background-color: transparent;
         }
-        .back button:hover {
+        .back button:hover, 
+        .next-project button:hover, 
+        .last-project button:hover {
   font-family: "Barriecito", system-ui;
         }
 
         .back button:focus {
+            outline: none;
+        }
+  
+        .next-project svg {
+            margin-top: 5px;
+            transform: scale(-1,1);
+        }
+
+        .navigation button:focus {
             outline: none;
         }
 
@@ -484,11 +515,35 @@ body.loaded {
 }
     </style>
   <div class="hati">
-    <div class="back">
+    <div class="back navigation">
         <a href="work.html"> 
             <button>
-                <i class="fa fa-arrow-left"></i>&nbsp;&nbsp;
+                <svg class="back-svg" fill="#7E7D7D" width="20px" height="20px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                  </svg>
                 Back to Work
+            </button>
+        </a>
+    </div>
+
+    <div class="next-project navigation">
+        <a href="chewa.html"> 
+            <button>
+                Next Project
+                <svg class="back-svg" fill="#7E7D7D" width="20px" height="20px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                  </svg>
+            </button>
+        </a>
+    </div>
+
+    <div class="last-project navigation">
+        <a href="airbridge.html"> 
+            <button>
+                <svg class="backk-svg" fill="#7E7D7D" width="20px" height="20px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                  </svg>
+                Last Project
             </button>
         </a>
     </div>
