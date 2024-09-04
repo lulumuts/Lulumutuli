@@ -1,0 +1,663 @@
+body {
+    margin:0;
+    font-family:Georgia;
+    width:100vw;
+    height:100vh;
+  }
+  
+
+#container .box {
+width:100vw;
+height:100vh;
+display:block;
+position:relative;
+}
+#container .box > div {
+height:100px;
+font-size:96px;
+color:#FFF;
+position:absolute;
+top:50%;
+left:50%;
+line-height:.7;
+font-weight:bold;
+}
+#container {
+overflow-y:scroll;
+overflow-x:hidden;
+transform: rotate(270deg) translateX(-100%);
+transform-origin: top left;
+background: linear-gradient(-20deg, #faebe7, #cbd41f, #f5afe6, #f9f9f7);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+width:100vh;
+height:100vw;
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 20%;
+    }
+    50% {
+      background-position: 100% 80%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+#container2, .two, .three, .four {
+transform: rotate(90deg) translateY(-100vh);
+transform-origin: top left;
+white-space:nowrap;
+font-size:0;
+}
+
+.one {
+  width: 100vw;
+  display: flex;
+
+}
+
+.two {
+  margin-top: 32vw;
+  padding: 10vh 0;
+  display: block !important;
+}
+
+.three {
+  margin-top: -30vw;
+  height: 200vh;
+  width: 180vh;
+  position: relative;
+  display: block;
+}
+.four {
+    margin-top: 30vw;
+    height: 200vh;
+    width: 180vh;
+}
+h1{
+  font-family: "Darker Grotesque", sans-serif;
+  margin-left: -20vw;
+  margin-top: -21vh;
+  color: #fff;
+  font-size: 10vh; 
+  text-align: left;
+  font-weight: 300;
+  position: absolute;
+}
+
+h2{
+  margin-top: 1px;
+  margin-left: -20vw;
+  color: #fff;
+  font-size: 5vh; 
+  text-align: left;
+  font-weight: 400;
+  position: absolute;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+.one .line-drawing-demo svg {
+  margin-left: -20vw;
+  position: absolute;
+  margin-top: -9vh;
+  width: 65vh;
+}
+
+.one img{
+  position: absolute;
+  margin-left: -50vw;
+  margin-top: -20vh;
+  width: 600px;
+}
+
+.two  h2 {
+  font-family: "Shrikhand", serif;
+  position: relative;
+  margin-left: 0.5vw;
+  margin-bottom: 3vw;
+  
+}
+
+.three h2 {
+  font-family: "Shrikhand", serif;
+  position: relative;
+  margin-left: 32vw;
+  padding-top: 10vh;
+}
+.work-card {
+  font-family: "Darker Grotesque", sans-serif;
+  display: block;
+  flex-wrap: wrap;
+  margin-top: -40vh;
+  margin-left: -25vh;
+  text-align: left;
+}
+
+.second-work-card {
+  margin-left: 60vh;
+}
+
+.third-work-card {
+  margin-left: 140vh;
+}
+
+.third-work-card img {
+  width: 500px;
+}
+
+.fourth-work-card {
+  margin-left: 210vh;
+}
+
+
+
+.fifth-work-card {
+  margin-left: 300vh;
+}
+
+.fifth-work-card img {
+  width: 72vh; 
+  padding-bottom: 20px;
+}
+
+
+.three .work-card svg {
+  width: 500px;
+  padding-bottom: 20px;
+}
+
+.three .second-work-card svg {
+    width: 250px;
+}
+
+
+.three .work-card img {
+  width: 56vh;
+  height: 56vh;
+}
+
+.three .work-card .air-bridge-image {
+  transform: rotate(-33deg);
+}
+
+.three .work-card .hati-image {
+  width: 560px;
+  padding-bottom: 4vh;
+  transform: rotate(28deg);
+}
+
+.three .work-card .redlandroses{
+  width: 720px;
+  mix-blend-mode: multiply;
+
+}
+.three .work-card h3 {
+  font-weight: 500;
+  font-size: 65px;
+}
+
+.three .work-card p {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 32px;
+  top: -12px;
+  position: relative;
+}
+
+.three .work-card .content {
+  margin-top: -6vh;
+  display: block;
+}
+.three .work-card button {
+  font-family: "Darker Grotesque", sans-serif;
+  position:relative;
+  justify-self: flex-start;
+  margin-top: -8vh;
+}
+
+
+
+.three .work-card .pill {
+  font-family: "Darker Grotesque", sans-serif;
+  position: relative;
+  top: -4vh;
+  bottom: 2px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  background-color: #ffffff3d;
+  font-weight: 600;
+  color: #fffefe !important;
+  padding: 2px 10px;
+  padding-bottom: 4.5px;
+  font-size:20px;
+}
+
+.two p {
+  font-size: 32px;
+  position: absolute;
+  font-weight: 400;
+  line-height: 40px;
+  font-family: "Darker Grotesque", sans-serif;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.skills-section {
+  position: relative !important;
+  top: 150px !important;
+  left: 0 !important;
+  height: 20px!important;
+}
+
+.skills {
+  margin-top: 0.5vh !important;
+  top: 1% !important;
+  left: 0 !important;
+  height: 50px;
+}
+
+.two .title {
+  font-family: "Darker Grotesque", sans-serif;
+  font-weight: 500;
+  position: relative;
+  font-size: 40px;
+  color: #fff;
+  margin-top: 12px;
+  top: 8%;
+}
+.two .pill {
+  font-family: "Darker Grotesque", sans-serif;
+  font-weight: 500 !important;
+  font-size: 24px;
+  border: 2px solid #fff;
+  border-radius: 24px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: -8px;
+  margin-top: 2px!important;
+  position: relative;
+}
+
+.design-skills {
+  height: 5px!important;
+  margin-top: 160px!important;
+}
+
+a {
+  border: none!important;
+}
+.btn-outline-primary{
+  width: 150px;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 24px!important;
+  font-weight: 500!important;
+  display: block;
+  text-transform: capitalize;
+  text-align: left;
+  color: #ffffff!important;
+  box-shadow: none;
+  padding: 0;
+  border: none !important;
+  margin-top:-2.25vh!important;
+  float: right;
+}
+
+.fa {
+    margin-top: 8px;
+}
+.btn-outline-primary:hover{
+  color: #e1ff00!important;
+  border-color: none!important;
+  fill: #e1ff00!important;
+  box-shadow: none;
+}
+.btn-outline-primary:not([disabled]):not(.disabled).active, .btn-outline-primary:not([disabled]):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+  color: #e1ff00!important;
+  border-color: none!important;
+  box-shadow: none;
+}
+
+
+.work-card .line-drawing-demo .lines svg{
+  width: 10vh!important;
+  margin-left: 0vh!important;
+}
+
+.three .fourth-work-card svg{
+    width: 620px;
+  }
+
+.three .third-work-card svg {
+    width: 360px;
+   }
+
+   .three .air-bridge-btn {
+    margin-right: -2vh!important;
+   }
+
+   .three .hati-btn {
+    margin-right: -2.5vw!important
+   }
+
+   .three .chewa-btn {
+    margin-right: 4vh!important;
+   }
+
+   .three .red-lands-btn{
+    margin-right: 8vh!important;
+   }
+
+   .three .afroglitch-btn {
+    margin-right: 12vh!important;
+   }
+@media (max-width: 850px) {
+
+  .two {
+  display: flex;
+  margin-top: 80%!important;
+}
+
+.one .line-drawing-demo svg {
+  margin-top: -8.75vh;
+  width: 65vw;
+}
+
+.skills-section {
+  top: 100px !important;
+}
+
+.one h2 {
+  margin-top: -3vh;
+  font-size: 3vh; 
+}
+
+.two {
+  height: 150vh!important;
+}
+
+.two p {
+  font-size: 32px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.two h2{
+margin-left: -110vh!important;
+}
+.two p, .skills-section{
+  margin-left: -110vh;
+}
+
+.one img{
+  margin-left: -40vh;
+}
+
+.three {
+  margin-top: -160vh;
+}
+
+.three h2 {
+  margin-left: 2vw!important;
+}
+}
+
+.bouncing-svg {
+    display: inline-block;
+    animation: bounce 1s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Add vendor prefixes for better browser support */
+  .bouncing-svg {
+    float: right; 
+    font-size: 40px;
+    -webkit-animation: bounce 1s infinite;
+    -moz-animation: bounce 1s infinite;
+    -ms-animation: bounce 1s infinite;
+    -o-animation: bounce 1s infinite;
+  }
+  
+  @-webkit-keyframes bounce {
+    0%, 100% {
+      -webkit-transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(-20px);
+    }
+  }
+  
+  @-moz-keyframes bounce {
+    0%, 100% {
+      -moz-transform: translateY(0);
+    }
+    50% {
+      -moz-transform: translateY(-20px);
+    }
+  }
+  
+  @-ms-keyframes bounce {
+    0%, 100% {
+      -ms-transform: translateY(0);
+    }
+    50% {
+      -ms-transform: translateY(-20px);
+    }
+  }
+  
+  @-o-keyframes bounce {
+    0%, 100% {
+      -o-transform: translateY(0);
+    }
+    50% {
+      -o-transform: translateY(-20px);
+    }
+  }
+
+  .modal-dialog .modal-content{
+    border-radius: 32px!important;
+  }
+  .modal-btn {
+    font-family: "Shrikhand", serif;
+    /* font-family: "Darker Grotesque", sans-serif; */
+    text-transform: capitalize;
+    z-index:1;
+    font-size: 20px;
+    font-weight: 600;
+    background: #e7fc02bf!important;
+    color: #3d4100;
+    border-radius: 16px;
+    position: absolute;
+    top: 92vh;
+    left: 2vh;
+  }
+
+  .modal-footer button {
+    font-size: 16px;
+    text-transform: capitalize;
+    background-color: #a68501!important;
+    font-family: "Shrikhand", serif;
+    font-weight: 400!important;
+  }
+
+  .modal-btn:hover {
+    color: #99a703;
+    background: #fff!important;
+  }
+
+@media (max-width: 320px) {
+
+  .two {
+  display: flex;
+  margin-top: 30%!important;
+}
+  .three  {
+      margin-top: -180vh;
+      margin-left: 10vh;
+}
+}
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+  #container .box {
+      width: 0vh;
+      display: flex;
+      margin-top: -45vw!important;
+  }
+
+  .one {
+      width: 100vh!important;
+      margin-top: 100vw!important;
+  }
+  .one h1, .one h2 {
+      margin-left: -27vh;
+  }
+
+  .one h1 {
+      margin-top: -14vh;
+      font-size: 160px;
+  }
+  .one h2 {
+      font-size: 60px;
+      font-weight: 500;
+  }
+
+  .one img {
+      margin-top: -4vh;
+      width: 900px;
+  }
+
+  .one .line-drawing-demo svg {
+  margin-top: -4.5vh;
+  margin-left: -28vh;
+  width: 80vw;
+}
+  #two {
+      margin-top: 3vw!important;
+      margin-bottom: 20vh;
+  }
+
+  #two h2 {
+      margin-left: 0!important;
+  }
+
+  #two p {
+      font-size: 45px;
+      line-height: 60px;
+      width: 40px;
+  }
+
+  #two .skills {
+      height: 110px;
+  }
+
+  #two .skills-section {
+      margin-top: 6vh;
+  }
+
+  .two .pill {
+      font-size: 32px!important;
+  }
+.three .work-card .hati-image {
+  width: 920px;
+}
+.third-work-card {
+  margin-left: 120vh;
+}
+
+
+
+.fourth-work-card {
+  margin-left: 180vh;
+}
+
+.fifth-work-card {
+  margin-left: 260vh;
+}
+.fourth-work-card img {
+  width: 120vw!important;
+}
+
+.fifth-work-card img {
+  width: 120vw!important;
+}
+
+.three .work-card svg {
+  margin-bottom: 96px;
+  width: 650px;
+}
+.three .fourth-work-card svg{
+    width: 48vh;
+  }
+
+.three .third-work-card svg {
+    width: 480px;
+   }
+
+.three .work-card .pill {
+  margin-top: 56px!important;
+  font-size: 40px;
+  padding: 10px 24px;
+}
+
+.three .work-card p {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 500;
+}
+
+.three .work-card button {
+  margin-top: 8px;
+}
+.three h2 {
+  margin-left: -24vh!important;
+}
+
+.three .second-work-card svg {
+    width: 300px;
+}
+
+
+.three .work-card .air-bridge-btn {
+    font-size: 2vh!important;
+    width: 20%!important;
+    padding-top: 8%;
+    margin-right: 8vh!important;
+   }
+
+   .three .work-card .hati-btn {
+    padding-top: 8%;
+    width: 22%!important;
+    font-size: 2vh!important;
+    margin-right: 5.5vh!important
+   }
+
+   .three .chewa-btn {
+    padding-top: 8%;
+    width: 22%!important;
+    font-size: 2vh!important;
+    margin-right: 18vh!important
+   }
+
+   .three .red-lands-btn{
+    margin-right: 8vh!important;
+   }
+
+   .three .afroglitch-btn {
+    margin-right: 12vh!important;
+   }
+}

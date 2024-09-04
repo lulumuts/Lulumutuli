@@ -1,0 +1,479 @@
+body {
+    font-family: "Poppins";
+    color: #7E7D7D;
+    line-height: 32px;
+}
+.image{
+    background-image: url('../img/redlandroses-hero-image.png');
+    background-size: cover;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: bottom 100%;
+    height: 600px;
+}
+
+.container-fluid {
+    padding:0;
+    overflow: hidden;
+}
+
+p {
+    font-size: 16px;
+}
+
+.intro {
+    margin: 100px 150px 50px 160px;
+}
+
+.statement {
+    display: block;
+}
+
+.hero-title{
+    margin: auto;
+}
+
+
+h1, h2 {
+    font-family: 'Shrikhand', serif;
+}
+h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.intro p{
+    width: 75%; 
+}
+.competitive-analysis {
+    margin: 32px 0;
+    text-align: center;
+}
+
+.competitive-analysis p {
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#customers {
+   font-family: Arial, Helvetica, sans-serif;
+   border-collapse: collapse;
+}
+
+#customers td, #customers th {
+padding: 8px;
+}
+
+#customers th {
+font-family: "Poppins";
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: center;
+font-weight: 600;
+color: #7E7D7D;
+}
+
+.table {
+align-self:center;
+justify-content: center;
+border-collapse: collapse;
+margin: 88px 0;
+}
+
+.table td, .table th {
+border-top: none;
+}
+
+
+#customers{
+border: none!important;
+}
+
+.table  img {
+width: 160px;
+}
+.close {
+width: 40px;
+opacity: 1;
+text-align: center;
+float: none;
+}
+
+.check {
+width: 40px;
+}
+
+.box {
+width: 500px;
+height:400px;
+background-color: #EF7C6A;
+color: white;
+margin: auto;
+border-radius: 24px;
+padding: 80px;
+margin-bottom: 72px;
+}
+
+.hero{
+background-color: #EF7C6A;
+}
+
+.hero h1, .hero p {
+color: white;
+}
+.wireframe-section {
+padding: 0 150px;
+}
+
+.wireframes {
+text-align: center;
+margin: 0 40px;
+}
+
+.wireframes h4, .wireframes p, .wireframes li{
+text-align: left;
+}
+
+.wireframe-title {
+text-align: center;
+margin: 40px  0;
+}
+
+.wireframe-svg{
+margin-top: 20px;
+width: 100%;
+}
+
+h4 {
+font-weight: 600;
+margin-bottom: 48px;
+}
+.sitemap {
+background-color: #EF7C6A;
+width: 900px;
+border-radius: 16px;
+
+margin: 120px auto;
+}
+.sitemap h2 {
+text-align: center;
+padding-top: 70px;
+color: white;
+}
+
+.sitemap img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding: 48px;
+width: 850px;
+}
+
+.final {
+margin: 0 8vw;
+}
+
+.final .content {
+top: 50px;
+left: 5vw;
+}
+
+.final img {
+width: 900px;
+right: 90px;
+top: 200px;
+position: relative;
+}
+
+.final-two {
+margin: 0 10vw;
+}
+
+.final-two li {
+width: 80%;
+}
+
+.final-two  img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 800px;
+}
+
+.final-three  img{
+position: relative;
+width: 900px;
+top: 100px;
+}
+
+.final-three .content{
+left: 16vh;
+top:120px;
+}
+
+.final-three li {
+width: 75%;
+}
+
+.final-four  img{
+position: relative;
+right:  300px;
+width: 900px;
+top:200px;
+}
+.final-four {
+margin: 0 10vw 12vw 10vw;
+}
+
+.final-four .content{
+top: 220px;
+}
+
+.final h2 {
+text-align: center;
+margin: 96px 0; 
+}
+
+
+.final .content{
+margin: 40px 0;
+}
+
+ul {
+margin: 0;
+padding: 0;
+}
+.final li, .final-two li, .final-three li, .final-four li{
+background-color: #F5F5F5;
+padding: 24px;
+list-style-type: none;
+border-radius: 8px;
+margin-top: 16px;
+}
+
+.back {
+font-family: 'Shrikhand', serif;
+position: fixed;
+top: 24px;
+right: 2px;
+width: 170vw;
+display: grid;
+grid-template-columns: auto auto;
+z-index:1;
+justify-content: end;
+}
+
+.back h4 {
+    position: fixed;
+    color: #7E7D7D;
+    /* left: 75px; */
+}
+
+.back-svg {
+    left: 24px;
+    top: 16px;
+    position: fixed;
+    margin-right: 200px;
+    width: 40px;
+    color: #7E7D7D;
+}
+
+i {
+    width: 20px;
+    position: fixed;
+    top: 30px;
+    font-size: 20px;
+    padding-right: 200px;
+}
+
+.back button {
+    border: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    color: #7E7D7D;
+    font-size: 20px;
+    width: 200px;
+    background-color: transparent;
+}
+.back button:hover {
+    left: 24px;
+    top: 16px;
+font-size: 21px;
+}
+
+.back button:focus {
+    outline: none;
+}
+
+.last-project, .last-project i {
+    position: fixed;
+    top: 95vh;
+    left: 200px;
+    width: 40px;
+}
+
+.last-project i {
+    top: 95.5vh;
+    font-size: 20px;
+    left: 56px;
+}
+
+.next-project  {
+    position: fixed;
+    top: 95.5vh;
+    right: 46px;
+    width: 40px;
+}
+
+.next-project  i {
+    top: 96vh;
+    transform: rotate(180deg);
+    font-size: 20px;
+    right: 48px;
+}
+
+
+@keyframes fadeInAnimation {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+body {
+animation: fadeInAnimation 6s ease;
+}
+body {
+transition: opacity 6s ease;
+}
+
+body.loaded {
+opacity: 1;
+}
+@media (max-width: 1300px) {
+
+.hero {
+margin-bottom: 80px;
+}
+.intro {
+margin: 20px;
+line-height: 32px;
+}
+
+.wireframe-section {
+padding: 0 10px;
+}
+
+.final img {
+position: relative;
+right: 60px;
+}
+
+.final-three .content{
+top: 120px;
+left: 10vh;
+width: 80%;
+}
+
+.final-three  img{
+width: 700px;
+}
+}
+
+@media (max-width: 1162px) {
+#customers{
+margin-left: 15vw;
+}
+
+.final {
+margin: 0 8vw;
+}
+
+.final img {
+position: relative;
+right: 188px;
+}
+
+.final-two img {
+position: relative;
+right: 160px;
+}
+
+.final-three .content{
+top: 10px;
+}
+
+.final-three .content li{
+width: 80%;
+}
+
+.hero-title {
+padding-top: 100px;
+padding-bottom: 100px;
+padding-left: 80px;
+}
+
+.competitive-analysis p, .sitemap, .sitemap img {
+width: 100%;
+}
+}
+
+@media (max-width: 895px) {
+#customers{
+margin-left: 5vw;
+}
+
+.final-three .content {
+left: 8vh;
+}
+.final-three  img{
+width: 800px;
+}
+
+.final-four .content{
+top: 20px;
+}
+
+
+}
+
+@media (max-width: 583px) {
+
+h2 {
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.final img {
+top: 0;
+right: 240px;
+}
+#customers{
+margin-left: 64vw;
+}
+
+.box {
+padding: 12%;
+}
+.final-four img{
+position: relative;
+right: 400px;
+top: 0;
+}
+
+.final-three img {
+top: 0;
+}
+.final .content {
+left: 0;
+}
+
+.final-two li, .final-three .content li {
+width: 100%;
+}
+
+}

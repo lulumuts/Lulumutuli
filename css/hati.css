@@ -1,0 +1,501 @@
+body {
+    font-family: "Poppins";
+    color: #7E7D7D;
+    line-height: 32px;
+}
+.image{
+    background-image: url('../img/iPad Mini 2021- Hati.png');
+    background-size: cover;
+    background-color: #F5F5F5;
+    background-repeat: no-repeat;
+    background-position: -145px 8px;
+    height: 1000px;
+}
+
+.container-fluid {
+    padding:0;
+    overflow: hidden;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.intro {
+    margin: 100px 150px 50px 160px;
+}
+
+.statement {
+    display: block;
+}
+
+.hero {
+    background-color: #F5F5F5;
+}
+.hero-title{
+    margin: auto 0;
+    padding: 80px;
+}
+
+
+.hero-title h1 {
+    font-size: 64px;
+    font-family: 'Shrikhand', serif;
+}
+
+.navigation {
+    font-family: "Shrikhand", serif;
+position: fixed;
+bottom: 24px;
+display: grid;
+grid-template-columns: auto auto;
+z-index:1;
+justify-content: end;
+}
+
+.back {
+    top: 24px;
+    right: 24px;
+    width: 100vw;
+}
+
+.next-project {
+right: 24px;
+}
+
+
+.last-project {
+left: 24px;
+}
+
+.back h4 {
+    position: fixed;
+    color: #7E7D7D;
+    left: 75px;
+}
+
+.back .back-svg {
+    top: 30px;
+    position: fixed;
+    right: 190px;
+    width: 40px;
+    color: #7E7D7D;
+}
+
+.last-project .backk-svg {
+    margin-top: 6px;
+    margin-right: 1px;
+}
+
+.next-project .back-svg {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 40px;
+}
+
+
+.back button, 
+.next-project button, 
+.last-project button {
+    font-family: "Shrikhand", serif;
+    border: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    color: #7E7D7D;
+    font-size: 20px;
+    width: 180px;
+    background-color: transparent;
+}
+.back button:hover, 
+.next-project button:hover, 
+.last-project button:hover {
+font-size:22px;
+
+}
+
+.back button:focus {
+    outline: none;
+}
+
+.next-project svg {
+    margin-top: 5px;
+    transform: scale(-1,1);
+}
+
+.navigation button:focus {
+    outline: none;
+}
+
+.hero-title p {
+    font-size: 24px;
+}
+h2 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.objectives, .role, .statement, .research {
+    font-family: "Poppins";
+    width: 75%;
+    display: block;
+    margin: auto 180px;
+    position: relative;
+}
+
+.objectives li {
+    font-size: 18px;
+    font-weight: 200;
+}
+.research {
+    margin:  80px 120px; 
+    width: 100%;
+}
+
+.research p {
+    width:75%;
+}
+span {
+background-color: #F5F5F5;
+margin: auto;
+position: relative;
+height: auto;
+margin-top: 20px;
+display: block;
+padding:  24px;
+text-align: left;
+border-radius: 16px;
+font-weight: 600;
+
+}
+
+.research-section, .research-section-two{
+margin: 160px 100px;
+}
+
+.first-section {
+margin-top: 0;
+}
+
+.research-section p {
+width: 100px;
+}
+
+.research-section li {
+margin-top: 16px;
+list-style-type: none;
+}
+
+ul {
+padding: 0;
+}
+
+.card {
+box-shadow: none;
+font-family: "Poppins";
+color: #868383!important;
+margin: auto;
+}
+
+.card .content{
+margin: 10px 0;
+}
+
+.card .content h5 {
+margin: 0;
+}
+
+.card-text{
+width: 100%;
+font-weight: 200!important;
+font-size: 16px!important;
+}
+
+.card-title{
+font-weight: 600!important;
+}
+
+.user-flow img {
+position: relative;
+display:flex;
+width: 80vw;
+flex-direction: column;
+align-items: center;
+}
+
+.final-designs {
+background-color:#C6D0CE;
+text-align: center;
+margin: 0;
+}
+
+.final-designs img {
+width: 800px;
+margin: auto;
+display: block;
+}
+
+.final-designs .content {
+width: 70vw;
+margin: auto;
+padding: 64px;
+color: #fff;
+}
+
+.final-designs-two {
+margin: 80px 110px;
+}
+
+.final-designs-two .content {
+width: 80%;
+
+}
+.final-designs-two img {
+width: 40vw;
+position: relative;
+right: 60px;
+}
+
+.homepage img{
+width: 45vw;
+right: 20%;
+}
+
+
+.course-details {
+padding: 120px 100px;
+background-color: #F0F0F0;
+}
+
+.course-details p{
+width: 90%;
+}
+
+.course-details img {
+width: 540px;
+}
+
+.quiz-section img {
+width: 640px;
+right: 40px;
+position: relative;
+}
+
+
+.quiz-section h3, .download-files h3 {
+font-weight: 400;
+padding-bottom: 20px;
+} 
+
+.quiz-section {
+padding: 120px 300px 10px 300px;
+}
+
+.download-files {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.download-files img{
+margin: auto;
+width: 800px;
+padding-bottom: 100px;
+}
+
+
+.final-thoughts {
+text-align: center;
+margin: 60px 200px;
+}
+.final-thoughts .content{
+width: 200px;
+}
+
+.final-thoughts p {
+text-align: left;
+}
+
+.final-thoughts iframe{
+width: 600px;
+height: 400px;
+border-radius: 20px;
+background-color: #C6D0CE;
+}
+
+
+.user-flow img {
+width: 60vw;
+display: flex;
+align-self: center;
+margin: auto;
+}
+
+
+@keyframes fadeInAnimation {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+body {
+animation: fadeInAnimation 6s ease;
+}
+body {
+transition: opacity 6s ease;
+}
+
+body.loaded {
+opacity: 1;
+}
+@media (max-width: 1535px) {
+
+
+.course-details {
+padding: 120px 100px;
+background-color: #F0F0F0;
+}
+
+.quiz-section {
+padding: 120px 110px 10px 110px;
+}
+
+.final-thoughts iframe{
+width: 400px;
+height: 300px;
+}
+
+.user-flow img {
+width: 80vw;
+}
+}
+
+@media (max-width: 1190px) {
+.quiz-section {
+padding: 120px 20px 20px 20px;
+text-align: center;
+}
+.quiz-section img {
+position: relative;
+left: 2%;
+width: 500px;
+}
+
+.course-details {
+padding: 120px 40px;
+background-color: #F0F0F0;
+}
+
+.course-details img {
+width: 450px;
+display: flex;
+margin: auto;
+}
+.final-thoughts {
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 100px 10px 10px 10px;
+}
+
+.final-thoughts .content{
+width: 100%;
+}
+.download-files img{
+margin: auto;
+width: 500px;
+}
+
+.course-details p{
+width: 100%;
+}
+
+.course-details h3{
+margin-top: 4%;
+}
+}
+@media (max-width: 1043px) {
+
+.role, .objectives{
+margin: auto 40px;
+}
+
+.user-personas, .user-flow {
+margin: 80px 10px;
+}
+.course-details {
+text-align: center;
+}
+.course-details h3 {
+padding-top: 40px;
+}
+
+.course-details h3, .course-details p {
+padding: 0 80px;
+}
+
+.final-designs img{
+right: 120px;
+position: relative;
+}
+
+.final-thoughts p {
+margin-top: 10px;
+}
+
+.final-thoughts iframe{
+width: 500px;
+height: 300px;
+}
+}
+
+@media (max-width: 920px) {
+.final-designs img {
+width: 600px;
+right:30px;
+}
+
+
+}
+@media (max-width: 895px) {
+
+
+.quiz-section img {
+width: 500px;
+right: 200px;
+position: relative;
+}
+.role, .objectives{
+margin: auto 40px;
+}
+.research {
+margin-top: 60px;
+}
+.research-section, .research{
+margin: 50px 30px 20px 50px;
+}
+
+}
+
+@media (max-width: 765px) {
+
+.final-designs-two img {
+width: 80vw;
+right: 100px;
+}
+
+.final-designs img {
+width: 68vw;
+position: relative;
+}
+.incorrect img {
+left: -20px;
+position: relative;
+}
+
+}

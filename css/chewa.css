@@ -1,0 +1,467 @@
+body {
+    font-family: "Poppins";
+    color: #7E7D7D;
+    line-height: 32px;
+}
+.image{
+    background-image: url('../img/chewa-hero-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -20px -20px;
+    height: 1000px;
+}
+
+.container-fluid {
+    padding:0;
+    overflow: hidden;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.hero-title{
+    margin: auto 0;
+    padding: 80px;
+}
+
+
+.hero-title h1 {
+    font-size: 82px;
+    font-family: 'Shrikhand', serif;
+}
+
+.hero-title p {
+    font-size: 24px;
+    width: 400px;
+    line-height: 40px;
+}
+
+h1 {
+    font-family: 'Shrikhand', serif;
+}
+
+h2 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.objectives, .role, .statement {
+    font-family: "Poppins";
+    width: 75%;
+    display: block;
+    margin: auto 160px;
+    position: relative;
+}
+
+.results {
+    margin: auto 4vh;
+    position: relative;
+}
+
+.results img {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+
+.wikipedia-screenshot {
+    width: 450px!important;
+    position: relative;
+    left: 10px;
+}
+
+.wikipedia-text{
+    width: 500px;
+    display: grid;
+    justify-content: center;
+    font-family: "Poppins";
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 40px;
+}
+
+.wikipedia-body{
+    width: 40vw;
+    font-family: "Poppins";
+    text-align: justify;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.wireframes {
+    margin: auto 20vw;
+}
+
+.wireframes img{
+    width: 100%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-self: center;
+}
+
+.intro {
+    margin: 0 100px;
+}
+
+.objectives li {
+    font-size: 18px;
+    font-weight: 200;
+}
+.research {
+    width: 100%;
+}
+
+.results-container {
+    max-width: 75vw;
+}
+
+.introduction {
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+.sketches img{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-self: center;
+}
+
+
+.research-section, .research-section-two{
+margin: 160px 100px;
+}
+
+.research-section p {
+width: 100px;
+}
+
+
+.card {
+box-shadow: none;
+font-family: "Poppins";
+color: #868383!important;
+margin: auto;
+}
+
+.card .content{
+margin: 10px 0;
+}
+
+.card .content h5 {
+margin: 0;
+}
+
+.card-text{
+width: 100%;
+font-weight: 200!important;
+font-size: 16px!important;
+}
+
+.card-title{
+font-weight: 600!important;
+}
+
+.user-personas{
+margin: auto 200px;
+}
+
+.marvel-device.iphone8 {
+height: 649px;
+width: 375px;
+position: relative;
+display: flex;
+align-self: center;
+justify-content: center;
+left: 16vh;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.marvel-device .screen {
+-webkit-box-shadow: none!important;
+}
+
+.gif-description {
+margin: auto;
+display: flex;
+position: relative;
+justify-content: center;
+align-items: center;
+}
+
+
+
+.gif-description2 p {
+width:100%;
+text-align: justify;
+}
+
+.final-designs {
+margin: auto;
+position: relative;
+}
+
+.screen img {
+width: 100%;
+}
+
+.chewa-authentication-A, .chewa-authentication-B{
+position: relative;
+right: 8vw;
+}
+
+.lesson .marvel-device.iphone8 {
+position: relative;
+margin: auto;
+display: flex;
+justify-content: center;
+align-self: center;
+left: 0;
+height: 962px;
+}
+
+.user-personas,
+.wireframes {
+margin-top: 40px!important;
+margin-bottom: 140px;
+}
+
+.wireframes h1,  .sketches h1{
+margin-bottom: 70px;
+}
+
+.testing-flow,
+.landing-page, 
+.learning-flow, 
+.authentication, 
+.lesson-content, 
+.lesson-audio {
+margin-top: 140px!important;
+margin-bottom: 140px; 
+}
+
+.testing-flow p,
+.landing-page p, 
+.learning-flow p, 
+.authentication p, 
+.lesson-content p, 
+.lesson-audio p{
+text-align: justify;
+width: 80%;
+}
+
+
+.lesson-audio  .marvel-device.iphone8 {
+height: 969px!important;
+margin: auto;
+display: flex;
+left: 0;
+}
+
+.authentication .marvel-device.iphone8 {
+height: 70%;
+}
+
+.lesson-audio p {
+width: 50%;
+display: flex;
+margin: auto;
+padding-bottom: 120px;
+}
+
+.navigation {
+font-family: "Barrio", system-ui;
+position: fixed;
+bottom: 24px;
+display: grid;
+grid-template-columns: auto auto;
+z-index:1;
+justify-content: end;
+}
+
+.back {
+    top: 24px;
+    right: 24px;
+    width: 100vw;
+}
+
+.next-project {
+right: 24px;
+}
+
+
+.last-project {
+left: 24px;
+}
+
+.back h4 {
+    position: fixed;
+    color: #7E7D7D;
+    left: 75px;
+}
+
+.back-svg {
+    top: 30px;
+    position: fixed;
+    right: 190px;
+    width: 40px;
+    color: #7E7D7D;
+}
+
+.last-project .backk-svg{
+left: 44px;
+margin-top: 5px;
+}
+
+.back button, 
+.next-project button, 
+.last-project button {
+    font-family: "Shrikhand", serif;
+    border: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    color: #7E7D7D;
+    font-size: 20px;
+    width: 180px;
+    background-color: transparent;
+}
+.back button:hover, .next-project button:hover, .last-project button:hover {
+ font-size: 21.5px;
+}
+
+.back button:focus,
+.next-project button:focus,
+.last-project button:focus {
+    outline: none;
+}
+
+.next-project svg {
+    position: fixed;
+    right: 30px;
+    margin-top: 5px;
+    transform: scale(-1,1);
+}
+
+
+@keyframes fadeInAnimation {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+body {
+animation: fadeInAnimation 6s ease;
+}
+body {
+transition: opacity 6s ease;
+}
+
+body.loaded {
+opacity: 1;
+}
+
+@media (min-width: 1625px) {
+.landing-page  .marvel-device.iphone8, 
+.testing-flow  .marvel-device.iphone8, 
+.learning-flow .marvel-device.iphone8,
+.authentication .marvel-device.iphone8 {
+left: 35%!important;
+}
+
+}
+@media (max-width: 1190px) {
+.wikipedia-body, .wikipedia-text{
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 32px;
+}
+.chewa-authentication-A, .chewa-authentication-B{
+position: relative;
+}
+
+.testing-flow  .marvel-device.iphone8, 
+.learning-flow .marvel-device.iphone8,
+.authentication .marvel-device.iphone8 {
+left: 30%!important;
+}
+.lesson-audio {
+margin-top: 30px!important;
+}
+.lesson-audio p {
+width: 80%;
+text-align: justify;
+margin: auto;
+padding-bottom: 64px;
+}
+
+.lesson-content {
+margin-bottom: 80px;
+}
+.lesson-content .marvel-device.iphone8 {
+left: 30%;
+}
+
+.testing-flow .content, .landing-page .content, .learning-flow .content {
+margin-top: 8%;
+}
+
+.landing-page, .learning-flow {
+margin-bottom: 10px;
+}
+}
+
+
+@media (max-width: 765px) {
+.results-container {
+margin: 10px 0;
+position: relative;
+left: 80px;
+}
+.wikipedia-text {
+position: relative;
+right: 80px;
+}
+
+.chewa-authentication-A, .chewa-authentication-B{
+position: relative;
+margin-bottom: 20px;
+}
+.gif-description p {
+width: 100%;
+}
+.user-personas {
+margin:auto;
+}
+.landing-page .marvel-device.iphone8 {
+position: relative;
+left: -6%!important;
+margin: auto;
+}
+
+.testing-flow  .marvel-device.iphone8 {
+left: -3%!important;
+}
+
+.learning-flow .marvel-device.iphone8 {
+left: -3%!important;
+} 
+.authentication .marvel-device.iphone8 {
+left: 12%!important;
+}
+
+.lesson-content .marvel-device.iphone8 {
+left: -3vw;
+right: 100vw!important;
+}
+
+}

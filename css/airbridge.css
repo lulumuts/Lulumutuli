@@ -1,0 +1,281 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.hero {
+    margin: 8vh 5vh 5vh 5vh;
+    border-radius: 24px;
+    background-image: url('../img/AIR-LOGIN.jpg');
+    background-position: center -20vh; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+}
+
+.center-img {
+    width: 50%;
+    margin: 0 auto;
+}
+.regulation-logo {
+    width: 250px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.info {
+    padding: 36px 0;
+    display: block;
+    margin: auto 16vw;
+    color: #757575;
+}
+
+.info p{
+    text-align: justify;
+}
+
+h1 {
+    padding: 36px 0;
+}
+
+.pill {
+    border: 1.5px solid #757575;
+    border-radius: 24px;
+    padding: 8px 16px;
+    margin: 8px;
+}
+
+.market-research img{
+    width: 100%;
+}
+
+.market-research .card {
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 16px;
+    border: 3px solid #EDEFF1;
+    background: #FFF;
+    padding: 20px;
+    height: 100%;
+}
+
+.market-research .info-card {
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 16px;
+    border: 3px solid #EDEFF1;
+    color: #fff;
+    background: #112E45;
+    padding: 56px;
+}
+
+.market-research p {
+    text-align: center;
+}
+
+.market-research .enlarged-text {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.ui-path {
+    width: 80%!important;
+    margin: 10%;
+}
+
+.wireframe .card {
+    background-image: url('../img/low-fidelity-wireframe.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.09);
+    height: 400px;
+    width: auto;
+    margin: 24px;
+    border-radius: 16px;
+    border: 3px solid #EDEFF1;
+    background-position: -1px 0;
+}
+
+.wireframe{
+    width: auto;
+    height: 60vh;
+    margin: 0;
+    background-image: url('../img/wireframes.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.personas-container {
+    background-color: #E3F2FD;
+    margin-bottom: 10vh;
+}
+.personas img {
+    width: 100%;
+}
+
+.typography {
+    font-family: "Roboto", sans-serif;
+    font-size: 64px;
+    color: #D9D9D9;
+    margin: 72px 0;
+
+}
+
+.medium {
+    font-weight: 500;
+    font-size: 64px;
+}
+
+.regular {
+    font-weight: 400;
+    font-size: 64px;
+}
+
+.light {
+    font-weight: 300;
+    font-size: 64px;
+}
+
+.colours, .components {
+    margin: 72px 0;
+}
+.colours img{
+    width: 100%;
+}
+
+.components img {
+    width: 100%;
+}
+
+.components-img{
+    width: 50%;
+}
+
+.design-library {
+    width: 80%;
+    padding: 8vw;
+    margin: auto;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 16px;
+    border: 3px solid #EDEFF1;   
+    color: #757575;
+}
+
+.design-library .info{
+    display: block;
+    margin: auto 8vw;
+}
+
+.design-library h1{
+    color: #757575;
+    padding-top: 0!important;
+}
+
+
+.high-fidelity img {
+    width: 100%;
+}
+
+.high-fidelity-background {
+    height: 48vh;
+    background-color:#E3F2FD;
+    z-index: -1;
+    position: absolute;
+    display: block;
+    margin-top: -60vw;
+}
+
+.market-placement-research img{
+    width: 75%;
+}
+
+.outro {
+    background-color: #E3F2FD;
+}
+
+.outro h1 {
+    color: #112E45;
+}
+
+.back a, .next-project a {
+    text-decoration: none;
+}
+.back {
+font-family: "Shrikhand", serif;
+position: fixed;
+top: 24px;
+right: 40px;
+width: 100vw;
+display: grid;
+grid-template-columns: auto auto;
+z-index:1;
+justify-content: end;
+}
+
+.next-project {
+font-family: "Shrikhand", serif;
+position: fixed;
+bottom: 24px;
+right: 44px;
+width: 100vw;
+display: grid;
+grid-template-columns: auto auto;
+z-index:1;
+justify-content: end;
+}
+
+.back h4 {
+    position: fixed;
+    color: #7E7D7D;
+    left: 75px;
+}
+
+.back-svg {
+    margin-top: 5px;
+    right: 200px;
+    color: #7E7D7D;
+    font-size: 24px;
+    position: fixed;
+}
+
+.next-project .back-svg {
+    right: 15px;
+    margin-right: 5px;
+    transform: scale(-1,1);
+    position: fixed;
+}
+
+
+.back button, .next-project button {
+    border: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    color: #7E7D7D;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.back button:hover, 
+.next-project button:hover {
+  font-size: 21px;
+
+}
+
+.back button:focus {
+    outline: none;
+}
+
+@media (max-width: 700px) {
+    .hero {
+    height: 60vh;
+    background-position: center; 
+}
+.personas-container img {
+    margin-top: 20px;
+}
+
+}

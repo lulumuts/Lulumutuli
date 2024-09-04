@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lulu Mutuli Portfolio</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Phudu:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300&family=Shrikhand&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/print.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Barrio&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="img/favicon-four.png">
+</head>
+<style>
+  .main {
+    background-image: url('img/vector_background.svg');
+    /* background-size: cover; */
+    background-position: 30% 90%;
+    background-size: 145%;
+    background-repeat: no-repeat;
+  }
+.blob {
+  display: block;
+  left: 200px;
+  overflow: hidden;
+  background: #8a7f7a;
+}
+
+.blob:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  bottom: 3px;
+  left: 40px;
+  mix-blend-mode: multiply;
+  animation: blobber 20s 0s linear infinite, cobler 2s 0s linear infinite alternate;
+}
+
+@keyframes blobber {
+  0% {
+    border-radius: 28% 22% 68% 32% / 42% 28% 72% 58%;
+  }
+  5% {
+    border-radius: 48% 52% 41% 29% / 66% 37% 63% 34%;
+  }
+  10% {
+    border-radius: 69% 31% 71% 29% / 67% 31% 69% 33%;
+  }
+  15% {
+    border-radius: 60% 40% 71% 29% / 63% 65% 35% 37%;
+  }
+  20% {
+    border-radius: 61% 39% 51% 49% / 57% 58% 42% 43%;
+  }
+  25% {
+    border-radius: 66% 34% 25% 75% / 47% 30% 70% 53%;
+  }
+  30% {
+    border-radius: 32% 68% 38% 62% / 65% 60% 40% 35%;
+  }
+  35% {
+    border-radius: 63% 37% 41% 59% / 35% 38% 62% 65%;
+  }
+  40% {
+    border-radius: 57% 43% 49% 51% / 55% 71% 29% 45%;
+  }
+  45% {
+    border-radius: 47% 53% 34% 66% / 65% 36% 64% 35%;
+  }
+  50% {
+    border-radius: 44% 56% 32% 68% / 69% 26% 74% 31%;
+  }
+  55% {
+    border-radius: 28% 72% 37% 63% / 71% 44% 56% 29%;
+  }
+  60% {
+    border-radius: 38% 62% 35% 65% / 74% 53% 47% 26%;
+  }
+  65% {
+    border-radius: 73% 27% 46% 54% / 54% 47% 53% 46%;
+  }
+  70% {
+    border-radius: 75% 25% 47% 53% / 49% 53% 47% 51%;
+  }
+  75% {
+    border-radius: 62% 38% 43% 57% / 85% 60% 40% 45%;
+  }
+  80% {
+    border-radius: 41% 59% 65% 35% / 73% 50% 50% 27%;
+  }
+  85% {
+    border-radius: 55% 45% 57% 43% / 73% 61% 39% 27%;
+  }
+  90% {
+    border-radius: 74% 26% 33% 67% / 40% 65% 35% 60%;
+  }
+  95% {
+    border-radius: 58% 42% 57% 43% / 53% 45% 55% 47%;
+  }
+  100% {
+    border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%;
+  }
+}
+
+
+@keyframes cobler {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+
+
+.container-fluid {
+    position: relative;
+    text-align: left;
+}
+
+p {
+  color:#948782;
+  font-family: "Poppins";
+  font-style: normal;
+  text-align: left;
+  font-size: 100%;
+  font-weight: 200;
+  
+}
+
+.contents {
+  flex-direction: column;
+  position: absolute;
+  top: 25%;
+  left: 60%;
+  margin-left: 16%;
+}
+
+.chewa .contents {
+    padding-top: 10%;
+}
+
+.redlandroses img {
+  margin-right: 35%;
+}
+
+.btn-outline-primary{
+    color: #D2C2BB!important;
+    border-color: #D2C2BB!important;
+    box-shadow: none;
+    width: 140px;
+    border-radius: 8px;
+    float:right;
+}
+
+.btn-outline-primary:hover{
+    background-color: #D2C2BB!important;
+    color: #fff!important;
+    border-color: #D2C2BB!important;
+    box-shadow: none;
+}
+
+.image-blob {
+    margin-left: 160px;
+    padding: 1px;
+}
+
+
+ h1{
+  font-family: "Barriecito", system-ui;
+    color:#948782;
+    text-align: left;
+    font-size: 4.8vw;
+}
+
+.hero .blob:after {
+    display: none;
+}
+
+.hero .container-fluid {
+  position: absolute;
+}
+
+
+.content {
+  margin-left: 20%;
+}
+
+.hero .btn{
+  color: #8a7f7a;
+  font-family: "Barrio", system-ui;
+  font-size: 22px;
+  text-transform: capitalize;
+  padding: 0;
+  font-weight:200;
+}
+
+.hero .btn:hover {
+  font-family: "Barriecito", system-ui;
+}
+
+.hero .btn:hover{
+    font-weight: 600;
+}
+
+span {
+  font-weight: 400;
+}
+span:hover {
+    color: #e1ff00;;
+}
+  
+  svg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+     top: 0;
+     left: 0;
+     z-index:-1
+  }
+
+  
+
+@media (max-width: 1300px) {
+  .contents {
+    top: 65%;
+    margin-left: 10%;
+    left: 0;
+}
+
+.container-fluid {
+    padding: 0 10%;
+    margin: auto;
+}
+ .main {
+  width: 100vw;
+ }
+
+ .resume-btn {
+  right: 20px;
+ }
+
+.hero p {
+  font-size:24px;
+}
+
+.hero .container {
+    width: 80vw;
+}
+
+.blob:before {
+  right: 1px;
+  left: 1px;
+}
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.circle {
+  background: #e1ff00;
+  width: 600px;
+  height: 600px;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  overflow: hidden;
+  margin-left: 45%;
+  animation: blobber 20s 0s linear infinite, cobler 2s 0s linear infinite alternate;
+}
+
+.circle:before {
+  padding: 0 2%;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 300px;
+  right: 10px;
+  bottom: 300px;
+  left: 1px;
+  mix-blend-mode: multiply;
+  
+}
+
+.circle:after {
+  padding: 0 25%;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 200px;
+  right: 200px;
+  bottom: 200px;
+  left: 450px;
+  border: 13px solid rgba(240, 225, 218, 0.83);
+  mix-blend-mode: multiply;
+  animation: blobber 25s 0s ease-in-out infinite, wobbler 15s 0s linear infinite alternate;
+}
+
+.container-fluid {
+  height: 100%;
+}
+
+.content {
+  margin: auto;
+  padding-left: 6%;
+}
+
+.alt-text {
+  font-family: "Poppins";
+  font-weight: 200;
+}
+
+.name {
+  font-family: "Barriecito", system-ui;
+  font-size: 6.25vh;
+  top: -200px!important;
+}
+@keyframes blobber {
+  0% {
+    border-radius: 28% 22% 68% 32% / 42% 28% 72% 58%;
+  }
+  5% {
+    border-radius: 48% 52% 41% 29% / 66% 37% 63% 34%;
+  }
+  10% {
+    border-radius: 69% 31% 71% 29% / 67% 31% 69% 33%;
+  }
+  15% {
+    border-radius: 60% 40% 71% 29% / 63% 65% 35% 37%;
+  }
+  20% {
+    border-radius: 61% 39% 51% 49% / 57% 58% 42% 43%;
+  }
+  25% {
+    border-radius: 66% 34% 25% 75% / 47% 30% 70% 53%;
+  }
+  30% {
+    border-radius: 32% 68% 38% 62% / 65% 60% 40% 35%;
+  }
+  35% {
+    border-radius: 63% 37% 41% 59% / 35% 38% 62% 65%;
+  }
+  40% {
+    border-radius: 57% 43% 49% 51% / 55% 71% 29% 45%;
+  }
+  45% {
+    border-radius: 47% 53% 34% 66% / 65% 36% 64% 35%;
+  }
+  50% {
+    border-radius: 44% 56% 32% 68% / 69% 26% 74% 31%;
+  }
+  55% {
+    border-radius: 28% 72% 37% 63% / 71% 44% 56% 29%;
+  }
+  60% {
+    border-radius: 38% 62% 35% 65% / 74% 53% 47% 26%;
+  }
+  65% {
+    border-radius: 73% 27% 46% 54% / 54% 47% 53% 46%;
+  }
+  70% {
+    border-radius: 75% 25% 47% 53% / 49% 53% 47% 51%;
+  }
+  75% {
+    border-radius: 62% 38% 43% 57% / 85% 60% 40% 45%;
+  }
+  80% {
+    border-radius: 41% 59% 65% 35% / 73% 50% 50% 27%;
+  }
+  85% {
+    border-radius: 55% 45% 57% 43% / 73% 61% 39% 27%;
+  }
+  90% {
+    border-radius: 74% 26% 33% 67% / 40% 65% 35% 60%;
+  }
+  95% {
+    border-radius: 58% 42% 57% 43% / 53% 45% 55% 47%;
+  }
+  100% {
+    border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%;
+  }
+}
+
+
+@keyframes cobler {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+.circle img {
+  width: 50vh;
+  position: relative;
+  margin-left: 2vw;
+  bottom: 10%;
+}
+.nav {
+    /* width: 100vw; */
+    z-index: 1!important;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+  align-items: center;
+  margin: auto;
+  margin-top: 16px;
+  color: #ab9d97;
+}
+
+.btn {
+  width: 120px;
+  color: #ab9d97;
+}
+.btn:hover {
+  font-family: 'Shrikhand', serif;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeInAnimation 3s ease;
+}
+body {
+  transition: opacity 3s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+@media (max-width: 1500px) {
+  .circle:after {
+  padding: 0 25%;
+  top: 168px;
+  bottom: 200px;
+  left: 350px;
+}
+}
+
+
+@media (max-width: 1388px) {
+  .circle:after {
+  padding: 0 26%;
+  top: 168px;
+  bottom: 200px;
+  left: 300px;
+}
+}
+
+@media (max-width: 1300px) {
+  p {
+    font-size:32px;
+    line-height: 56px;
+}
+.name {
+  font-size: 40px;
+}
+
+.circle img {
+  margin-left: -8vw; 
+}
+.circle:before {
+  padding: 0 50%;
+  left:10px;
+  
+}
+.circle:after {
+  display: none;
+}
+}
+
+@media (max-width: 850px) {
+.circle img {
+  margin-left: -32vw; 
+}
+p {
+    font-size:24px;
+    line-height: 48px;
+}
+
+.circle:after {
+  padding: 0 2%;
+  top: 300px;
+  right: 400px;
+  bottom: 300px;
+  left: 1px;
+
+  
+}
+}
+</style>
+
+<style>
+  #loader {
+      border: 12px solid #c5c2c2;
+      border-radius: 50%;
+      border-top: 12px solid #444444;
+      width: 70px;
+      height: 70px;
+      animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+
+  .center {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+</style>
+<body>
+  <div id="loader" class="center"></div>
+  <div  id="content" class="main" style="display:none;">
+    <div class="container-fluid hero">
+      <div class="blob"></div>
+      <div class="row">
+          <div class="col-12 ">
+           
+              <div class="container-fluid nav">
+                <a href="about.html"><button class="btn active">About</button></a>
+                <a href="work.html"><button class="btn">Work</button></a>
+                <a href="img/LuluMutuli-CV.pdf" target="_blank" download><button class="btn">Resume</button></a>
+                <a href="contact.html"><button class="btn">Contact</button></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 col-xs-12">
+          <div class="wrap">
+            <div class="circle">
+              <img src="img/profile-image.png"/>
+              </div>
+          </div>
+        </div>
+        <div class="col-6 col-xs-12 content">
+          <p>
+            Hi! 👋 My name is<br> <span class="alt-text name">Lulu Mutuli,<br> </span>I'm a <span class="alt-text">UI Developer</span> +<br> UI Designer based in <br><span class="alt-text">Singapore.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+ 
+
+
+   
+
+  </div>
+  <script>
+    document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+            document.getElementById('content').style.display = "none";
+            document.getElementById('loader').style.display = "block";
+        } else {
+            document.getElementById('loader').style.display = "none";
+            document.getElementById('content').style.display = "block";
+        }
+    };
+    </script>
+    
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/js/mdb.min.js"></script>
+</body>
+</html>
