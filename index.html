@@ -17,31 +17,53 @@
 </head>
 
   <body>
-            <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Schedule a chat!
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary modal-btn smooth-button ripple-effect" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+    Find out more 
   </button>
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+  <div class="modal fade smooth-modal" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h1>Here's a little more about me.</h1>
+            
+          <div class="circle-container">
+            <iframe src="img/video-CV.mp4" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <p>(click above to play)</p>  
+        </div>
+        <div class="modal-footer modal-button-one">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Like what you see? Book a call</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade smooth-modal" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <div id="calendly-embed" style="min-width:320px;height:700px;"></div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back</button>
         </div>
       </div>
     </div>
   </div>
+  
+
     <div id="container">
         <div id="container2">
-          <div class="box one ">
+          <div class="box one">
 
             <div class="row">
                 <div class="col-md-6">
@@ -76,7 +98,7 @@
                                 <path d="M235.89 1.49463C237.282 1.49463 238.302 1.75863 238.95 2.28663C239.622 2.81463 239.958 3.53463 239.958 4.44663C239.958 4.97463 239.874 5.49063 239.706 5.99463L234.054 24.3546C233.982 24.6426 233.946 24.8946 233.946 25.1106C233.946 25.4226 234.006 25.6746 234.126 25.8666C234.246 26.0346 234.414 26.2026 234.63 26.3706C234.798 26.5386 234.918 26.6826 234.99 26.8026C235.062 26.8986 235.074 27.0306 235.026 27.1986C234.906 27.5106 234.666 27.7386 234.306 27.8826C233.946 28.0266 233.394 28.0986 232.65 28.0986H224.442C223.818 28.0986 223.362 28.0026 223.074 27.8106C222.786 27.5946 222.69 27.3186 222.786 26.9826C222.882 26.6946 223.134 26.4426 223.542 26.2266C223.902 26.0346 224.202 25.8066 224.442 25.5426C224.682 25.2786 224.886 24.8586 225.054 24.2826L230.526 6.31863C230.598 6.10263 230.634 5.92263 230.634 5.77864C230.634 5.51463 230.562 5.29863 230.418 5.13063C230.298 4.96263 230.13 4.79463 229.914 4.62663C229.674 4.43463 229.494 4.26663 229.374 4.12263C229.278 3.97863 229.266 3.78663 229.338 3.54663C229.482 2.99463 230.238 2.51463 231.606 2.10663C232.974 1.69863 234.402 1.49463 235.89 1.49463Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1_406_88)"/>
                                 <path d="M249.938 9.05463C251.33 9.05463 252.35 9.31863 252.998 9.84663C253.646 10.3746 253.97 11.0946 253.97 12.0066C253.97 12.5586 253.886 13.0866 253.718 13.5906L250.406 24.3546C250.334 24.6426 250.298 24.8946 250.298 25.1106C250.298 25.4226 250.358 25.6746 250.478 25.8666C250.598 26.0346 250.766 26.2026 250.982 26.3706C251.15 26.5386 251.27 26.6826 251.342 26.8026C251.414 26.8986 251.426 27.0306 251.378 27.1986C251.258 27.5106 251.018 27.7386 250.658 27.8826C250.298 28.0266 249.746 28.0986 249.002 28.0986H240.794C240.17 28.0986 239.714 28.0026 239.426 27.8106C239.138 27.5946 239.042 27.3186 239.138 26.9826C239.234 26.6946 239.486 26.4426 239.894 26.2266C240.254 26.0346 240.554 25.8066 240.794 25.5426C241.034 25.2786 241.238 24.8586 241.406 24.2826L244.538 13.8786C244.61 13.6626 244.646 13.4826 244.646 13.3386C244.646 13.0746 244.586 12.8706 244.466 12.7266C244.346 12.5586 244.166 12.3906 243.926 12.2226C243.686 12.0306 243.518 11.8626 243.422 11.7186C243.326 11.5746 243.314 11.3826 243.386 11.1426C243.53 10.5906 244.286 10.1106 245.654 9.70263C247.022 9.27063 248.45 9.05463 249.938 9.05463ZM252.35 1.09863C253.286 1.09863 254.066 1.41063 254.69 2.03463C255.314 2.63463 255.626 3.37863 255.626 4.26663C255.626 4.89063 255.458 5.50263 255.122 6.10263C254.81 6.70263 254.354 7.19463 253.754 7.57863C253.178 7.93863 252.53 8.11863 251.81 8.11863C250.898 8.11863 250.13 7.81863 249.506 7.21863C248.906 6.59463 248.594 5.82663 248.57 4.91463C248.57 4.31463 248.726 3.72663 249.038 3.15063C249.35 2.55063 249.794 2.05863 250.37 1.67463C250.946 1.29063 251.606 1.09863 252.35 1.09863Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1_406_88)"/>
                                 </svg>
-                            <h2>a Design Engineer based in Singapore<br> <span class="bouncing-svg"><i class="fa fa-angle-double-down" aria-hidden="true"></i> </span></h2>
+                            <h2>a UI/UX Designer & Frontend Developer!<br> <span class="bouncing-svg"><i class="fa fa-angle-double-down" aria-hidden="true"></i> </span></h2>
                     </div>
                  </div>
             </div>
@@ -84,6 +106,13 @@
             </div>
         </div>
           <div class="box two" id="two">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        
+                    </div>
+                </div>
+            </div>
                 <h2>About me</h2>
                 
               <p>I have over 5 years of experience in software development, 
@@ -121,6 +150,9 @@
                         <span class="pill">Colour Theory</span>
                         <span class="pill">Information Architecture</span>
                     </div> 
+
+                    <div>
+                    </div>
                 </div>
             </p>
              
@@ -308,6 +340,17 @@
         </div>
         
       </div>
+      <script>
+        document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.getElementById('content').style.display = "none";
+                document.getElementById('loader').style.display = "block";
+            } else {
+                document.getElementById('loader').style.display = "none";
+                document.getElementById('content').style.display = "block";
+            }
+        };
+        </script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
   <script>
@@ -330,5 +373,6 @@ url: 'https://calendly.com/luluhmutuli',
 parentElement: document.getElementById('calendly-embed')
 });
 </script>
+
     </body>
 </html>

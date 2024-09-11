@@ -19,7 +19,7 @@
 <div class="back">
     <a href="index.html"> 
         <button>
-            <svg class="back-svg" fill="#7E7D7D" width="20px" height="20px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+            <svg class="back-svg" fill="#112E45" width="20px" height="20px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
                 <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
               </svg>
             Back to Work
@@ -32,7 +32,7 @@
     <a href="hati.html"> 
         <button>
             Next Project
-            <svg class="back-svg" fill="#7E7D7D" width="20px" height="20px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+            <svg class="back-svg" fill="#112E45" width="20px" height="20px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
                 <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
               </svg>
         </button>
@@ -68,6 +68,7 @@
                 </p>
         </div>
       </div>
+      
 
       <div class="intro">
         <div class="info">
@@ -76,12 +77,28 @@
               </h1>
               <div class="d-flex flex-wrap">
                 <span class="pill">UI Design</span>
+                <span class="pill">Frontend Development</span>
                 <span class="pill">UX Research</span>
                 <span class="pill">design system</span>
                 <span class="pill">component library</span>
                 <span class="pill">wireframes</span>
                 <span class="pill">clickable prototype</span>
                 <span class="pill">High Fidelity mockup</span>
+              </div>
+              
+        </div>
+      </div>
+
+      <div class="intro">
+        <div class="info">
+            <h1>
+                Tools used
+              </h1>
+              <div class="d-flex flex-wrap">
+                <img src="img/figma-3d-icon-free-png.webp" style="width: 200px;"/>
+                <img src="img/vuejs.png" style="width: 130px;height: 140px; margin: auto;"/>
+                <img src="img/chromatic-logo-icon-png-svg.png" style="width: 300px; height: 60px;margin: auto;"/>
+                <img src="img/Storybook.svg" style="width: 300px; height: 60px;margin: auto;"/>
               </div>
               
         </div>
@@ -209,7 +226,7 @@ Once we all agreed on the general understanding, we moved to high fidelity wiref
             <div>
                 <div class="mb-2 title d-inline-flex p-2">
                     <h1>
-                        Design System + Component Library
+                        Design System 
                       </h1>
                 </div>
                 <p>Design assets and styles were built on top of Vuetify design library, as this 
@@ -285,7 +302,29 @@ Once we all agreed on the general understanding, we moved to high fidelity wiref
         <div class="container-fluid high-fidelity-background">
         </div>
 
-        <div class="intro market-placement-research">
+        <div class="info results">
+            <div class="mb-2 title d-inline-flex p-2">
+            <h1>Results</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <p>We continued to iterate over this product by building a working Proof of Concept connected with UI Path, built on Vue.js with a PHP backend. <br>The UI included few tweaks, but the most important output was to consolidate all the components by building the component library. I used Storybook and Vue 3 for this, including Chromatic as part of my CI/CD pipeline.</p>
+                        <a href="https://lulumuts.github.io/Storybook-Library/?path=/story/atoms-status-indicators-workflow-card--workflow-card"><button type="button" class="btn btn-outline-primary mt-4">View the Storybook Component Library</button></a>
+                    </div>
+                    <div class="col-lg-6 col-md-12 mt-md-4">
+                        <img src="img/Storybook.png" />
+                        <img class="storybook-two" src="img/Storybook-two.png" />
+                    </div>
+                  
+                 
+                </div>
+            </div>
+   
+        </div>
+      
+
+        <!-- <div class="intro market-placement-research">
             <div class="info">
                 <h1>
                     Market Placement Research
@@ -297,7 +336,7 @@ Once we all agreed on the general understanding, we moved to high fidelity wiref
                     </p>
                     <img src="img/questions.png" />
             </div>
-          </div>
+          </div> -->
 
           <div class="outro">
             <div class="info">
@@ -309,5 +348,9 @@ Once we all agreed on the general understanding, we moved to high fidelity wiref
           </div>
       </div>
     </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/js/mdb.min.js"></script>
 </body>
 </html>

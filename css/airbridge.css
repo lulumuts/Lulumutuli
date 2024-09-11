@@ -2,14 +2,35 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+
+  
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  body {
+    animation: fadeInAnimation 3s ease;
+  }
+  body {
+    transition: opacity 3s ease;
+  }
+  
+  body.loaded {
+    opacity: 1;
+  }
 .hero {
     margin: 8vh 5vh 5vh 5vh;
     border-radius: 24px;
     background-image: url('../img/AIR-LOGIN.jpg');
-    background-position: center -20vh; 
+    background-position: center -30vw; 
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70vh;
+    height: 80vh;
 }
 
 .center-img {
@@ -26,19 +47,22 @@ body {
     padding: 36px 0;
     display: block;
     margin: auto 16vw;
-    color: #757575;
+    color: #112E45;
 }
 
 .info p{
     text-align: justify;
+    font-size: 20px;
+    font-weight: 200;
 }
 
 h1 {
     padding: 36px 0;
+    font-size: 48px;
 }
 
 .pill {
-    border: 1.5px solid #757575;
+    border: 1.5px solid #112E45;
     border-radius: 24px;
     padding: 8px 16px;
     margin: 8px;
@@ -162,7 +186,7 @@ h1 {
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.09);
     border-radius: 16px;
     border: 3px solid #EDEFF1;   
-    color: #757575;
+    color: #112E45;
 }
 
 .design-library .info{
@@ -171,17 +195,21 @@ h1 {
 }
 
 .design-library h1{
-    color: #757575;
+    color: #112E45;
     padding-top: 0!important;
 }
 
+.design-library p {
+    font-size: 20px;
+    font-weight: 200;
+}
 
 .high-fidelity img {
     width: 100%;
 }
 
 .high-fidelity-background {
-    height: 48vh;
+    height: 56vw;
     background-color:#E3F2FD;
     z-index: -1;
     position: absolute;
@@ -230,14 +258,14 @@ justify-content: end;
 
 .back h4 {
     position: fixed;
-    color: #7E7D7D;
+    color: #112E45;
     left: 75px;
 }
 
 .back-svg {
     margin-top: 5px;
     right: 200px;
-    color: #7E7D7D;
+    color: #112E45;
     font-size: 24px;
     position: fixed;
 }
@@ -246,7 +274,7 @@ justify-content: end;
     right: 15px;
     margin-right: 5px;
     transform: scale(-1,1);
-    position: fixed;
+    position: fixed!important;
 }
 
 
@@ -254,7 +282,7 @@ justify-content: end;
     border: none;
     display: grid;
     grid-template-columns: auto auto;
-    color: #7E7D7D;
+    color: #112E45;
     font-size: 20px;
     background-color: transparent;
 }
@@ -269,6 +297,47 @@ justify-content: end;
     outline: none;
 }
 
+.results {
+    color: #112E45;
+    padding-bottom: 10vh;
+}
+
+.results h1 {
+    padding: 36px 0;
+    font-size: 48px;
+}
+
+.results img {
+    margin-top: -120px;
+    width: 26vw;
+    border-radius: 16px;
+    -webkit-box-shadow: 4px 9px 26px -11px rgba(133,129,133,0.95);
+-moz-box-shadow: 4px 9px 26px -11px rgba(133,129,133,0.95);
+box-shadow: 4px 9px 26px -11px rgba(133,129,133,0.95);
+
+}
+
+.results p {
+    font-size: 22px;
+    font-weight: 200;
+    padding-right: 16%;
+}
+.results .storybook-two {
+    position: relative;
+    margin-top: -20%;
+    margin-left: 20%;
+}
+
+a {
+    font-size: 18px;
+}
+
+@media (max-width: 1000px) {
+.results img {
+    margin-top: 60px;
+    width: 40vw;
+}
+}
 @media (max-width: 700px) {
     .hero {
     height: 60vh;
@@ -276,6 +345,12 @@ justify-content: end;
 }
 .personas-container img {
     margin-top: 20px;
+}
+
+.results img {
+    margin-top: 120px;
+
+
 }
 
 }
