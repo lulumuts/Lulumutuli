@@ -18,9 +18,12 @@
 
   <body>
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary modal-btn smooth-button ripple-effect" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
-    Find out more 
-  </button>
+     <div class="d-flex">
+        <button type="button" class="btn btn-primary modal-btn smooth-button ripple-effect" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+            Find out more 
+          </button>
+     </div>
+
   
   <div class="modal fade smooth-modal" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
@@ -36,7 +39,6 @@
             <video width="320" height="240" controls>
                 <source src="img/video-CV.mp4" type="video/mp4" autoplay="false">
             </video>
-            <!-- <video src="img/video-CV.mp4" frameborder="0" scrolling="no"></iframe> -->
         </div>
         <p>(click above to play)</p>  
         </div>
@@ -54,9 +56,9 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <div id="calendly-embed" style="min-width:320px;height:700px;"></div>
+            <div id="calendly-embed" style="min-width:320px;height:800px;"></div>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer modal-button-one">
           <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back</button>
         </div>
       </div>
@@ -64,7 +66,7 @@
   </div>
   
 
-    <div id="container">
+    <div id="container" class="hidden">
         <div id="container2">
           <div class="box one">
 
@@ -376,6 +378,36 @@ url: 'https://calendly.com/luluhmutuli',
 parentElement: document.getElementById('calendly-embed')
 });
 </script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('img');
+    let loadedImagesCount = 0;
+    const totalImages = images.length;
 
+    if (images.length === 6) {
+        document.getElementById('container').classList.remove('hidden');
+        return;
+    }
+
+    images.forEach(img => {
+        if (img.complete) {
+            loadedImagesCount++;
+        } else {
+            img.addEventListener('load', checkAllImagesLoaded);
+            img.addEventListener('error', checkAllImagesLoaded); // Optional: handle image load errors
+        }
+    });
+
+    function checkAllImagesLoaded() {
+        if (!event.target.complete) { // Check if the image is not already loaded
+        loadedImagesCount++;
+    }
+    if (loadedImagesCount === totalImages) {
+        document.getElementById('container').classList.remove('hidden');
+    }
+    }
+});
+
+</script>
     </body>
 </html>
