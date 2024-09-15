@@ -384,14 +384,16 @@ parentElement: document.getElementById('calendly-embed')
     let loadedImagesCount = 0;
     const totalImages = images.length;
 
-    if (images.length === 6) {
+    if (images.length === 0) {
         document.getElementById('container').classList.remove('hidden');
         return;
     }
 
+
     images.forEach(img => {
         if (img.complete) {
             loadedImagesCount++;
+            console.log(loadedImagesCount)
         } else {
             img.addEventListener('load', checkAllImagesLoaded);
             img.addEventListener('error', checkAllImagesLoaded); // Optional: handle image load errors
@@ -402,11 +404,13 @@ parentElement: document.getElementById('calendly-embed')
         if (!event.target.complete) { // Check if the image is not already loaded
         loadedImagesCount++;
     }
-    if (loadedImagesCount === totalImages) {
+    if (loadedImagesCount >= 6) {
         document.getElementById('container').classList.remove('hidden');
     }
     }
+    checkAllImagesLoaded();
 });
+
 
 </script>
     </body>
