@@ -379,37 +379,40 @@ parentElement: document.getElementById('calendly-embed')
 });
 </script>
 <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('container');
     const images = document.querySelectorAll('img');
     let loadedImagesCount = 0;
-    const totalImages = images.length;
 
     if (images.length === 0) {
-        document.getElementById('container').classList.remove('hidden');
+        container.classList.remove('hidden');
         return;
     }
 
-
     images.forEach(img => {
-        if (img.complete) {
-            loadedImagesCount++;
-            console.log(loadedImagesCount)
-        } else {
-            img.addEventListener('load', checkAllImagesLoaded);
-            img.addEventListener('error', checkAllImagesLoaded); // Optional: handle image load errors
-        }
+        img.addEventListener('load', handleImageLoad);
+        img.addEventListener('error', handleImageLoad); // Handle both successful loads and errors
     });
 
-    function checkAllImagesLoaded() {
-        if (!event.target.complete) { // Check if the image is not already loaded
-        loadedImagesCount++;
+    function handleImageLoad(event) {
+        if (event.type === 'load' || event.type === 'error') {
+            loadedImagesCount++;
+            console.log(`Image ${loadedImagesCount} of ${images.length} loaded`);
+            
+            if (loadedImagesCount >= images.length) {
+                container.classList.remove('hidden');
+            }
+        }
     }
-    if (loadedImagesCount >= 6) {
-        document.getElementById('container').classList.remove('hidden');
-    }
-    }
-    checkAllImagesLoaded();
+
+    // Check for already loaded images
+    images.forEach(img => {
+        if (img.complete) {
+            handleImageLoad({ type: 'load', target: img });
+        }
+    });
 });
+
 
 
 </script>
