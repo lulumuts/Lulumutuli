@@ -66,7 +66,7 @@
   </div>
   
 <div id="loading">
-    <dotlottie-player src="https://lottie.host/869861db-8cb9-41cf-97de-01637dbb2456/npBQESTkW2.json" background="transparent" speed="1" style="width: 400px; height: 400px; margin: auto;" loop autoplay></dotlottie-player>
+    <dotlottie-player src="https://lottie.host/869861db-8cb9-41cf-97de-01637dbb2456/npBQESTkW2.json" background="transparent" speed="1" style="width: 400px; height: 400px; margin: auto; margin-top: 32vh;" loop autoplay></dotlottie-player>
 </div>
     <div id="container" class="hidden">
         <div id="container2">
@@ -390,6 +390,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (images.length === 0) {
         container.classList.remove('hidden');
+        loading.classList.add('hidden');
         return;
     }
 
@@ -404,8 +405,12 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(`Image ${loadedImagesCount} of ${images.length} loaded`);
             
             if (loadedImagesCount >= images.length) {
-                loading.classList.add('hidden');
+                // loading.classList.add('hidden');
                 container.classList.remove('hidden');
+            }
+
+            if(!container.classList.contains('hidden')) {
+                loading.classList.add('hidden')
             }
         }
     }
