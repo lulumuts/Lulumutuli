@@ -51,6 +51,10 @@ img {
     padding: 0 10%;
     
 }
+
+.intro img {
+    padding: 15% 10% 0 10%;
+}
 .title {
     padding: 0 30vh;
 }
