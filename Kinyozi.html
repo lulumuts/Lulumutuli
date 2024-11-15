@@ -502,7 +502,89 @@ ul li::before {
     height: 80vh;
 }
 
+.navigation {
+    font-family: "Shrikhand", serif;
+position: fixed;
+bottom: 24px;
+display: grid;
+grid-template-columns: auto auto;
+z-index:1;
+justify-content: end;
+}
 
+.back {
+    top: 24px;
+    right: 24px;
+    width: 100vw;
+}
+
+.next-project {
+right: 24px;
+}
+
+
+.last-project {
+left: 24px;
+}
+
+.back h4 {
+    position: fixed;
+    color: #7E7D7D;
+    left: 75px;
+}
+
+.back .back-svg {
+    top: 30px;
+    position: fixed;
+    right: 190px;
+    width: 40px;
+    color: #7E7D7D;
+}
+
+.last-project .backk-svg {
+    margin-top: 6px;
+    margin-right: 1px;
+}
+
+.next-project .back-svg {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 40px;
+}
+
+
+.back button, 
+.next-project button, 
+.last-project button {
+    font-family: "Shrikhand", serif;
+    border: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    color: #7E7D7D;
+    font-size: 20px;
+    width: 180px;
+    background-color: transparent;
+}
+.back button:hover, 
+.next-project button:hover, 
+.last-project button:hover {
+font-size:22px;
+
+}
+
+.back button:focus {
+    outline: none;
+}
+
+.next-project svg {
+    margin-top: 5px;
+    transform: scale(-1,1);
+}
+
+.navigation button:focus {
+    outline: none;
+}
 @media (max-width: 576px) {
     .prototype .container-fluid {
         display: grid;
@@ -534,6 +616,39 @@ p {
 }
 </style>
 <body>
+
+    <div class="back navigation">
+        <a href="index.html"> 
+            <button>
+                <svg class="back-svg" fill="#7E7D7D" width="20px" height="20px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                  </svg>
+                Back Home
+            </button>
+        </a>
+    </div>
+
+    <div class="next-project navigation">
+        <a href="redlandroses.html"> 
+            <button>
+                Next Project
+                <svg class="back-svg" fill="#7E7D7D" width="20px" height="20px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                  </svg>
+            </button>
+        </a>
+    </div>
+
+    <div class="last-project navigation">
+        <a href="airbridge.html"> 
+            <button>
+                <svg class="backk-svg" fill="#7E7D7D" width="20px" height="20px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M228,128a12.00028,12.00028,0,0,1-12,12H68.9707l51.51465,51.51465a12.0001,12.0001,0,0,1-16.9707,16.9707l-72-72a11.99973,11.99973,0,0,1,0-16.9707l72-72a12.0001,12.0001,0,0,1,16.9707,16.9707L68.9707,116H216A12.00028,12.00028,0,0,1,228,128Z"/>
+                  </svg>
+                Last Project
+            </button>
+        </a>
+    </div>
     <div class="intro">
         <div class="container-fluid">
             <div class="row">
