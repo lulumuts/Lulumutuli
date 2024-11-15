@@ -1,0 +1,596 @@
+    .container-fluid {
+        background: #fff;
+        margin: 0;
+        width: auto;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        background: transparent;
+    }
+
+
+    .intro .card{
+        width: 100%;
+        height: 100vh;
+    }
+
+.container-fluid, .row, .col-md-6{
+    display: flex;
+}
+
+.intro video {
+    height: 70vh;
+}
+
+.intro h2{
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 30px;
+    padding-top:  30px;
+    color: #cf941c;
+}
+
+.intro ul {
+    font-family: "Azeret Mono", monospace;
+    color: #cf941c;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+
+.intro .container-fluid{
+    display: grid;
+}
+
+img {
+    width: 100%;
+    margin: auto;
+    padding: 0 10%;
+    
+}
+.title {
+    padding: 0 30vh;
+}
+
+.title-logo {
+    width: 88vw;
+    text-align: center;
+}
+
+
+p, h2{
+    text-align: justify;
+    font-size: 20px;
+    color: #b1b0ac;
+    font-family: "Azeret Mono", monospace;
+    font-weight: 100;
+}
+
+p {
+    padding: 0 28% 10% 28%;
+    line-height: 40px;
+}
+
+
+.solution {
+    padding: 4% 28% 0 28%;
+    font-size: 24px;
+    padding-bottom: 30px;
+    padding-top:  30px;
+}
+
+.solution .card {
+    padding: 10%;
+    border-radius: 16px;
+    -webkit-box-shadow: 7px -7px 32px 18px rgba(0,0,0,0.18);
+-moz-box-shadow: 7px -7px 32px 18px rgba(0,0,0,0.18);
+box-shadow: 7px -7px 32px 18px rgba(0,0,0,0.18);
+border: 1px solid #00FD85;
+}
+
+.solution h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #099251!important;
+}
+
+.solution p{
+    color: #099251;
+}
+h2 {
+    font-size: 32px;
+}
+
+.carousel .card {
+    width: 390px;
+    color: #fff;
+    border-radius: 24px;
+    box-shadow: rgba(0,0,0,10%) 5px 5px 20px 0;
+    padding: 20px;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    height: 850px;
+
+    &:nth-child(1){
+        background-image: url('../img/Kinyozi splash screen.svg');
+        background-size: cover;
+    }
+
+    &:nth-child(2) {
+        background-image: url('../img/Kinyozi-Introscreen.svg');
+        background-size: cover;
+    }
+
+    &:nth-child(3) {
+        background-image: url('../img/Kinyozi-userselection.svg');
+        background-size: cover;
+    }
+
+    &:nth-child(4) {
+        background-image: url('../img/Kinyozi-newstylistform.svg');
+        background-size: cover;
+    }
+
+    &:nth-child(5) {
+        background-image: url('../img/Kinyozi-Hairstyleformselection.svg');
+        background-size: cover;
+    }
+
+
+    &:nth-child(6) {
+        background-image: url('../img/Kinyozi-Dashboard.svg');
+        background-size: cover;
+    }
+
+
+    &:nth-child(7) {
+        background-image: url('../img/Kinyozi-Confirmation.svg');
+        background-size: cover;
+    }
+
+    &:nth-child(8) {
+        background-image: url('../img/Kinyozi-HaircareAssistant.svg');
+        background-size: cover;
+    }
+
+    &:nth-child(9) {
+        background-image: url('../img/Kinyozi-HaircareAssistantResult.svg');
+        background-size: cover;
+    }
+   
+}
+
+.group {
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+    will-change: transform;
+    animation: scrolling 20s linear infinite;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%)
+    }
+}
+
+.carousel {
+    position: relative;
+    margin: auto;
+    margin-bottom: 10%;
+    padding: 20px 0;
+    overflow: hidden;
+    display: flex;
+    > * {
+        flex: 0 0 100%;
+    }
+    &hover .group {
+        animation-play-state: paused;
+    }
+}
+
+.intro, 
+.user-persona,
+.user-research,
+.wireframes,
+.design-system,
+.prototype,
+.market-research {
+    display: grid;
+    justify-content: center;
+    height: auto;
+}
+
+.intro .content{
+    padding: 0 20% 10% 20%;
+}
+
+.design-system {
+    padding-top: 0;
+}
+.subtitles {
+    width: 80%;
+    margin: 10% auto;
+}
+
+.prototype .subtitles {
+    margin: 4% auto;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 60px;
+  padding-bottom: 18px;
+  font-size: 20px;
+}
+
+ul li::before {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.intro ul li:nth-child(1):before {
+    content: '😞';
+}
+
+.intro ul li:nth-child(2):before {
+    content: '😩';
+}
+.intro ul li:nth-child(3):before {
+    content: '😓';
+}
+
+.prototype .card ul li:nth-child(1):before {
+    content: '🪪';
+}
+
+.prototype .card ul li:nth-child(2):before {
+    content: '🤖';
+}
+
+.prototype .card ul li:nth-child(3):before {
+    content: '🗓️';
+}
+
+.prototype .card ul li:nth-child(4):before {
+    content: '🔍';
+}
+.wireframes .container-fluid {
+    margin-bottom: 10vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.design-system .container-fluid {
+    padding: 8%;
+    margin: auto;
+    width: 100vw;
+    background-color: #000;
+    display: grid;
+}
+
+.design-system .subtitles, .prototype .subtitles {
+    padding-bottom: 3vh;
+}
+
+.user-persona img {
+    padding-top: 4%;
+}
+
+.prototype {
+    background-color: #FFE2A7;
+}
+
+.prototype .container-fluid {
+    background-color: #FFE2A7;
+    width: auto;
+    margin: auto;
+    display: flex;
+}
+
+.prototype img {
+    display: block;
+}
+
+.prototype h2 {
+    text-align: left;
+    font-family: "Azeret Mono", monospace;
+    font-weight: 500;
+    margin-bottom: 32px;
+    
+}
+.prototype .card-gif {
+    color: #fff;
+    border-radius: 24px;
+    padding: 10%;
+    font-size: xx-large;
+}
+
+.prototype .content {
+    margin: 180px 1%;
+    width: 950px;
+    padding: 2%;
+    
+}
+
+.prototype span{
+    font-size: 14px;
+}
+.prototype p, .prototype h2 {    
+    margin:auto;
+    padding: 0 20%;
+    color: #CDA75C;
+}
+
+.prototype h2 {
+    margin-bottom: 20px;;
+    font-weight: 600;
+    line-height: 48px;
+}
+.prototype p {
+    font-size: 18px;
+    text-align: left;
+    font-weight:200;
+}
+
+
+.prototype video {
+    width: 300px;
+    height: auto;
+    border-radius: 6px;
+    border: 2px solid #000;
+    box-shadow: rgba(0,0,0,10%) 5px 5px 20px 0;
+}
+
+.prototype .card h2 {
+    font-weight: 700;
+    font-size: 2.8vh;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+.prototype .subtitles {
+    margin-top: 12%;
+    margin-bottom: 8%;
+}
+.prototype .card{
+    height: auto;
+    width: 60%;
+    margin: auto;
+    background-color: #000;
+    font-family: "Azeret Mono", monospace;
+    color: #CDA75C;
+    text-align: left;
+    border-radius: 16px;
+    padding: 80px;
+    margin-bottom: 40px;
+}
+
+.market-research-img {
+    background-image: url('../img/market-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px 0 0 16px ;
+}
+
+.market-research ul {
+    padding: 0 16% 4% 16%;
+    font-family: "Azeret Mono", monospace;
+    font-weight: 200;
+}
+
+.market-research li {
+    font-size: 16px;
+}
+.market-research p {
+    font-size: 16px;
+    padding: 2% 16% 1% 16%;
+    color: #F5AE20;
+}
+
+.market-research .card {
+    margin: 8% 10% 8% 10%;
+    background-color: #000;
+    border-radius: 16px;
+    
+}
+
+.market-research .content {
+    color: #F5AE20;
+    padding: 4%;
+}
+.market-research img {
+    padding-bottom: 48px;
+}
+.market-research ul li:nth-child(1):before {
+    content: '💸'
+}
+
+.market-research ul li:nth-child(2):before {
+    content: '🛍️'
+}
+
+.market-research ul li:nth-child(3):before {
+    content: '🦾'
+}
+
+.market-research span {
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 10px;
+    display: block;
+}
+
+.mockups {
+    display: grid;
+}
+.title-text{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.title-text ul li{
+    font-size: 18px;
+}
+.landing-page {
+    display: grid;
+    background-color: #000;
+}
+
+.landing-page p{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50%;
+}
+
+.landing-page-img {
+    padding-top: 20%;
+    padding-bottom: 10%;
+    width: 90%;
+    margin: auto;
+}
+
+
+.parallax {
+  background-color: #000;
+  height: 20vh; 
+}
+
+.parallax video {
+    height: 80vh;
+}
+
+.navigation {
+    font-family: "Shrikhand", serif;
+position: fixed;
+bottom: 24px;
+display: grid;
+grid-template-columns: auto auto;
+z-index:1;
+justify-content: end;
+}
+
+.back {
+    top: 24px;
+    /* right: 24px; */
+    width: 100vw;
+}
+
+.next-project {
+right: 24px;
+}
+
+
+.last-project {
+left: 24px;
+}
+
+.back h4 {
+    position: fixed;
+    color: #7E7D7D;
+    left: 75px;
+}
+
+.back .back-svg {
+    top: 30px;
+    position: fixed;
+    right: 190px;
+    width: 40px;
+    color: #7E7D7D;
+}
+
+.last-project .backk-svg {
+    margin-top: 6px;
+    margin-right: 1px;
+}
+
+.next-project .back-svg {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 40px;
+}
+
+
+.back button, 
+.next-project button, 
+.last-project button {
+    font-family: "Shrikhand", serif;
+    border: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    color: #7E7D7D;
+    font-size: 20px;
+    width: 180px;
+    background-color: transparent;
+}
+.back button:hover, 
+.next-project button:hover, 
+.last-project button:hover {
+font-size:22px;
+
+}
+
+.back button:focus {
+    outline: none;
+}
+
+.next-project svg {
+    margin-top: 5px;
+    transform: scale(-1,1);
+}
+
+.navigation button:focus {
+    outline: none;
+}
+@media (max-width: 576px) {
+    .prototype .container-fluid {
+        display: grid;
+    }
+
+    .prototype video {
+    margin-left: 20%;
+}
+.prototype .content {
+    margin: 20px 1%;
+    width: 800px;
+    padding: 2%;
+}
+
+.market-research img {
+    padding-top: 10%;
+}
+.parallax {
+  background-color: #000;
+  height: 70vh; 
+}
+
+.solution p {
+    font-size: 16px;
+}
+p {
+    font-size: 16px;
+}
+}
