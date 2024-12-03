@@ -1,4 +1,4 @@
-#app {
+body {
       overflow-x:hidden;
       transform-origin: top left;
       background: linear-gradient(-20deg, #faebe7, #cbd41f, #f5afe6, #f9f9f7);
@@ -22,6 +22,38 @@
       background-position: 0% 50%;
     }
   }
+
+  #loader {
+    width: 8px;
+    height: 56px;
+    display: inline-block;
+    position: relative;
+    border-radius: 4px;
+    box-sizing: border-box;
+    animation: animloader 1.5s linear infinite alternate;
+  }
+  
+  @keyframes animloader {
+    0% {
+      box-shadow: 20px 0 rgba(255, 255, 255, 0), 40px 0 rgba(255, 255, 255, 0), 60px 0 rgba(255, 255, 255, 0), 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0);
+    }
+    20% {
+      box-shadow: 20px 0 white, 40px 0 rgba(255, 255, 255, 0), 60px 0 rgba(255, 255, 255, 0), 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0);
+    }
+    40% {
+      box-shadow: 20px 0 white, 40px 0 white, 60px 0 rgba(255, 255, 255, 0), 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0);
+    }
+    60% {
+      box-shadow: 20px 0 white, 40px 0 white, 60px 0 white, 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0);
+    }
+    80% {
+      box-shadow: 20px 0 white, 40px 0 white, 60px 0 white, 80px 0 white, 100px 0 rgba(255, 255, 255, 0);
+    }
+    100% {
+      box-shadow: 20px 0 white, 40px 0 white, 60px 0 white, 80px 0 white, 100px 0 white;
+    }
+  }
+      
 
   h1{
   font-family: "Darker Grotesque", sans-serif;
