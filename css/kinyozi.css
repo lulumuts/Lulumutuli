@@ -126,7 +126,7 @@ h2 {
     }
 
     &:nth-child(2) {
-        background-image: url('../img/Kinyozi-Introscreen.svg');
+        background-image: url('../img/Kinyozi-introscreen.svg');
         background-size: cover;
     }
 
