@@ -18,21 +18,21 @@
 </head>
 
 <body>
-    <div id="app">
-        <component :is="isLoading ? LottieLoading : Intro"></component>
+  <div id="loader"></div>
+  
+  <div id="app">
+      <component :is="Intro"></component>
     </div>
 
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://unpkg.com/vue-router@4"></script>
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 
     <script>
     const { createApp, ref, reactive, onMounted, watch } = Vue;
-    const { createRouter, createWebHashHistory } = VueRouter;
+    const { createRouter, createWebHistory } = VueRouter;
 
     const Intro = {
         template: `
-        
             <div class="card container-fluid" v-show="showHome">
                 <div>
                     <div class="buttons d-flex justify-content-between">
@@ -493,76 +493,42 @@ const routes = [
 ];
 
 
-    
-const LottieLoading = {
-        template: `
-     <div id="loading">
-      <dotlottie-player src="https://lottie.host/869861db-8cb9-41cf-97de-01637dbb2456/npBQESTkW2.json" background="transparent" speed="1" style="width: 400px; height: 400px; margin: auto; margin-top: 32vh;" loop autoplay></dotlottie-player>
-      </div>
-    `
-    }
-   
-
-    const isLoading = ref(false)
-    const isLoaded = ref(true)
-
 const router = createRouter({
-      history: createWebHashHistory(),
+      history: createWebHistory(),
       routes: [
         { path: '/', component: Intro},
-        { path: '/kinyozi.html'},
+        { path: '/kinyozi'},
         { path: '/airbridge.html'},
         { path: '/chewa.html'},
-        { path: '/redlandroses'},
-        { path: '/hati'}
+        { path: '/redlandroses.html'},
+        { path: '/hati.html'}
       ]
     })
 
-    const app = createApp({
-        setup() {
-            setTimeout(() => {
-                isLoading.value = false
+    document.addEventListener('DOMContentLoaded', () => {
+      const loader = document.getElementById('loader');
 
-            }, 3300)
+      if (loader) {
+        setTimeout(() => {
+          loader.remove();
+          console.log('Vue app is initializing')
 
-            function renderComponent(event) {
-        console.log('Event received:', event);
-        console.log('Event type:', event?.type);
-        if(event.type === 'load' || event.type === 'error') {
-                isLoading.value = true
-        } else {
-            isLoading.value = false
-        }
-    }
-            return {
-                LottieLoading,
-                Intro,
+
+          const app = createApp({
+            setup() {
+              return {
                 router,
-                isLoading,
-                isLoaded,
-                renderComponent
+                Intro
+              }
             }
-        }
-    }).use(router)
+          })
+         app.use(router)
+         app.mount('#app');
+        }, 2500)
+      }
 
-    app.mount('#app')
-
-    function renderComponent(event) {
-        console.log('Event received:', event);
-        console.log('Event type:', event?.type);
-        if(event.type === 'load' || event.type === 'error') {
-                isLoading.value = true
-        } else {
-            isLoading.value = false
-        } 
-    }
- 
-    // const test = new Event('error')
-    renderComponent(test)
-
-    watch(() => [isLoaded.value, isLoading.value], () => {
-        renderComponent()
     })
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
