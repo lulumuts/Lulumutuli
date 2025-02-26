@@ -782,6 +782,41 @@ font-size:22px;
 .navigation button:focus {
     outline: none;
 }
+
+.live-app {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    z-index:1;
+    font-family: "Azeret Mono", monospace;
+    color: #414040;
+}
+
+.live-app svg{
+    width: 56px;
+    position: relative;
+    bottom: 20px;
+    display: flex;
+}
+
+.live-app:hover {
+ color: #E26648;
+ fill: #E26648;
+}
+
+.landing-page {
+    display: flex;
+}
+
+.footer-section {
+    padding: 20%;
+}
+.footer-section p {
+    text-align: center;
+    margin-bottom: 20%;
+    font-family: "Azeret Mono", monospace;
+}
 @media (max-width: 576px) {
     .prototype .container-fluid {
         display: grid;
