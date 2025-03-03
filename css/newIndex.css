@@ -199,7 +199,7 @@ h2{
 
 .carousel-inner .airbridge {
     width: 24vw!important;
-    margin-top: 20%;
+    margin-bottom: 10px;
 }
 
 .carousel-inner .kinyozi {
@@ -214,7 +214,7 @@ h2{
 
 .carousel-inner .hati {
     width: 13.25vw!important;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 .carousel-inner .redlandroses {
     width: 40vw!important;
@@ -240,6 +240,13 @@ h2{
 }
 .work .carousel-caption{
     bottom: -0.6em!important;
+}
+
+.carousel-inner .redesign {
+    fill: #fff!important;
+    width: 56vw!important;
+    margin-left: -3.5vw;
+    margin-bottom: 24px!important;
 }
 .carousel .carousel-control-next-icon, 
 .carousel .carousel-control-prev-icon {
@@ -411,8 +418,8 @@ h2{
 }
 
 .carousel-inner .hati {
-    width: 20vh!important;
-    margin-bottom: 2.5vh!important;
+    width: 18vh!important;
+    margin-bottom: 2.25vh!important;
 }
 .carousel-inner .redlandroses {
     width: 56vw!important;
@@ -434,7 +441,7 @@ h2{
 .card .button svg {
     width: 16px;
     height: 16px;
-    margin-top: 4%;
+    margin-top: 6px;
 }
 .card .button {
     font-size: 16px;
@@ -444,6 +451,10 @@ h2{
 .card .button:hover {
     font-weight: 800;
     font-size: 18px;
+}
+
+.carousel-inner .redesign {
+    margin-bottom: 42px!important;
 }
 }
 
