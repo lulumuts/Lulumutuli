@@ -226,6 +226,27 @@ h2{
     stroke-width:0.5px;
 }
 
+.tags {
+    display:flex;
+    position: absolute;
+    bottom: 14vh;
+    left: 10%;
+}
+
+.tags p{
+    position: relative;
+    margin: 0 10px;
+    background: rgba(255, 255, 255, 0.784);
+    padding: 8px 16px;
+    border-radius: 16px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-family: "Darker Grotesque", sans-serif;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: #776c6c;
+}
+
 .work .second-set {
     position: relative;
     margin-top: -4.53vh;
@@ -352,6 +373,9 @@ h2{
   z-index: 9999;
 }
 
+.afroglitch-svg{
+    margin-bottom: 16px;
+}
 .dotlottie-player {
   max-width: 400px !important;
   margin: auto;
@@ -494,7 +518,11 @@ h2{
     width: 18vh!important;
     margin-bottom: 2.5vh!important;
 }
-
+.tags p{
+    font-size: 8px;
+    padding: 4px 8px;
+    width: auto;
+}
 .carousel-inner .hati {
     width: 16vh!important;
     margin-bottom: 2.5vh!important;
