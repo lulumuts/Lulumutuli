@@ -11,6 +11,8 @@ body {
       overflow:hidden
   }
 
+
+
 @keyframes gradient {
     0% {
       background-position: 0% 20%;
@@ -73,7 +75,7 @@ h2{
     .card {
         margin: auto;
         width:75vw;
-        height: 900px;
+        height: 80vh;
         position: relative;
          background: rgba(255, 255, 255, 0.2);
          border-radius: 16px;
@@ -85,6 +87,128 @@ h2{
          justify-content: center;
 
     }
+
+/* Vue.js v-show transitions */
+.card {
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.card[v-show="false"] {
+  opacity: 0;
+  transform: translateX(100px);
+  pointer-events: none;
+}
+
+.card[v-show="true"] {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* Test animation on button click */
+.card-content.test-transition {
+  animation: slideTransition 0.6s ease-in-out;
+}
+
+.card-content.slide-left {
+  animation: slideLeftTransition 0.6s ease-in-out;
+}
+
+
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay transition */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+/* Work: left to right */
+.card-overlay.work-slide-in {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.card-overlay.work-fade-out {
+  opacity: 0 !important;
+  transform: translateX(100%) !important;
+}
+
+/* About: right to left */
+.card-overlay.about-slide-in {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.card-overlay.about-fade-out {
+  opacity: 0 !important;
+  transform: translateX(-100%) !important;
+}
+
+/* Home: top to bottom */
+.card-overlay.home-slide-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.card-overlay.home-fade-out {
+  opacity: 0 !important;
+  transform: translateY(100%) !important;
+}
+
+/* Contact: bottom to top */
+.card-overlay.contact-slide-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.card-overlay.contact-fade-out {
+  opacity: 0 !important;
+  transform: translateY(-100%) !important;
+}
+
+@keyframes slideTransition {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeftTransition {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 .card .button {
     z-index: 1;
@@ -103,8 +227,8 @@ h2{
 
 .card .button:hover {
     font-weight: 800;
-    color: #e7fb07ea;
-    font-size: 21px;
+    font-size: 18px;
+    color:#e7fb07ea;
 }
 .top-left {
   display: inline-flex;
@@ -177,66 +301,124 @@ h2{
 
 .video-container {
   position: relative;
+  padding: 2%;
   width: 100%;
   border-radius: 16px;
-  padding-top: 51em; /* 16:9 aspect ratio */
+  height: 60.5vh;
+}
+
+/* White patch only for BN-promo.mp4 video */
+.video-container:has(video[src*="BN-promo.mp4"])::after,
+.video-container video[src*="BN-promo.mp4"] + .white-patch {
+  content: '';
+  position: absolute;
+  bottom: 2%;
+  right: 1.2%;
+  width: 12%;
+  height: 15%;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .video-container video {
     border-radius: 16px;
     border: 2px solid #fff;
     position: absolute;
-    top: 4.75vh;
-    left: 7.5%;
-    width: 85%;
-    height: 78%;
-    object-fit: cover; /* This ensures the video covers the entire container while maintaining its aspect ratio */
-  }
+    padding: 1%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: center 30%; */
+}
+
+/* Specific styling for BN-app video to reduce zoom */
+.video-container:has(video[src*="BN-app"]) video,
+.video-container video[src*="BN-app"] {
+    object-fit: contain;
+    object-position: center center;
+    max-width: 90%;
+    max-height: 90%;
+    left: 5%;
+    top: 5%;
+}
 
 .carousel-inner {
-    padding: 0 3%;
+    padding: 0 8%;
 }
 
 .carousel-inner .airbridge {
-    width: 24vw!important;
-    margin-bottom: 10px;
+    width: clamp(200px, 36vh, 40vh)!important;
+    /* margin-bottom: clamp(12vh, 25vh, 25vh); */
+    background-color: #000000d6;
+    padding: 4.5% 6%;
+    border: 1px solid #fff;
+    border-radius: 40px;
 }
 
 .carousel-inner .kinyozi {
-    width: 23vw!important;
+    width: clamp(180px, 32vh, 40vh)!important;
+    /* margin-bottom: clamp(12vh, 25vh, 64vh); */
+    background-color: #000000d6;
+    padding: 3.5% 7%;
+    border: 1px solid #fff;
+    border-radius: 36px;
 }
 
 
-.carousel-inner .chewa{
-    width: 18vw!important;
-    margin-bottom: 24px;
+.carousel-inner .chewa {
+    width: clamp(160px, 25vh, 30vh)!important;
+    /* margin-bottom: clamp(12vh, 26vh, 26vh); */
+    background-color: #000000d6;
+    padding: 8% 10%!important;
+    border: 1px solid #fff;
+    border-radius: 36px;
 }
 
 .carousel-inner .hati {
-    width: 13.25vw!important;
-    margin-bottom: 20px;
+    width: clamp(140px, 25vh, 20vh)!important;
+    /* margin-bottom: clamp(12vh, 26vh, 26vh); */
+    background-color: #000000d6;
+    padding: 8.5% 14%;
+    border: 1px solid #fff;
+    border-radius: 36px;
 }
 .carousel-inner .redlandroses {
-    width: 40vw!important;
-    margin-left: -36px;
-    margin-bottom: 24px;
+    width: 560px!important;
+    /* width: clamp(280px, 50vw, 56vh)!important; */
+    /* margin-left: -24px; */
+    /* margin-bottom: clamp(12vh, 26vh, 27vh); */
+    background-color: #000000d6;
+    padding: 3.5% 5%;
+    border: 1px solid #fff;
+    border-radius: 36px;
 }
-.carousel-inner a svg:hover path{
-    fill: #fff;
-    stroke-width:0.5px;
+/* SVG title styling - light grey fill and thin stroke */
+.carousel-inner a svg path {
+    fill: #fff !important;
+    stroke: none !important;
+    stroke-width: 0 !important;
+}
+
+.carousel-inner a:hover svg path,
+.carousel-inner a svg:hover path {
+    fill: #f2ff00!important;
 }
 
 .tags {
     display:flex;
     position: absolute;
-    bottom: 14vh;
-    left: 10%;
+    bottom: 2.4vh;
+    left: 1%;
 }
 
 .tags p{
     position: relative;
     margin: 0 10px;
-    background: rgba(255, 255, 255, 0.784);
+    background: rgba(42, 42, 42, 0.75);
     padding: 8px 16px;
     border-radius: 16px;
     border: 2px solid #fff;
@@ -244,7 +426,7 @@ h2{
     font-family: "Darker Grotesque", sans-serif;
     letter-spacing: 3px;
     font-weight: 500;
-    color: #776c6c;
+    color: #fff;
 }
 
 .work .second-set {
@@ -253,7 +435,9 @@ h2{
 }
 
 .work .carousel-indicators{
-    bottom: -6%;
+    bottom: -10vh;
+    top: auto;
+    transform: none;
 }
 
 .work h5 {
@@ -263,11 +447,96 @@ h2{
     bottom: -0.6em!important;
 }
 
+/* Robust vertical and horizontal centering for SVG in carousel-caption */
+.carousel-caption {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 2;
+  background: none !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+.carousel-caption a svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 90vw;
+  max-height: 80vh;
+}
+
+/* Remove fixed vh widths from individual SVG card classes */
+.carousel-inner .airbridge,
+.carousel-inner .kinyozi,
+.carousel-inner .chewa,
+.carousel-inner .hati,
+.carousel-inner .redlandroses,
+.carousel-inner .redesign,
+.carousel-inner .afroglitch-svg,
+.carousel-inner .bn-app {
+  /* width: 100% !important; */
+  /* max-width: 400px !important; */
+  /* min-width: 180px; */
+  /* margin-bottom: 2vw !important; */
+  /* background-color: transparent !important; */
+  /* padding: 0 !important; */
+  border: none !important;
+  border-radius: 24px !important;
+}
+
+@media (max-width: 850px) {
+  .carousel-inner {
+    gap: 4vw;
+    padding: 0 2vw;
+  }
+  .carousel-caption a svg,
+  .carousel-inner a svg {
+    max-width: 90vw;
+    padding: 4vw 2vw;
+  }
+  .carousel-inner .redesign {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-inner {
+    flex-direction: column;
+    gap: 6vw;
+    padding: 0 1vw;
+  }
+  .carousel-caption {
+    min-height: 120px;
+    height: 100%;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .carousel-caption a svg {
+    max-width: 98vw;
+    max-height: 40vh;
+  }
+}
+
 .carousel-inner .redesign {
-    fill: #fff!important;
-    width: 56vw!important;
-    margin-left: -3.5vw;
-    margin-bottom: 24px!important;
+    width: clamp(320px, 56vh, 64vh)!important;
+    /* margin-left: -4vw; */
+    background-color: #000000d6;
+    /* margin-bottom: clamp(12vh, 26vh, 27vh); */
+    border: 1px solid #fff;
+    border-radius: 36px;
+    padding: 4.5% 3%!important;
+}
+
+.carousel-inner .bn-app {
+    padding: 1.5% 3%!important;
+    height: 9vh;
 }
 .carousel .carousel-control-next-icon, 
 .carousel .carousel-control-prev-icon {
@@ -276,17 +545,35 @@ h2{
 }
 
 .carousel .carousel-control-next-icon {
-    margin-left: 40px;
+    /* margin-left: 40px; */
 }
 .carousel .carousel-control-prev-icon {
-    margin-right: 40px;
+    /* margin-right: 40px; */
 }
 .carousel-control-prev,
 .carousel-control-next  {
-    top: 80px !important;
-    bottom: 80px!important;
+    top: auto !important;
+    bottom: 26vh !important;
 }
-
+.about p{
+  font-size: 60%;
+  /* padding: 20%; */
+}
+.about h2 {
+  font-size: 2.5em;
+  position: relative;
+  padding-bottom: 10px;
+  font-family: "shrikhand", sans-serif;
+}
+.about .content {
+  background-color: #000000d6;
+  padding: 20%;
+  border: 1px solid #fff;
+  border-radius: 36px;
+  content-visibility: scr;
+  overflow-y: auto;
+  max-height: 64vh;
+}
 .about .skills {
     display: flex;
     flex-wrap: wrap;
@@ -374,7 +661,17 @@ h2{
 }
 
 .afroglitch-svg{
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
+
+        width: clamp(200px, 40vh, 40vh) !important;
+        margin-left: -36px;
+        background-color: #000000d6;
+        padding: 4% 10%;
+        height: auto;
+        /* margin-bottom: clamp(12vh, 25vh, 25vh)!important; */
+        border: 1px solid #fff;
+        border-radius: 36px;
+    
 }
 .dotlottie-player {
   max-width: 400px !important;
@@ -395,15 +692,18 @@ h2{
 }
 
 .about .content{
-    padding-right: 10px!important;
+    /* padding-right: 10px!important; */
     font-family: "Darker Grotesque", sans-serif;
+    padding: 5%;
+    height: 64vh;
+    width: 88%;
     font-size: 2vw;
     font-weight: 500;
     color: #fff;
 }
 @media (max-width: 1225px) {
     .card {
-        height: 50vh;
+        height: 80vh;
     }
     .card .content {
         z-index: 1;
@@ -424,43 +724,57 @@ h2{
 }
 .carousel-inner svg {
     width: 300px!important;
-    margin-bottom: 1.5vh;
+    margin-bottom: 3vh;
 }
 
 .carousel-inner .airbridge {
     width: 32vh!important;
+    margin-bottom: 16vh;
 }
 
 .carousel-inner .kinyozi {
     width: 32vh!important;
+    margin-bottom: 16vh;
 }
 
 
 .carousel-inner .chewa {
     width: 26vh!important;
-    margin-bottom: 2.5vh!important;
+    /* margin-bottom: 16vh!important; */
 }
 
 .carousel-inner .hati {
     width: 18vh!important;
-    margin-bottom: 2.25vh!important;
+    /* margin-bottom: 16vh!important; */
 }
 .carousel-inner .redlandroses {
-    width: 56vw!important;
-    margin-left: -24px;
-    margin-bottom: 2.5vh!important;
+    width: 48vh!important;
+    /* margin-left: -5%; */
+    /* margin-bottom: 16vh!important; */
 }
 
-/* .work .carousel-indicators{
-    bottom: -10%;
-} */
+.carousel .redesign, .afroglitch-svg {
+    /* margin-bottom: 16vh!important; */
+    width: 40vh!important;
+}
+
+.carousel .redesign {
+    /* margin-left: -4vh; */
+}
+
+.carousel-inner .bn-app {
+    height: 9vh;
+}
+.work .carousel-indicators{
+    /* bottom: -18vh; */
+}
 
 .video-container video {
-  height: 30vh;
+  height: 100%;
 }
 
 .video-container {
-    padding-top: 32em;
+    height: 42.35vh;
 }
 .card .button svg {
     width: 16px;
@@ -472,14 +786,35 @@ h2{
     
 }
 
-.card .button:hover {
-    font-weight: 800;
-    font-size: 18px;
+.work .carousel-caption{
+    bottom: -0.6em!important;
 }
 
-.carousel-inner .redesign {
-    margin-bottom: 42px!important;
+/* Extreme screen size adjustments */
+@media (max-width: 480px) {
+    .carousel-inner .airbridge,
+    .carousel-inner .kinyozi,
+    .carousel-inner .chewa,
+    .carousel-inner .hati,
+    .carousel-inner .redlandroses,
+    .carousel-inner .redesign,
+    .afroglitch-svg {
+        width: 90vw !important;
+        margin-left: 0 !important;
+        margin-bottom: 8vh !important;
+    }
 }
+
+@media (min-width: 1920px) {
+    .carousel-inner .airbridge,
+    .carousel-inner .kinyozi,
+    .carousel-inner .chewa,
+    .carousel-inner .hati,
+    .carousel-inner .redlandroses,
+    .carousel-inner .redesign,
+    .afroglitch-svg {
+        max-width: 600px !important;
+    }
 }
 
 @media (max-width: 850px) {
@@ -491,7 +826,18 @@ h2{
     padding-right: 10%;
 }
 .work .carousel-indicators{
-    bottom: -36px;
+    /* top: 50%; */
+    transform: translateY(-50%);
+    bottom: auto;
+    bottom: -6.5vh;
+}
+
+.work .carousel-caption{
+    bottom: 28vh!important;
+    padding: 2.5% 5%;
+    left: 45%!important;
+    transform: translateX(-50%)!important;
+    text-align: center!important;
 }
 
 .card h2 {
@@ -501,35 +847,299 @@ h2{
     margin-top: 4%;
 }
 
-
-.carousel-inner .airbridge {
-    width: 24vh!important;
-    margin-left: -16px;
-    margin-bottom: 30px;
+.video-container {
+    height: 60.5vh;
 }
 
-.carousel-inner .kinyozi {
-    margin-left: -16px;
-    width: 24vh!important;
+.tags {
+    bottom: 6vh;
+    left: 5%;
 }
 
-
-.carousel-inner .chewa {
-    width: 18vh!important;
-    margin-bottom: 2.5vh!important;
-}
 .tags p{
     font-size: 8px;
     padding: 4px 8px;
     width: auto;
+    margin: 0 5px;
+}
+
+.carousel-inner .airbridge {
+    width: 24vh!important;
+    margin-left: 8vw!important;
+    margin-bottom: -40px;
+    /* background-color: #1bed14de; */
+    padding: 8%;
+    border: 1px solid #fff;
+    border-radius: 36px;
+}
+
+.carousel-inner .kinyozi {
+    margin-left: 8vw!important;
+    width: 24vh!important;
+    margin-bottom: -40px;
+    /* background-color: #1bed14de; */
+    padding: 8%;
+    border: 1px solid #fff;
+    border-radius: 36px;
+}
+
+
+.carousel-inner .chewa {
+    height: 132px;
+    /* width: 32vh!important; */
+    margin-bottom: -40px!important;
+    /* background-color: #1bed14de; */
+    margin-left: 4vh!important;;
+    padding: 12% 16%;
+    border: 1px solid #fff;
+    border-radius: 36px;
 }
 .carousel-inner .hati {
-    width: 16vh!important;
-    margin-bottom: 2.5vh!important;
+    width: 24vh!important;
+    margin-bottom: -40px !important;
+    margin-left: 4vh!important;
+    /* background-color: #1bed14de; */
+    padding: 10%;
+    border: 1px solid #fff;
+    border-radius: 36px;
 }
 .carousel-inner .redlandroses {
-    width: 56vw!important;
-    margin-left: -24px;
-    margin-bottom: 4vh!important;
+    width: 32vh!important;
+    margin-left: 6vh!important;
+    /* margin-bottom: -40px!important; */
+    /* background-color: #1bed14de; */
+    padding: 8%;
+    border: 1px solid #fff;
+    border-radius: 36px;
 }
+
+.carousel .redesign{
+    width: 32vh!important;
+    margin-bottom: -40px !important;
+    margin-left: 4vh!important;
+    height: 120px;
+    /* background-color: #1bed14de; */
+    padding: 10%;
+    border: 1px solid #fff;
+    border-radius: 36px;
 }
+
+.carousel .afroglitch-svg{
+    height: 105px;
+    width: 46vw!important;
+    margin-bottom: -40px !important;
+    margin-left: 4vh!important;
+    /* background-color: #1bed14de; */
+    padding: 4%;
+    border: 1px solid #fff;
+    border-radius: 36px;
+}
+
+.carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon {
+    /* color: #e7fb07ea !important; */
+    background: #f1ebeb;
+    height: 6vh;
+    width: 6vh;
+    /* margin-top: 30vh; */
+    /* margin-right: 2vh; */
+    border-radius: 10vh;
+    z-index:1000;
+}
+
+/* More specific selectors to override CDN styles */
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+    color: #e7fb07ea !important;
+}
+
+/* Target the actual button elements */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    color: #e7fb07ea !important;
+    fill: #e7fb07ea !important;
+    stroke: #e7fb07ea !important;
+}
+
+/* Even more specific targeting */
+.carousel .carousel-control-prev .carousel-control-prev-icon,
+.carousel .carousel-control-next .carousel-control-next-icon {
+    color: #e7fb07ea !important;
+    fill: #e7fb07ea !important;
+    stroke: #e7fb07ea !important;
+}
+
+/* Target the SVG elements inside the buttons */
+.carousel-control-prev svg,
+.carousel-control-next svg {
+    color: #e7fb07ea !important;
+    fill: #e7fb07ea !important;
+    stroke: #e7fb07ea !important;
+}
+
+lottie-player {
+    width: 100%;
+    height: 200px;
+    display: block;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+@media (max-width: 732px) {
+  .carousel-caption a svg {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Center SVG in video container's caption */
+.video-container + .carousel-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 0;
+}
+
+.video-container + .carousel-caption a svg {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Always keep video container height consistent */
+.video-container {
+  height: 60.5vh !important;
+}
+
+@media (max-width: 1225px) {
+  .video-container {
+    height: 60.5vh !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .video-container {
+    height: 60.5vh !important;
+  }
+}
+
+/* Add black background to all SVG titles */
+.carousel-inner a svg,
+.carousel-caption a svg {
+  background-color: #000000d6;
+  border: 1px solid #fff;
+  border-radius: 36px;
+  padding: 2.5% 5%;
+  box-sizing: border-box;
+}
+
+/* Restrict a tag to only wrap around the SVG */
+.carousel-inner a,
+.carousel-caption a {
+  display: inline-block;
+  width: fit-content;
+  text-decoration: none;
+}
+
+/* Ensure carousel control buttons are always visible and on top */
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 9999 !important;
+  position: absolute !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  z-index: 10000 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure buttons work on all screen sizes */
+@media (max-width: 850px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    z-index: 9999 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    z-index: 9999 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+}
+
+/* -------- Card Transitions -------- */
+.card {
+  transition: opacity 0.6s ease-in-out;
+}
+
+.card.work,
+.card.contact {
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* Vue Fade Transition */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to, .fade-leave-from {
+  opacity: 1;
+}
+
+/* GSAP Overlay Styles */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-text {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  opacity: 0;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+/* Card positioning for transitions */
+.card {
+  position: relative;
+}
+
+.card-content {
+  position: relative;
+}
+
+
+
