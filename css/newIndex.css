@@ -258,14 +258,43 @@ h2{
   bottom: 4px;
   left: 8px;
 }
-.card .button .bottom-left svg
-.card .button .bottom-right svg{
+.card .button .bottom-left svg,
+.card .button .bottom-right svg {
   top: 20px!important;
 }
 
 .bottom-right {
   bottom: 4px;
   right: 8px;
+}
+
+/* Corner Navigation Styles */
+.nav-top-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+}
+
+.nav-top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 20;
+}
+
+.nav-bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 20;
+}
+
+.nav-bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 20;
 }
 
 .card .background-image {
@@ -347,7 +376,9 @@ h2{
 }
 
 .carousel-inner {
+  width: 70vw;
     padding: 0 8%;
+    top: 10vh;
 }
 
 .carousel-inner .airbridge {
@@ -409,10 +440,13 @@ h2{
 }
 
 .tags {
-    display:flex;
+    display: flex;
+    flex-wrap: wrap;
     position: absolute;
     bottom: 2.4vh;
     left: 1%;
+    gap: 8px;
+    max-width: 90%;
 }
 
 .tags p{
@@ -435,9 +469,14 @@ h2{
 }
 
 .work .carousel-indicators{
-    bottom: -10vh;
+    bottom: -20vh;
     top: auto;
     transform: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 20px;
 }
 
 .work h5 {
@@ -489,10 +528,13 @@ h2{
   border-radius: 24px !important;
 }
 
+
+
 @media (max-width: 850px) {
   .carousel-inner {
     gap: 4vw;
-    padding: 0 2vw;
+    /* height: 90vh; */
+    /* padding: 0 2vw; */
   }
   .carousel-caption a svg,
   .carousel-inner a svg {
@@ -504,13 +546,46 @@ h2{
     margin-right: auto !important;
     display: block;
   }
+
+  .nav-top-left, 
+.nav-top-right, 
+.nav-bottom-left, 
+.nav-bottom-right{
+  font-size: 10px;
+}
 }
 
 @media (max-width: 600px) {
   .carousel-inner {
     flex-direction: column;
     gap: 6vw;
-    padding: 0 1vw;
+    /* padding: 0 1vw; */
+  }
+  
+  .work .carousel-indicators {
+    bottom: -14vh;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 0 10px;
+    max-width: 90vw;
+  }
+  
+  .work .carousel-indicators button {
+    margin: 2px;
+    min-width: 8px;
+    height: 8px;
+  }
+  
+  .tags {
+    bottom: 4vh;
+    left: 3%;
+    gap: 3px;
+    max-width: 90%;
+  }
+  
+  .tags p {
+    font-size: 7px;
+    padding: 3px 6px;
   }
   .carousel-caption {
     min-height: 120px;
@@ -545,10 +620,10 @@ h2{
 }
 
 .carousel .carousel-control-next-icon {
-    /* margin-left: 40px; */
+    margin-left: 40px;
 }
 .carousel .carousel-control-prev-icon {
-    /* margin-right: 40px; */
+    margin-right: 40px;
 }
 .carousel-control-prev,
 .carousel-control-next  {
@@ -606,6 +681,10 @@ h2{
     align-items: center!important;
     margin: auto;
     padding-right: 0!important;
+}
+
+.contact .card-content{
+  display: contents
 }
 
 .contact .content button {
@@ -729,12 +808,12 @@ h2{
 
 .carousel-inner .airbridge {
     width: 32vh!important;
-    margin-bottom: 16vh;
+    /* margin-bottom: 16vh; */
 }
 
 .carousel-inner .kinyozi {
     width: 32vh!important;
-    margin-bottom: 16vh;
+    /* margin-bottom: 16vh; */
 }
 
 
@@ -766,16 +845,16 @@ h2{
     height: 9vh;
 }
 .work .carousel-indicators{
-    /* bottom: -18vh; */
+    bottom: -18vh;
 }
 
-.video-container video {
+/* .video-container video {
   height: 100%;
-}
+} */
 
-.video-container {
+/* .video-container {
     height: 42.35vh;
-}
+} */
 .card .button svg {
     width: 16px;
     height: 16px;
@@ -803,6 +882,33 @@ h2{
         margin-left: 0 !important;
         margin-bottom: 8vh !important;
     }
+    
+    .work .carousel-indicators {
+        bottom: -12vh;
+        flex-wrap: wrap;
+        gap: 3px;
+        padding: 0 8px;
+        max-width: 95vw;
+    }
+    
+    .work .carousel-indicators button {
+        margin: 1px;
+        min-width: 6px;
+        height: 6px;
+    }
+    
+    .tags {
+        bottom: 3vh;
+        left: 2%;
+        gap: 2px;
+        max-width: 95%;
+    }
+    
+    .tags p {
+        font-size: 6px;
+        padding: 2px 4px;
+        border-radius: 12px;
+    }
 }
 
 @media (min-width: 1920px) {
@@ -826,10 +932,11 @@ h2{
     padding-right: 10%;
 }
 .work .carousel-indicators{
-    /* top: 50%; */
     transform: translateY(-50%);
-    bottom: auto;
-    bottom: -6.5vh;
+    bottom: -26vh;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0 15px;
 }
 
 .work .carousel-caption{
@@ -847,20 +954,23 @@ h2{
     margin-top: 4%;
 }
 
-.video-container {
+/* .video-container {
     height: 60.5vh;
-}
+} */
 
 .tags {
     bottom: 6vh;
     left: 5%;
+    flex-wrap: wrap;
+    gap: 4px;
+    max-width: 85%;
 }
 
 .tags p{
-    font-size: 8px;
+    font-size: 16px;
     padding: 4px 8px;
     width: auto;
-    margin: 0 5px;
+    margin: 0;
 }
 
 .carousel-inner .airbridge {
@@ -905,7 +1015,7 @@ h2{
 }
 .carousel-inner .redlandroses {
     width: 32vh!important;
-    margin-left: 6vh!important;
+    margin-left: 5vw!important;
     /* margin-bottom: -40px!important; */
     /* background-color: #1bed14de; */
     padding: 8%;
@@ -936,15 +1046,15 @@ h2{
 }
 
 .carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon {
-    /* color: #e7fb07ea !important; */
-    background: #f1ebeb;
-    height: 6vh;
-    width: 6vh;
-    /* margin-top: 30vh; */
-    /* margin-right: 2vh; */
+    height: 5.5vh;
+    width: 5.5vh;
+    position: absolute;
     border-radius: 10vh;
     z-index:1000;
+
+    margin-top: -10vh!important;
 }
+
 
 /* More specific selectors to override CDN styles */
 .carousel .carousel-control-prev,
@@ -985,6 +1095,7 @@ lottie-player {
     border-radius: 10px;
 }
 
+
 @media (max-width: 732px) {
   .carousel-caption a svg {
     display: block;
@@ -1021,11 +1132,6 @@ lottie-player {
   }
 }
 
-@media (max-width: 850px) {
-  .video-container {
-    height: 60.5vh !important;
-  }
-}
 
 /* Add black background to all SVG titles */
 .carousel-inner a svg,
@@ -1072,6 +1178,15 @@ lottie-player {
     visibility: visible !important;
     pointer-events: auto !important;
   }
+  .video-container {
+    height: 60.5vh !important;
+  }
+
+
+  .card button svg {
+    width: 26px!important;
+    height: 26px!important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1081,7 +1196,17 @@ lottie-player {
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto !important;
+    margin-top: -10vh!important;
   }
+  .carousel .redesign{
+    margin-left: 4vw!important;
+}
+.work .carousel-indicators {
+  bottom: -22vh!important;
+}
+.home h2{
+  flex-wrap: wrap;
+}
 }
 
 /* -------- Card Transitions -------- */
@@ -1136,10 +1261,5 @@ lottie-player {
 .card {
   position: relative;
 }
-
-.card-content {
-  position: relative;
 }
-
-
-
+}

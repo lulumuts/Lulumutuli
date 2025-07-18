@@ -106,12 +106,19 @@ svg {
 
 .contact a {
     color: #D2C2BB;
+    transition: color 0.3s ease;
 }
-.contact .email:hover {
+
+.contact a:hover {
     color: #7E7D7D;
 }
-.contact svg:hover {
+
+.contact a:hover svg {
     fill: #7E7D7D;
+}
+
+.contact svg {
+    transition: fill 0.3s ease;
 }
 @keyframes fadeInAnimation {
   0% {
