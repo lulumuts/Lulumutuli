@@ -649,6 +649,10 @@ h2{
   overflow-y: auto;
   max-height: 64vh;
 }
+
+.about .card-content {
+  min-height: auto;
+}
 .about .skills {
     display: flex;
     flex-wrap: wrap;
@@ -959,7 +963,7 @@ h2{
 } */
 
 .tags {
-    bottom: 6vh;
+    /* bottom: 6vh; */
     left: 5%;
     flex-wrap: wrap;
     gap: 4px;
@@ -1005,11 +1009,11 @@ h2{
     border-radius: 36px;
 }
 .carousel-inner .hati {
-    width: 24vh!important;
+    width: 28vh!important;
     margin-bottom: -40px !important;
     margin-left: 4vh!important;
     /* background-color: #1bed14de; */
-    padding: 10%;
+    padding: 6%;
     border: 1px solid #fff;
     border-radius: 36px;
 }
@@ -1035,12 +1039,12 @@ h2{
 }
 
 .carousel .afroglitch-svg{
-    height: 105px;
+    height: 120px;
     width: 46vw!important;
     margin-bottom: -40px !important;
     margin-left: 4vh!important;
     /* background-color: #1bed14de; */
-    padding: 4%;
+    padding: 5%;
     border: 1px solid #fff;
     border-radius: 36px;
 }
@@ -1181,7 +1185,9 @@ lottie-player {
   .video-container {
     height: 60.5vh !important;
   }
-
+  .about p {
+    font-size: 128%;
+  }
 
   .card button svg {
     width: 26px!important;
@@ -1262,4 +1268,9 @@ lottie-player {
   position: relative;
 }
 }
+}
+
+
+.home {
+  position: relative;
 }

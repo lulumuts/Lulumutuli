@@ -900,6 +900,21 @@ if (typeof document !== 'undefined') {
   document.addEventListener('visibilitychange', handleVisibilityChange);
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.gsap) {
+    gsap.fromTo(
+      '.home-glass',
+      { opacity: 0, '--glass-blur': '0px' },
+      {
+        opacity: 1,
+        '--glass-blur': '8px',
+        duration: 1.2,
+        ease: 'power2.out'
+      }
+    );
+  }
+});
+
 // Public Instance
 
 function anime(params = {}) {
