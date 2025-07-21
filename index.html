@@ -105,9 +105,9 @@
     .overlay { 
   position: absolute; 
   inset: 0; 
-  background: rgba(244, 242, 242, 0.657);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  background: rgba(240, 240, 240, 0.725);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -120,13 +120,12 @@
   transition: opacity 0.3s ease;
 }
     .overlay-word { 
-  color: #000; 
+  color: #ffffff; 
   font-size: 12vw; 
   font-weight: 900; 
   opacity: 0; 
   font-family: "Shrikhand", sans-serif;
-  letter-spacing: 8px;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  letter-spacing: 6px;
   padding: 20px 40px;
   border-radius: 10px;
 }
@@ -249,7 +248,7 @@ h2{
     font-size: 5vh;
     font-weight: 400;
     line-height:5vh;
-    flex-wrap: wrap;
+    display: contents;
 }
 .card .home .content {
     padding-right: 32vw;
@@ -850,7 +849,7 @@ style="position: absolute!important;
       <div class="about d-flex flex-row" v-show="showAbout">
       <div class="flex-grow-0 me-1">
           <div>
-              <div class="content" style="">
+              <div class="content">
       <h2>About me</h2>
                 <p>
                   

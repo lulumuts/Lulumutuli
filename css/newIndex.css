@@ -620,10 +620,10 @@ h2{
 }
 
 .carousel .carousel-control-next-icon {
-    margin-left: 40px;
+    margin-left: 32px;
 }
 .carousel .carousel-control-prev-icon {
-    margin-right: 40px;
+    margin-right: 32px;
 }
 .carousel-control-prev,
 .carousel-control-next  {
@@ -634,10 +634,10 @@ h2{
   font-size: 60%;
   /* padding: 20%; */
 }
-.about h2 {
+.about .content h2 {
   font-size: 2.5em;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 60px;
   font-family: "shrikhand", sans-serif;
 }
 .about .content {
@@ -805,6 +805,10 @@ h2{
 .card .content {
     padding-right: 32%;
 }
+
+.card .about .content{
+  padding-right: 8%;
+}
 .carousel-inner svg {
     width: 300px!important;
     margin-bottom: 3vh;
@@ -841,24 +845,6 @@ h2{
     width: 40vh!important;
 }
 
-.carousel .redesign {
-    /* margin-left: -4vh; */
-}
-
-.carousel-inner .bn-app {
-    height: 9vh;
-}
-.work .carousel-indicators{
-    bottom: -18vh;
-}
-
-/* .video-container video {
-  height: 100%;
-} */
-
-/* .video-container {
-    height: 42.35vh;
-} */
 .card .button svg {
     width: 16px;
     height: 16px;
@@ -937,7 +923,7 @@ h2{
 }
 .work .carousel-indicators{
     transform: translateY(-50%);
-    bottom: -26vh;
+    /* bottom: -26vh; */
     flex-wrap: wrap;
     gap: 6px;
     padding: 0 15px;
@@ -1134,6 +1120,12 @@ lottie-player {
   .video-container {
     height: 60.5vh !important;
   }
+  .carousel .carousel-control-next-icon {
+    margin-left: 60px;
+}
+.carousel .carousel-control-prev-icon {
+    margin-right: 60px;
+}
 }
 
 
@@ -1182,6 +1174,7 @@ lottie-player {
     visibility: visible !important;
     pointer-events: auto !important;
   }
+
   .video-container {
     height: 60.5vh !important;
   }
