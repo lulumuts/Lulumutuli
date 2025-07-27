@@ -77,17 +77,19 @@ i {
     top: 30px;
     font-size: 20px;
     padding-right: 200px;
+    color: #112E45;
 }
 
 .back button {
     border: none;
     display: flex;
     align-items: center;
-    color: #7E7D7D;
+    color: #112E45;
     font-size: 20px;
     width: 200px;
     background-color: transparent;
     white-space: nowrap;
+    font-weight: 500;
 }
 .back button:hover {
     left: 24px;
@@ -114,13 +116,13 @@ font-size: 21px;
 
 .next-project  {
     position: fixed;
-    top: 95.5vh;
+    top: 94.5vh;
     right: 46px;
     width: 40px;
 }
 
 .next-project  i {
-    top: 96vh;
+    top: 95vh;
     transform: rotate(180deg);
     font-size: 20px;
     right: 48px;
@@ -130,11 +132,12 @@ font-size: 21px;
     border: none;
     display: flex;
     align-items: center;
-    color: #7E7D7D;
+    color: #112E45;
     font-size: 20px;
     width: 200px;
     background-color: transparent;
     white-space: nowrap;
+    font-weight: 500;
 }
 
 .last-project button i {
