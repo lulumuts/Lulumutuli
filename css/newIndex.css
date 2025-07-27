@@ -429,14 +429,24 @@ h2{
 }
 /* SVG title styling - light grey fill and thin stroke */
 .carousel-inner a svg path {
-    fill: #fff !important;
-    stroke: none !important;
-    stroke-width: 0 !important;
+    fill: none !important;
+    stroke: #fff !important;
+    stroke-width: 1.5px !important;
+}
+
+.carousel-inner a .redesign path,
+.carousel-inner a .afroglitch-svg path {
+  stroke-width: 2.5px !important;
+}
+ 
+.carousel-inner a .bn-app path  {
+  stroke-width: 3.5px !important;
 }
 
 .carousel-inner a:hover svg path,
 .carousel-inner a svg:hover path {
-    fill: #f2ff00!important;
+    fill: #ffffff!important;
+    stroke: none !important;
 }
 
 .tags {
@@ -444,14 +454,14 @@ h2{
     flex-wrap: wrap;
     position: absolute;
     bottom: 2.4vh;
-    left: 1%;
+    left: 3%;
     gap: 8px;
     max-width: 90%;
 }
 
 .tags p{
     position: relative;
-    margin: 0 10px;
+    margin: 0 2px;
     background: rgba(42, 42, 42, 0.75);
     padding: 8px 16px;
     border-radius: 16px;
@@ -601,9 +611,7 @@ h2{
 
 .carousel-inner .redesign {
     width: clamp(320px, 56vh, 64vh)!important;
-    /* margin-left: -4vw; */
     background-color: #000000d6;
-    /* margin-bottom: clamp(12vh, 26vh, 27vh); */
     border: 1px solid #fff;
     border-radius: 36px;
     padding: 4.5% 3%!important;
@@ -631,14 +639,13 @@ h2{
     bottom: 26vh !important;
 }
 .about p{
-  font-size: 60%;
-  /* padding: 20%; */
+  font-size: 20px;
 }
 .about .content h2 {
   font-size: 2.5em;
   position: relative;
-  padding-bottom: 60px;
   font-family: "shrikhand", sans-serif;
+  margin-bottom: 40px;;
 }
 .about .content {
   background-color: #000000d6;
@@ -1121,10 +1128,10 @@ lottie-player {
     height: 60.5vh !important;
   }
   .carousel .carousel-control-next-icon {
-    margin-left: 60px;
+    margin-left: 51px;
 }
 .carousel .carousel-control-prev-icon {
-    margin-right: 60px;
+    margin-right: 51px;
 }
 }
 
@@ -1178,9 +1185,7 @@ lottie-player {
   .video-container {
     height: 60.5vh !important;
   }
-  .about p {
-    font-size: 128%;
-  }
+
 
   .card button svg {
     width: 26px!important;

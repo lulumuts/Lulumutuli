@@ -276,77 +276,124 @@ margin: auto;
 padding-bottom: 120px;
 }
 
-.navigation {
-font-family: "Barrio", system-ui;
+.back {
+font-family: 'Shrikhand', serif;
 position: fixed;
-bottom: 24px;
+top: 24px;
+right: 2px;
+width: 170vw;
 display: grid;
 grid-template-columns: auto auto;
 z-index:1;
 justify-content: end;
 }
 
-.back {
-    top: 24px;
-    right: 24px;
-    width: 100vw;
-}
-
-.next-project {
-right: 24px;
-}
-
-
-.last-project {
-left: 24px;
-}
-
 .back h4 {
     position: fixed;
     color: #7E7D7D;
-    left: 75px;
+    /* left: 75px; */
 }
 
 .back-svg {
-    top: 30px;
+    left: 24px;
+    top: 16px;
     position: fixed;
-    right: 190px;
+    margin-right: 200px;
     width: 40px;
     color: #7E7D7D;
 }
 
-.last-project .backk-svg{
-left: 44px;
-margin-top: 5px;
+i {
+    width: 20px;
+    position: fixed;
+    top: 30px;
+    font-size: 20px;
+    padding-right: 200px;
+}
+
+.back button {
+    border: none;
+    display: flex;
+    align-items: center;
+    color: #7E7D7D;
+    font-size: 20px;
+    width: 200px;
+    background-color: transparent;
+    white-space: nowrap;
+}
+.back button:hover {
+    left: 24px;
+    top: 16px;
+font-size: 21px;
+}
+
+.back button:focus {
+    outline: none;
+}
+
+.last-project, .last-project i {
+    position: fixed;
+    top: 95vh;
+    left: 216px;
+    width: 40px;
+}
+
+.last-project i {
+    top: 95.5vh;
+    font-size: 20px;
+    left: 56px;
+}
+
+.next-project  {
+    position: fixed;
+    top: 95.5vh;
+    right: 46px;
+    width: 40px;
+}
+
+.next-project  i {
+    top: 96vh;
+    transform: rotate(180deg);
+    font-size: 20px;
+    right: 48px;
+}
+
+.last-project button, .next-project button {
+    font-family: "Shrikhand", serif;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: #7E7D7D;
+    font-size: 20px;
+    width: 200px;
+    background-color: transparent;
+    white-space: nowrap;
+}
+
+.last-project button i {
+    margin-right: 16px;
 }
 
 .back button, 
 .next-project button, 
 .last-project button {
-    font-family: "Shrikhand", serif;
-    border: none;
-    display: grid;
-    grid-template-columns: auto auto;
-    color: #7E7D7D;
-    font-size: 20px;
-    width: 180px;
-    background-color: transparent;
-}
-.back button:hover, .next-project button:hover, .last-project button:hover {
- font-size: 21.5px;
+transition: font-size 0.2s ease;
 }
 
-.back button:focus,
-.next-project button:focus,
-.last-project button:focus {
+.back button:hover, 
+.next-project button:hover, 
+.last-project button:hover {
+font-size: 21px;
+}
+
+.back button:hover i, 
+.next-project button:hover i, 
+.last-project button:hover i {
+font-size: 20px;
+}
+
+.back button:focus, .next-project button:focus, .last-project button:focus {
     outline: none;
-}
-
-.next-project svg {
-    position: fixed;
-    right: 30px;
-    margin-top: 5px;
-    transform: scale(-1,1);
 }
 
 

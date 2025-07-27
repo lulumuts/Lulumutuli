@@ -233,23 +233,11 @@ h1 {
     text-decoration: none;
 }
 .back {
-font-family: "Shrikhand", serif;
+font-family: 'Shrikhand', serif;
 position: fixed;
 top: 24px;
-right: 40px;
-width: 100vw;
-display: grid;
-grid-template-columns: auto auto;
-z-index:1;
-justify-content: end;
-}
-
-.next-project {
-font-family: "Shrikhand", serif;
-position: fixed;
-bottom: 24px;
-right: 44px;
-width: 100vw;
+right: 2px;
+width: 170vw;
 display: grid;
 grid-template-columns: auto auto;
 z-index:1;
@@ -259,41 +247,108 @@ justify-content: end;
 .back h4 {
     position: fixed;
     color: #112E45;
-    left: 75px;
+    /* left: 75px; */
 }
 
 .back-svg {
-    margin-top: 5px;
-    right: 200px;
-    color: #112E45;
-    font-size: 24px;
+    left: 24px;
+    top: 16px;
     position: fixed;
+    margin-right: 200px;
+    width: 40px;
+    color: #112E45;
 }
 
-.next-project .back-svg {
-    right: 15px;
-    margin-right: 5px;
-    transform: scale(-1,1);
-    position: fixed!important;
+i {
+    width: 20px;
+    position: fixed;
+    top: 30px;
+    font-size: 20px;
+    padding-right: 200px;
 }
 
-
-.back button, .next-project button {
+.back button {
     border: none;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    align-items: center;
     color: #112E45;
     font-size: 20px;
+    width: 200px;
     background-color: transparent;
+    white-space: nowrap;
 }
-
-.back button:hover, 
-.next-project button:hover {
-  font-size: 21px;
-
+.back button:hover {
+    left: 24px;
+    top: 16px;
+font-size: 21px;
 }
 
 .back button:focus {
+    outline: none;
+}
+
+.last-project, .last-project i {
+    position: fixed;
+    top: 95vh;
+    left: 216px;
+    width: 40px;
+}
+
+.last-project i {
+    top: 95.5vh;
+    font-size: 20px;
+    left: 56px;
+}
+
+.next-project  {
+    position: fixed;
+    top: 95.5vh;
+    right: 46px;
+    width: 40px;
+}
+
+.next-project  i {
+    top: 96vh;
+    transform: rotate(180deg);
+    font-size: 20px;
+    right: 48px;
+}
+
+.last-project button, .next-project button {
+    font-family: "Shrikhand", serif;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: #112E45;
+    font-size: 20px;
+    width: 200px;
+    background-color: transparent;
+    white-space: nowrap;
+}
+
+.last-project button i {
+    margin-right: 16px;
+}
+
+.back button, 
+.next-project button, 
+.last-project button {
+transition: font-size 0.2s ease;
+}
+
+.back button:hover, 
+.next-project button:hover, 
+.last-project button:hover {
+font-size: 21px;
+}
+
+.back button:hover i, 
+.next-project button:hover i, 
+.last-project button:hover i {
+font-size: 20px;
+}
+
+.back button:focus, .next-project button:focus, .last-project button:focus {
     outline: none;
 }
 

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Braiding Nairobi App</title>
+  <meta name="description" content="Braiding Nairobi App - Features, screenshots, and download information.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+  main, header{
+    margin: 0 200px;
+    font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #3A0F88;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  header video {
+    width: 100%;
+    height: 60vh;
+    margin: 0;
+  }
+    .ui-improvements img{
+        width: 110%;
+    }
+    video {
+        width: 100%;
+    }
+
+    .web-app-extension img{
+        width: 100%;
+    }
+
+    .container-fluid {
+      padding: 30px 0;
+    }
+    pre code {
+      height: 450px;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 6px;
+    display: block;
+    overflow-x: auto;
+    font-family: monospace;
+  }
+
+  h4 {
+    text-align: center;
+    padding-bottom: 24px;
+    font-size: 48px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .app-features {
+    text-align: left;
+    font-size: 24px;
+    padding-bottom: 8px;
+  }
+  .project-info {
+ 
+      list-style-type: none;
+      margin-left: -22px;
+      
+  }
+ 
+  li { 
+    font-size: 18px;
+  }
+    .task-list {
+      list-style-type: dot;
+    }
+
+  
+  .responsiveness video {
+    width: 80%;
+    margin: auto;
+  }
+
+  .body-text{
+    margin: 40px 150px;
+    text-align: center;
+  }
+
+  header {
+    text-align: left;
+    background-color: #F8F4FF;
+    margin: 0;
+  }
+
+  header .content {
+    padding: 20px;
+  }
+
+  header video{
+    width: 100%;
+    height: 54vh;
+    margin-top: 8px;
+  }
+
+  header .content p,
+  header .content h5,
+  header .content h1 {
+    margin: 8px 40px;
+  }
+.line-svg {
+  display: block;
+  margin: auto;
+}
+.back {
+font-family: 'Shrikhand', serif;
+position: fixed;
+top: 24px;
+right: 2px;
+width: 170vw;
+display: grid;
+grid-template-columns: auto auto;
+z-index:1;
+justify-content: end;
+}
+
+.back h4 {
+    position: fixed;
+    color: #7E7D7D;
+    /* left: 75px; */
+}
+
+.back-svg {
+    left: 24px;
+    top: 16px;
+    position: fixed;
+    margin-right: 200px;
+    width: 40px;
+    color: #7E7D7D;
+}
+
+i {
+    width: 20px;
+    position: fixed;
+    top: 30px;
+    font-size: 20px;
+    padding-right: 200px;
+}
+
+.back button {
+    border: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    color: #7E7D7D;
+    font-size: 20px;
+    width: 200px;
+    background-color: transparent;
+}
+.back button:hover {
+    left: 24px;
+    top: 16px;
+font-size: 21px;
+}
+
+.back button:focus {
+    outline: none;
+}
+
+.last-project, .last-project i {
+    position: fixed;
+    top: 95vh;
+    left: 200px;
+    width: 40px;
+}
+
+.last-project i {
+    top: 95.5vh;
+    font-size: 20px;
+    left: 56px;
+}
+
+.next-project  {
+    position: fixed;
+    top: 95.5vh;
+    right: 46px;
+    width: 40px;
+}
+
+.next-project  i {
+    top: 96vh;
+    transform: rotate(180deg);
+    font-size: 20px;
+    right: 48px;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeInAnimation 6s ease;
+}
+body {
+    transition: opacity 6s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+    </style>
+    <div class="back">
+      <a href="index.html"> 
+          <button>
+              <i class="fa fa-arrow-left"></i>&nbsp;&nbsp;
+              Back Home
+          </button>
+      </a>
+  </div>
+
+  <div class="back last-project">
+      <a href="./braidingnairobi.html"> 
+          <button>
+              <i class="fa fa-arrow-left"></i>&nbsp;&nbsp;
+              Last Project
+          </button>
+      </a>
+  </div>
+
+  <div class="back next-project">
+      <a href="./airbridge.html"> 
+          <button>
+              <i class="fa fa-arrow-left"></i>&nbsp;&nbsp;
+              Next Project
+          </button>
+      </a>
+  </div>
+  <header class="">
+    <div class="container-fluid py-0">
+      <div class="row">
+        <div class="col-md-5 p-5 d-flex flex-column justify-content-center content">
+          <h1 style="font-size: 48px;">Braiding Nairobi</h1>
+          <h5 style=" font-size: 24px;">Mobile App + Web App</h5>
+          <p>The Braiding Nairobi App connects clients with professional hair braiders in Nairobi, offering convenient at-home styling and easy appointment booking. Discover features, screenshots, and download options below.</p>
+        </div>
+        <div class="col-md-7">
+          <video src="img/BN-App-intro-video.mp4" autoplay loop muted playsinline></video>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <section class="mb-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class="app-features">📱 App Features</h4>
+            <ul>
+              <li>Browse and book top-rated braiders in Nairobi</li>
+              <li>View stylist profiles, reviews, and portfolios</li>
+              <li>Easy in-app appointment scheduling</li>
+              <li>Secure payment options</li>
+              <li>Track your booking and get reminders</li>
+              <li>Available for iOS and Android</li>
+            </ul>
+          </div>
+          <div class="col-md-6 mb-5 project-info">
+            
+            <h4 class="app-features"> 📝 Project Info</h4>
+            <ul>
+              <li class="project-info"><strong>Role:</strong> Acting CTO + Product Designer</li>
+              <li class="project-info"><strong>Type:</strong> Mobile App + Web App</li>
+              <li class="project-info"><strong>Tools Used: </strong>Flutter, Cursor, Dart, Figma, Git</li>
+              <li class="project-info"><strong>Task:</strong>
+                <ul>
+                    <li>Redesign of mobile app to be more user friendly and intuitive</li>
+                    <li>Spearheaded the implementation of Little Cab API for streamlined booking in collaboration with founding engineer, CEO and external teams.</li>
+                    <li>Web app extension with flutter for easy access to the app</li>
+                    <li>Created a modular design system and component library based on atomic design principles.</li>
+                    <li>Addition of new feature that allows users to book a braids removal</li>
+                </ul></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluid ui-improvements">
+            <div class="row">
+                <h4> 🖌️ <br/><br/>UI Improvements</h4>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            <img src="img/BN_splash_screen.png" />
+                        </div>
+                        <div class="col">
+                            <img src="img/BN_signup_screen.png" />
+                      
+                        </div>
+                        <div class="col">
+                            <img src="img/BN_home_screen.png" />
+                        </div>
+                      </div>
+                    <div class="row">
+                      <div class="col">
+                        <img src="img/BN_braider_screen.png" />
+                      </div>
+                      <div class="col">
+                        <img src="img/BN_order_screen.png" />
+                      </div>
+                    </div>
+                 
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+  
+<section>
+    <div class="container-fluid web-app-extension">
+        <h4>🖥️ <br/><br/>Web App Screens</h4>
+        <p class="body-text">I introduced the idea of a web app as an extension of the mobile app to make it easier for users to book appointments on the go, without needing to download anything. This was especially important for international users visiting Nairobi, many of whom couldn’t access the app through their regional app stores.  </p>
+        <img src="img/BN_Web_App_Screens.png" />
+        <p class="body-text">A web app offered a lightweight, accessible solution with minimal development overhead. It also allowed us to maintain a consistent codebase by leveraging Flutter’s cross-platform capabilities for both mobile and web.</p>
+    </div>
+</section>
+
+    <section>
+        <div class="container-fluid">
+            <h4>📁 <br/><br/>Widgetbook Components</h4>
+
+            <p class="body-text">I used widgetbook to create a component library for the app. This allowed me to create a consistent design system and component library based on atomic design principles, for mobile and web, consistent with brand identity. I was not familiar with flutter or dart at the time, so I relied heavily on AI tools such as Cursor to help me build this library, accessing the source code for the widget in particular from Figma plugins.</p>
+            
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <video src="img/BN_our-services-video.mp4" autoplay muted loop></video>
+                    <video src="img/BN-our-styles-buttons.mp4" autoplay muted loop></video>
+                    <video style="border-width: 7px; border-color: #fff;" src="img/BN_booking_status.mp4" autoplay muted loop></video>
+                </div>
+                  <div class="col-md-6">
+                    <h6>Code Example from Figma's Flutter Plugin</h6>
+                    <br/>
+                    <pre><code>
+                  Container(
+                      height: 48,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF332749),
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          CircleAvatar(
+                            radius: 19,
+                            backgroundColor: Colors.white,
+                            child: Image.network(
+                              "https://placehold.co/25x25",
+                              width: 25,
+                              height: 25,
+                            ),
+                          ),
+                          SizedBox(width: 12),
+                          Text(
+                            'Book a New Look',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontFamily: 'League Spartan',
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                    </code></pre>
+                  </div>
+                  
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluid responsiveness d-flex flex-column align-items-center">
+            <h4>📐<br/><br/>Responsiveness</h4>
+            <p class="body-text">The app is responsive and works on all devices, including mobile, tablet and desktop. Though we started with the design of the mobile, we made sure that on smaller screens on web, the mobile app layout would be the same.</p>
+            <video src="img/BN-widgetbook-responsiveness.mp4" autoplay muted loop></video>
+        </div>
+    </section>
+  </main>
+  <footer class="py-4 bg-light text-center">
+    <p>&copy; 2024 Lulu Mutuli</p>
+  </footer>
+</body>
+</html>
