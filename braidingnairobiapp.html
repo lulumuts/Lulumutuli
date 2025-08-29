@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/x-icon" href="img/favicon-four.png">
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
@@ -30,8 +31,10 @@
   }
   header video {
     width: 100%;
-    height: 60vh;
+    height: 100vh;
+    object-fit: cover;
     margin: 0;
+    right: 0;
   }
     .ui-improvements img{
         width: 110%;
@@ -63,7 +66,7 @@
     font-size: 48px;
   }
   p {
-    font-size: 18px;
+    font-size: 20px;
   }
   .app-features {
     text-align: left;
@@ -78,7 +81,8 @@
   }
  
   li { 
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 32px;
   }
     .task-list {
       list-style-type: dot;
@@ -98,16 +102,20 @@
   header {
     text-align: left;
     background-color: #F8F4FF;
+    display: flex;
+    justify-content: center;
     margin: 0;
   }
 
   header .content {
     padding: 20px;
+    padding-left: 150px!important;
   }
 
   header video{
     width: 100%;
-    height: 54vh;
+    height: 74vh;
+    object-fit: cover;
     margin-top: 8px;
   }
 
@@ -221,6 +229,28 @@ body.loaded {
     opacity: 1;
 }
 
+.ui-improvements h1 {
+  font-size: 3.6vw;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #7F38FF;
+  opacity: 0.1;
+  padding-bottom: 32px;
+}
+
+.mobile-screens {
+  padding: 42px 0;
+}
+
+.mobile-screens img {
+  padding: 24px;
+
+}
+
+.widgetbook-components {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
     </style>
     <div class="back">
       <a href="index.html"> 
@@ -303,30 +333,59 @@ body.loaded {
     <section>
         <div class="container-fluid ui-improvements">
             <div class="row">
-                <h4> 🖌️ <br/><br/>UI Improvements</h4>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col">
-                            <img src="img/BN_splash_screen.png" />
-                        </div>
-                        <div class="col">
-                            <img src="img/BN_signup_screen.png" />
-                      
-                        </div>
-                        <div class="col">
-                            <img src="img/BN_home_screen.png" />
-                        </div>
-                      </div>
-                    <div class="row">
-                      <div class="col">
-                        <img src="img/BN_braider_screen.png" />
-                      </div>
-                      <div class="col">
-                        <img src="img/BN_order_screen.png" />
-                      </div>
+                <h4> 🖌️ UI Improvements</h4>
+                <div class="container-fluid">
+
+                  <div class="row">
+                    <div class="col-md-8 mobile-screens">
+                      <h1 class="text-left">SPLASH SCREEN</h1>
+                      <img src="img/BNApp-splash-screen.svg" />
                     </div>
-                 
+                    <div class="col-md-4">
+                    </div>
                   </div>
+
+                  <div class="row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-8 mobile-screens">
+                      <h1 class="text-left">SIGNUP SCREEN</h1>
+                      <img src="img/BNApp-signup-screen.svg" style="" />
+                    </div>
+                   
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-8 mobile-screens">
+                      <h1 class="text-left">HOME SCREEN</h1>
+                      <img src="img/BNApp-Home-Screen.svg" />
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                  </div>
+
+              
+              
+
+                  <div class="row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-8 mobile-screens">
+                      <h1 class="text-left">BRAIDERS SCREEN</h1>
+                      <img src="img/BNApp-braider-screen.svg" />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-8 mobile-screens">
+                      <h1 class="text-left">ORDERS SCREEN</h1>
+                      <img src="img/BNApp-orders-screen.svg" />
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                  </div>
+                </div>
+
                 </div>
 
             </div>
@@ -336,16 +395,16 @@ body.loaded {
   
 <section>
     <div class="container-fluid web-app-extension">
-        <h4>🖥️ <br/><br/>Web App Screens</h4>
+        <h4>🖥️ Web App Screens</h4>
         <p class="body-text">I introduced the idea of a web app as an extension of the mobile app to make it easier for users to book appointments on the go, without needing to download anything. This was especially important for international users visiting Nairobi, many of whom couldn’t access the app through their regional app stores.  </p>
         <img src="img/BN_Web_App_Screens.png" />
         <p class="body-text">A web app offered a lightweight, accessible solution with minimal development overhead. It also allowed us to maintain a consistent codebase by leveraging Flutter’s cross-platform capabilities for both mobile and web.</p>
     </div>
 </section>
 
-    <section>
+    <section class="widgetbook-components">
         <div class="container-fluid">
-            <h4>📁 <br/><br/>Widgetbook Components</h4>
+            <h4>📁 Widgetbook Components</h4>
 
             <p class="body-text">I used widgetbook to create a component library for the app. This allowed me to create a consistent design system and component library based on atomic design principles, for mobile and web, consistent with brand identity. I was not familiar with flutter or dart at the time, so I relied heavily on AI tools such as Cursor to help me build this library, accessing the source code for the widget in particular from Figma plugins.</p>
             
@@ -401,14 +460,14 @@ body.loaded {
 
     <section>
         <div class="container-fluid responsiveness d-flex flex-column align-items-center">
-            <h4>📐<br/><br/>Responsiveness</h4>
+            <h4>📐Responsiveness</h4>
             <p class="body-text">The app is responsive and works on all devices, including mobile, tablet and desktop. Though we started with the design of the mobile, we made sure that on smaller screens on web, the mobile app layout would be the same.</p>
             <video src="img/BN-widgetbook-responsiveness.mp4" autoplay muted loop></video>
         </div>
     </section>
   </main>
   <footer class="py-4 bg-light text-center">
-    <p>&copy; 2024 Lulu Mutuli</p>
+    <p>&copy; 2025 Lulu Mutuli</p>
   </footer>
 </body>
 </html>
