@@ -90,7 +90,7 @@ h2{
 
 /* Vue.js v-show transitions */
 .card {
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .card[v-show="false"] {
@@ -133,7 +133,7 @@ h2{
   pointer-events: none;
   opacity: 0;
   transform: translateX(-100%);
-  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Work: left to right */
@@ -228,7 +228,7 @@ h2{
 .card .button:hover {
     font-weight: 800;
     font-size: 18px;
-    color:#e7fb07ea;
+    color:#f5afe6;
 }
 .top-left {
   display: inline-flex;
@@ -245,7 +245,7 @@ h2{
 }
 
 .card .button:hover svg {
-    stroke: #e7fb07ea;
+    stroke: #f5afe6;
 }
 
 .top-right {
@@ -719,11 +719,11 @@ h2{
 }
 
 .contact .content button:hover svg {
-    stroke: #e7fb07ea;
+    stroke: #f5afe6;
 }
 
 .contact .content button:hover {
-    border: 2px solid #e7fb07ea;
+    border: 2px solid #f5afe6;
 }
 
 .contact p {
@@ -1056,30 +1056,30 @@ h2{
 /* More specific selectors to override CDN styles */
 .carousel .carousel-control-prev,
 .carousel .carousel-control-next {
-    color: #e7fb07ea !important;
+    color: #f5afe6 !important;
 }
 
 /* Target the actual button elements */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    color: #e7fb07ea !important;
-    fill: #e7fb07ea !important;
+    color: #f5afe6 !important;
+    fill: #f5afe6 !important;
     stroke: #e7fb07ea !important;
 }
 
 /* Even more specific targeting */
 .carousel .carousel-control-prev .carousel-control-prev-icon,
 .carousel .carousel-control-next .carousel-control-next-icon {
-    color: #e7fb07ea !important;
-    fill: #e7fb07ea !important;
+    color: #f5afe6 !important;
+    fill: #f5afe6 !important;
     stroke: #e7fb07ea !important;
 }
 
 /* Target the SVG elements inside the buttons */
 .carousel-control-prev svg,
 .carousel-control-next svg {
-    color: #e7fb07ea !important;
-    fill: #e7fb07ea !important;
+    color: #f5afe6 !important;
+    fill: #f5afe6 !important;
     stroke: #e7fb07ea !important;
 }
 
@@ -1215,17 +1215,17 @@ lottie-player {
 
 /* -------- Card Transitions -------- */
 .card {
-  transition: opacity 0.6s ease-in-out;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .card.work,
 .card.contact {
-  transition: opacity 0.6s ease-in-out;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Vue Fade Transition */
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.6s ease-in-out;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .fade-enter-from, .fade-leave-to {
@@ -1250,6 +1250,44 @@ lottie-player {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* SVG Transition Overlay */
+.svg-transition-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 15;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.svg-transition-overlay[v-show="true"] {
+  opacity: 1;
+}
+
+.transition-svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transition-svg {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.svg-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  fill: none;
 }
 
 .overlay-text {

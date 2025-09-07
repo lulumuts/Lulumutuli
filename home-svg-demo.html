@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home SVG Animation Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(-20deg, #faebe7, #cbd41f, #f5afe6, #f9f9f7);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 20%; }
+            50% { background-position: 100% 80%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .demo-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .svg-display {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .info h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .info p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🏠 Home SVG Animation Demo</h1>
+        
+        <div class="controls">
+            <button onclick="triggerAnimation()">🎬 Play Animation</button>
+            <button onclick="resetAnimation()">🔄 Reset</button>
+            <button onclick="addHoverEffects()">🖱️ Add Hover Effects</button>
+            <button onclick="addClickEffects()">👆 Add Click Effects</button>
+            <button onclick="createFloating()">🦋 Floating Animation</button>
+            <button onclick="createParticles()">✨ Particle Effect</button>
+        </div>
+
+        <div class="svg-display" id="svgDisplay">
+            <!-- Home.svg will be loaded here -->
+        </div>
+
+        <div class="info">
+            <h3>🎨 Animation Features</h3>
+            <ul class="feature-list">
+                <li><strong>Line Drawing:</strong> SVG paths are drawn sequentially with smooth animations</li>
+                <li><strong>Interactive Hover:</strong> Paths change color and stroke width on hover</li>
+                <li><strong>Click Effects:</strong> Ripple effects and bounce animations on click</li>
+                <li><strong>Floating Animation:</strong> Gentle up-and-down floating motion</li>
+                <li><strong>Particle Effects:</strong> Dynamic particle explosions</li>
+                <li><strong>Responsive Design:</strong> Adapts to different screen sizes</li>
+                <li><strong>Performance Optimized:</strong> Uses CSS transforms and will-change properties</li>
+                <li><strong>Accessibility:</strong> Supports reduced motion preferences</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>🔧 Technical Details</h3>
+            <p>
+                This demo showcases the Home.svg animation system built with anime.js. The SVG is converted from an image to inline SVG elements, 
+                allowing for path-by-path animation control. Each path is animated using stroke-dasharray and stroke-dashoffset properties 
+                to create the line drawing effect. The system integrates seamlessly with Vue.js applications and provides multiple 
+                animation triggers and interactive effects.
+            </p>
+        </div>
+    </div>
+
+    <!-- Load anime.js -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    
+    <!-- Load the Home SVG animations -->
+    <script src="./js/home-svg-animations.js"></script>
+
+    <script>
+        // Demo-specific functionality
+        function triggerAnimation() {
+            if (window.homeSVGAnimator) {
+                window.homeSVGAnimator.animate();
+            }
+        }
+
+        function resetAnimation() {
+            if (window.homeSVGAnimator) {
+                window.homeSVGAnimator.reset();
+            }
+        }
+
+        function addHoverEffects() {
+            if (window.homeSVGAnimator) {
+                window.homeSVGAnimator.addHoverEffects();
+                alert('Hover effects added! Try hovering over the SVG paths.');
+            }
+        }
+
+        function addClickEffects() {
+            if (window.homeSVGAnimator) {
+                window.homeSVGAnimator.addClickEffects();
+                alert('Click effects added! Try clicking on the SVG paths.');
+            }
+        }
+
+        function createFloating() {
+            if (window.homeSVGAnimator) {
+                window.homeSVGAnimator.createFloatingAnimation();
+            }
+        }
+
+        function createParticles() {
+            if (window.homeSVGAnimator) {
+                window.homeSVGAnimator.createParticleEffect();
+            }
+        }
+
+        // Load the Home.svg into the demo
+        document.addEventListener('DOMContentLoaded', () => {
+            const svgDisplay = document.getElementById('svgDisplay');
+            
+            // Create an img element to load the SVG
+            const img = document.createElement('img');
+            img.src = './img/Home.svg';
+            img.alt = 'Home';
+            img.className = 'home-title-svg';
+            img.style.width = '200px';
+            img.style.height = 'auto';
+            
+            svgDisplay.appendChild(img);
+            
+            // Initialize the Home SVG Animator
+            if (window.homeSVGAnimator) {
+                // Wait a bit for the SVG to load, then prepare it
+                setTimeout(() => {
+                    window.homeSVGAnimator.prepareSVGForAnimation();
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
