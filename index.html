@@ -147,38 +147,58 @@
     /* SVG Transition Overlay Styles */
     .svg-transition-overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(239, 85, 247, 0.861);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      pointer-events: none;
-      opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(239, 85, 247, 0.861);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0s linear 0.8s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
     }
 
-    .transition-svg-container {
+    .svg-transition-overlay.show {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.8s ease;
+    }
+
+    .transition-text-container {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
       height: 100%;
+      padding-bottom: 24vh; /* This gives you the 10% offset you wanted */
     }
 
-    .transition-svg {
+    .transition-text {
+      color: white;
+      font-size: 4rem;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
       opacity: 0;
-      transform: scale(0.5);
-      transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      letter-spacing: 2px;
+      transition: opacity 0.5s cubic-bezier(0.15, 0.05, 0.15, 1);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-
-    .transition-svg.show {
+    
+    .transition-text.show {
       opacity: 1;
-      transform: scale(1);
     }
 
     .svg-path {
@@ -489,31 +509,9 @@ h2{
     <div class="black-overlay" ref="blackOverlay" v-show="showBlackOverlay"></div>
     
     <!-- SVG Transition Overlay -->
-    <div class="svg-transition-overlay" ref="svgOverlay" v-show="showTransition">
-      <div class="transition-svg-container">
-        <!-- Home SVG -->
-        <svg v-show="transitionLabel === 'home'" class="transition-svg" width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="svg-path" d="M20 30 L40 10 L60 30 L60 50 L40 50 L40 35 L40 50 L20 50 Z" stroke="white" stroke-width="2" fill="none"/>
-          <text x="70" y="35" fill="white" font-size="24" font-family="Arial">HOME</text>
-        </svg>
-        
-        <!-- Work SVG -->
-        <svg v-show="transitionLabel === 'work'" class="transition-svg" width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="svg-path" d="M20 20 L60 20 L60 40 L20 40 Z M25 25 L55 25 L55 35 L25 35 Z" stroke="white" stroke-width="2" fill="none"/>
-          <text x="70" y="35" fill="white" font-size="24" font-family="Arial">WORK</text>
-        </svg>
-        
-        <!-- About SVG -->
-        <svg v-show="transitionLabel === 'about'" class="transition-svg" width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle class="svg-path" cx="30" cy="30" r="15" stroke="white" stroke-width="2" fill="none"/>
-          <text x="55" y="35" fill="white" font-size="24" font-family="Arial">ABOUT</text>
-        </svg>
-        
-        <!-- Contact SVG -->
-        <svg v-show="transitionLabel === 'contact'" class="transition-svg" width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="svg-path" d="M20 20 L40 20 L40 40 L20 40 Z M25 25 L35 25 L35 35 L25 35 Z M30 30 L30 30" stroke="white" stroke-width="2" fill="none"/>
-          <text x="50" y="35" fill="white" font-size="24" font-family="Arial">CONTACT</text>
-        </svg>
+    <div class="svg-transition-overlay" :class="{ show: showTransition }" ref="svgOverlay">
+      <div class="transition-text-container">
+        <h1 class="transition-text">{{ transitionLabel.toUpperCase() }}</h1>
       </div>
     </div>
     
@@ -1084,225 +1082,74 @@ const app = createApp({
     const animateSVGTransition = (viewName) => {
       console.log('Starting transition to:', viewName);
       
-      // Set the transition label and show overlay
+      // Set the transition label and show overlay immediately
       transitionLabel.value = viewName;
       showTransition.value = true;
 
       // Wait for DOM update
       nextTick(() => {
         const overlayElement = document.querySelector('.svg-transition-overlay');
-        const svgElement = document.querySelector(`.transition-svg[v-show="true"]`);
+        console.log('Overlay element found:', !!overlayElement);
+        console.log('showTransition value:', showTransition.value);
+        console.log('transitionLabel value:', transitionLabel.value);
         
-        console.log('Elements found:', {
-          overlay: !!overlayElement,
-          svg: !!svgElement,
-          gsap: !!window.gsap
-        });
-        
-        if (overlayElement && svgElement && window.gsap) {
-          // Force show overlay first to ensure it's visible
-          overlayElement.style.display = 'flex';
-          overlayElement.style.opacity = '1';
-          overlayElement.style.visibility = 'visible';
+        if (overlayElement) {
+          // Make overlay visible first, then add show class for smooth fade-in transition
+          overlayElement.style.display = 'block';
           
-          // Set initial states
-          gsap.set(overlayElement, { 
-            opacity: 0,
-            scale: 1.1,
-            rotation: 2
-          });
-          gsap.set(svgElement, { 
-            opacity: 0, 
-            scale: 0.3, 
-            y: 50,
-            rotation: -5,
-            filter: "blur(10px)"
-          });
+          // Force a reflow to ensure the element is rendered before transition
+          overlayElement.offsetHeight;
           
-          // Create animated timeline
-          const tl = gsap.timeline({
-            onComplete: () => {
-              // Animate black overlay exit with ultra-smooth fade out
-              const blackOverlayElement = document.querySelector('.black-overlay');
-              if (blackOverlayElement && window.gsap) {
-                gsap.timeline()
-                  .to(blackOverlayElement, {
-                    scale: 1.005,
-                    filter: "blur(1px)",
-                    duration: 0.2,
-                    ease: "power1.out"
-                  })
-                  .to(blackOverlayElement, {
-                    opacity: 0,
-                    scale: 0.995,
-                    filter: "blur(2px)",
-                    duration: 0.6,
-                    ease: "power1.out",
-                    onComplete: () => {
-                      showBlackOverlay.value = false;
-                    }
-                  });
-              } else {
-                showBlackOverlay.value = false;
-              }
-              
-              setTimeout(() => {
-                currentView.value = viewName;
-                showTransition.value = false;
-                transitionLabel.value = '';
-              }, 200);
-            }
-          });
+          // Add show class to trigger the fade-in transition
+          overlayElement.classList.add('show');
           
-          // Animated overlay entrance with multiple effects
-          tl.to(overlayElement, {
-            opacity: 1,
-            scale: 1,
-            rotation: 0,
-            duration: 0.8,
-            ease: "power2.out"
-          })
-          // SVG dramatic entrance
-          .to(svgElement, {
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            rotation: 0,
-            filter: "blur(0px)",
-            duration: 1.0,
-            ease: "back.out(1.7)"
-          }, "-=0.3")
-          // Add a subtle pulse effect
-          .to(svgElement, {
-            scale: 1.05,
-            duration: 0.3,
-            ease: "power2.inOut",
-            yoyo: true,
-            repeat: 1
-          })
-          // Hold with gentle breathing effect
-          .to(svgElement, {
-            scale: 1.02,
-            duration: 0.8,
-            ease: "sine.inOut",
-            yoyo: true,
-            repeat: 2
-          })
-          // Smooth exit animation with gentle transitions
-          .to(overlayElement, {
-            opacity: 0,
-            scale: 0.98,
-            rotation: -0.5,
-            duration: 0.8,
-            ease: "power1.out"
-          })
-          .to(svgElement, {
-            opacity: 0,
-            scale: 0.9,
-            y: -10,
-            rotation: 1.5,
-            filter: "blur(2px)",
-            duration: 0.6,
-            ease: "power1.out"
-          }, "-=0.5");
-          
-        } else {
-          console.log('Fallback: Elements not found or GSAP not available');
-          // Fallback if elements not found - still animate black overlay exit with smooth fade
-          const blackOverlayElement = document.querySelector('.black-overlay');
-          if (blackOverlayElement && window.gsap) {
-            gsap.timeline()
-              .to(blackOverlayElement, {
-                scale: 1.005,
-                filter: "blur(1px)",
-                duration: 0.2,
-                ease: "power1.out"
-              })
-              .to(blackOverlayElement, {
-                opacity: 0,
-                scale: 0.995,
-                filter: "blur(2px)",
-                duration: 0.6,
-                ease: "power1.out",
-                onComplete: () => {
-                  showBlackOverlay.value = false;
-                }
-              });
-          } else {
-            showBlackOverlay.value = false;
+          // Add delayed fade-in for the text
+          const textElement = overlayElement.querySelector('.transition-text');
+          if (textElement) {
+            setTimeout(() => {
+              textElement.classList.add('show');
+            }, 200); // Text starts fading in after 200ms - much faster
           }
           
+          // Show for 0.8 seconds then fade out
           setTimeout(() => {
+            // Change view first, then start fade out
             currentView.value = viewName;
-            showTransition.value = false;
-            transitionLabel.value = '';
-          }, 1000);
+            
+            // Start fade out after a brief delay to allow view change
+            setTimeout(() => {
+              overlayElement.classList.remove('show');
+              
+              // Wait for fade-out transition to complete before hiding overlay
+              setTimeout(() => {
+                showTransition.value = false;
+                transitionLabel.value = '';
+                
+                // Clean up text classes
+                const textElement = overlayElement.querySelector('.transition-text');
+                if (textElement) {
+                  textElement.classList.remove('show');
+                }
+                
+                // Hide the overlay completely
+                overlayElement.style.display = 'none';
+              }, 400); // Reduced from 800ms to 400ms
+            }, 50); // Reduced delay before fade out
+          }, 800); // Reduced from 1500ms to 800ms for faster transitions
+          
+        } else {
+          console.log('Overlay element not found');
+          // Fallback - immediate transition
+          currentView.value = viewName;
+          showTransition.value = false;
+          transitionLabel.value = '';
         }
       });
     };
 
     const go = (next) => {
-      // Show black overlay first
-      showBlackOverlay.value = true;
-      
-      // Wait for DOM update, then animate the overlay
-      nextTick(() => {
-        const overlayElement = document.querySelector('.black-overlay');
-        
-        if (overlayElement && window.gsap) {
-          // Set initial state for ultra-smooth fade effect
-          gsap.set(overlayElement, {
-            opacity: 0,
-            scale: 0.995,
-            filter: "blur(1px)",
-            transformOrigin: "center center"
-          });
-          
-          // Create seamless fade timeline
-          const fadeTimeline = gsap.timeline({
-            onComplete: () => {
-              // Start SVG transition after fade completes
-              setTimeout(() => {
-                animateSVGTransition(next);
-              }, 200);
-            }
-          });
-          
-          // Quick but smooth fade in with natural easing
-          fadeTimeline
-            .to(overlayElement, {
-              opacity: 1,
-              duration: 0.6,
-              ease: "power1.out"
-            })
-            .to(overlayElement, {
-              scale: 1,
-              filter: "blur(0px)",
-              duration: 0.4,
-              ease: "power1.out"
-            }, "-=0.3")
-            // Subtle micro-animation for organic feel
-            .to(overlayElement, {
-              scale: 1.001,
-              duration: 0.8,
-              ease: "sine.inOut",
-              yoyo: true,
-              repeat: 1
-            }, "-=0.2")
-            // Gentle settle
-            .to(overlayElement, {
-              scale: 1,
-              duration: 0.2,
-              ease: "power1.out"
-            });
-            
-        } else {
-          // Fallback if GSAP not available
-          setTimeout(() => {
-            animateSVGTransition(next);
-          }, 500);
-        }
-      });
+      // Show SVG transition immediately
+      animateSVGTransition(next);
     };
 
         const animateViewTransition = (newView) => {
@@ -1334,7 +1181,7 @@ const app = createApp({
     onMounted(() => {
       setTimeout(() => {
         loading.value = false;
-      }, 2000); // Loader duration
+      }, 500); // Loader duration - reduced for faster display
     });
 
          // ✅ Watch for when loading is complete, then animate .home-glass
