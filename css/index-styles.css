@@ -1,0 +1,494 @@
+/* Main Layout Styles */
+html, body { 
+  height: 100%; 
+  margin: 0; 
+  font-family: sans-serif;  
+  transform-origin: top left;
+  background: linear-gradient(-20deg, #faebe7, #cbd41f, #f5afe6, #f9f9f7);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 20%;
+  }
+  50% {
+    background-position: 100% 80%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Loader Styles */
+#loader {
+  width: 8px;
+  height: 56px;
+  display: inline-block;
+  position: relative;
+  border-radius: 4px;
+  box-sizing: border-box;
+  animation: animloader 1.5s linear infinite alternate;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 20px 0 rgba(255, 255, 255, 0), 40px 0 rgba(255, 255, 255, 0), 60px 0 rgba(255, 255, 255, 0), 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0);
+  }
+  20% {
+    box-shadow: 20px 0 white, 40px 0 rgba(255, 255, 255, 0), 60px 0 rgba(255, 255, 255, 0), 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0);
+  }
+  40% {
+    box-shadow: 20px 0 white, 40px 0 white, 60px 0 rgba(255, 255, 255, 0), 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0);
+  }
+  60% {
+    box-shadow: 20px 0 white, 40px 0 white, 60px 0 white, 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0);
+  }
+  80% {
+    box-shadow: 20px 0 white, 40px 0 white, 60px 0 white, 80px 0 white, 100px 0 rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 20px 0 white, 40px 0 white, 60px 0 white, 80px 0 white, 100px 0 white;
+  }
+}
+
+/* App and Card Styles */
+#app { 
+  min-height: 100vh;
+  min-width: 80vw;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.card { 
+  position: relative;
+  width: 70vw;
+  min-height: 80vh;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  border-radius: 16px; 
+  background: #fff; 
+  overflow: hidden; 
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+}
+
+.card-content { 
+  min-height: 80vh;
+}
+
+/* View Transitions */
+.view { 
+  position: absolute; 
+  inset: 0; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  opacity: 0; 
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);  
+}
+
+.view.active { 
+  opacity: 1; 
+  pointer-events: auto; 
+}
+
+/* Overlay Styles */
+.overlay { 
+  position: absolute; 
+  inset: 0; 
+  background: rgba(239, 85, 247, 0.861);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8.4px);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  opacity: 0; 
+  z-index: 10; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  pointer-events: none; 
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.overlay-word { 
+  color: #f5afe6; 
+  font-size: 17vw; 
+  font-weight: 900; 
+  opacity: 0; 
+  font-family: "Shrikhand", sans-serif;
+  letter-spacing: 4px;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+/* Black Overlay Styles */
+.black-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(239, 85, 247, 0.861);
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.98);
+  filter: blur(2px);
+}
+
+/* SVG Transition Overlay Styles */
+.svg-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(239, 85, 247, 0.861);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0s linear 0.8s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-transition-overlay.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s ease;
+}
+
+.transition-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 24vh;
+}
+
+.transition-text {
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+  transition: opacity 0.5s cubic-bezier(0.15, 0.05, 0.15, 1);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transition-text.show {
+  opacity: 1;
+}
+
+/* Work SVG Styling */
+.work-transition-svg {
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.15, 0.05, 0.15, 1);
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.3));
+}
+
+.work-transition-svg.show {
+  opacity: 1;
+}
+
+.svg-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.svg-path.animate {
+  stroke-dashoffset: 0;
+}
+
+.contact-transition-svg path {
+  stroke-width: 0.75 !important;
+}
+
+/* Navigation Styles */
+nav { 
+  position: absolute; 
+  z-index: 20; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+nav button { 
+  z-index: 1;
+  position: absolute;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: transparent;
+  font-family: "Darker Grotesque", sans-serif;
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 3px;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav button:hover {
+  color: #000;
+}
+
+nav button:hover svg {
+  stroke: #000;
+}
+
+.card button svg {
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  stroke: #fff;
+  transition: stroke 0.3s ease;
+}
+
+.card .contact .content button svg {
+  position: relative;
+  left: 2px;
+  top: 0;
+}
+
+/* Corner Navigation Styles */
+.nav-top-left {
+  position: absolute;
+  top: 16px;
+  left: 40px;
+  z-index: 20;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.nav-top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 20;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.nav-bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  z-index: 20;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.nav-bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 20;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.bottom-left {
+  bottom: 4px;
+  left: 8px;
+}
+
+/* Typography */
+h1 {
+  font-family: "Darker Grotesque", sans-serif;
+  color: #fff;
+  text-align: left;
+  font-weight: 200;
+}
+
+h2 {
+  color: #fff;
+  text-align: left;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+.card h1 {
+  margin-top: 24vh;
+  font-size: 6.5vh;
+  font-weight: 400;
+  position: absolute;
+}
+
+.card h2 {
+  margin-top: 2vh;
+  font-size: 4.5vh;
+  font-weight: 400;
+  line-height: 5vh;
+}
+
+.card .home .content {
+  padding-right: 32vw;
+  position: relative;
+  margin: auto;
+  z-index: 1;
+}
+
+.line-drawing-demo svg {
+  margin-top: 33vh;
+  width: 48vh;
+}
+
+.card .background-image {
+  position: absolute;
+  bottom: 0;
+  left: 38vw;
+  width: 55vh;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Glass Overlay */
+.home-glass {
+  background: rgba(255, 255, 255, 0.564);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  transition: box-shadow 0.9s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Vue.js Cloak */
+[v-cloak] {
+  display: none;
+}
+
+#card {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1225px) {
+  .card .home .content {
+    margin: auto;
+    z-index: 1;
+  }
+  
+  .line-drawing-demo svg {
+    margin-top: 33vh;
+    width: 48vh;
+  }
+
+  .card .background-image {
+    left: 28vw;
+    width: 40vh;
+  }
+}
+
+@media (max-width: 1240px) {
+  .card {
+    width: 88vh;
+  }
+  
+  .card .home .card-content {
+    padding-right: 4vw;
+  }
+}
+
+@media (max-width: 850px) {
+  .line-drawing-demo svg {
+    width: 40vh;
+    margin-top: 32vh;
+    margin-bottom: 1vh;
+  }
+  
+  .card .background-image {
+    left: 24vw;
+    width: 40vh;
+  }
+  
+  .card .home .content {
+    padding-right: 40vw;
+  }
+
+  .card h1 {
+    font-size: 6vh;
+    margin-top: 24vh;
+  }
+
+  .card h2 {
+    font-size: 3rem;  
+    display: flex;
+    line-height: 1.1;
+    white-space: normal;
+    max-width: 90vw;
+  }
+
+  .card .home h2 { 
+    margin-top: 0;
+  }
+
+  .card { 
+    width: 70vw;
+  }
+  
+  .card .home .content {
+    padding-right: 2vw;
+  }
+  
+  .card {
+    width: 90vh !important;
+  }
+  
+  .nav-top-left, 
+  .nav-top-right, 
+  .nav-bottom-left, 
+  .nav-bottom-right {
+    font-size: 14px;
+  }
+
+  .nav-top-left svg, 
+  .nav-top-right svg, 
+  .nav-bottom-left svg, 
+  .nav-bottom-right svg {
+    width: 30px !important;
+  }
+}
