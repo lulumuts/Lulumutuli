@@ -13,6 +13,7 @@ const app = createApp({
     const svgOverlay = ref(null);
     const showBlackOverlay = ref(false);
     const blackOverlay = ref(null);
+    const isFirstLoad = ref(true);
 
     // Computed properties
     const overlayLabel = computed(() => {
@@ -288,9 +289,298 @@ const app = createApp({
     };
 
     // Lifecycle hooks
+    // GSAP Animation Functions
+    const animateHomeElements = () => {
+      if (currentView.value !== 'home') return;
+      
+      // Create a timeline for the home animations
+      const tl = gsap.timeline();
+      
+      // Animate the "I'm" heading - subtle fade and slide
+      tl.fromTo('.line-drawing-demo h1', 
+        { 
+          opacity: 0, 
+          y: 20 
+        },
+        { 
+          opacity: 1, 
+          y: 0, 
+          duration: 0.8, 
+          ease: "power2.out" 
+        }
+      );
+      
+      // Animate the SVG line drawing - smooth and elegant
+      tl.fromTo('.lines path', 
+        { 
+          strokeDasharray: "1000", 
+          strokeDashoffset: "1000"
+        },
+        { 
+          strokeDashoffset: "0", 
+          duration: 1.5, 
+          ease: "power1.inOut" 
+        }, "-=0.3"
+      );
+      
+      // Animate SVG opacity separately to avoid affecting stroke properties
+      tl.to('.lines path', 
+        { 
+          opacity: 1, 
+          duration: 0.1, 
+          ease: "none" 
+        }, "-=1.4"
+      );
+      
+      // Animate the subtitle - gentle fade and slide
+      tl.fromTo('.line-drawing-demo h2', 
+        { 
+          opacity: 0, 
+          y: 15 
+        },
+        { 
+          opacity: 1, 
+          y: 0, 
+          duration: 0.8, 
+          ease: "power2.out" 
+        }, "-=1.0"
+      );
+      
+      // Animate the profile image - ultra smooth blur to focus effect
+      tl.fromTo('.background-image', 
+        { 
+          opacity: 0, 
+          filter: "blur(15px) brightness(1.1)",
+          scale: 1.02
+        },
+        { 
+          opacity: 1, 
+          filter: "blur(0px) brightness(1)",
+          scale: 1, 
+          duration: 2.0, 
+          ease: "power1.inOut" 
+        }, "-=0.6"
+      );
+    };
+
+    // GSAP Hover Floating Animations for Home Elements
+    const initHoverFloatingAnimations = () => {
+      if (currentView.value !== 'home') return;
+
+      // Hover floating animation for "I'm" text
+      gsap.to('.line-drawing-demo h1', {
+        y: -8,
+        duration: 0.6,
+        ease: "power2.out",
+        paused: true
+      });
+
+      // Hover floating animation for "a UI/UX Designer..." text
+      gsap.to('.line-drawing-demo h2', {
+        y: -6,
+        duration: 0.6,
+        ease: "power2.out",
+        paused: true
+      });
+
+      // Hover floating animation for SVG line drawing
+      gsap.to('.line-drawing-demo svg', {
+        y: -10,
+        duration: 0.6,
+        ease: "power2.out",
+        paused: true
+      });
+
+      // Hover floating animation for background image
+      gsap.to('.background-image', {
+        y: -12,
+        duration: 0.6,
+        ease: "power2.out",
+        paused: true
+      });
+
+      // Add hover event listeners
+      const h1Element = document.querySelector('.line-drawing-demo h1');
+      const h2Element = document.querySelector('.line-drawing-demo h2');
+      const svgElement = document.querySelector('.line-drawing-demo svg');
+      const imageElement = document.querySelector('.background-image');
+
+      if (h1Element) {
+        h1Element.addEventListener('mouseenter', () => {
+          gsap.to(h1Element, { 
+            y: -8, 
+            duration: 0.6, 
+            ease: "power2.out",
+            scale: 1.02
+          });
+        });
+        h1Element.addEventListener('mouseleave', () => {
+          gsap.to(h1Element, { 
+            y: 0, 
+            duration: 0.6, 
+            ease: "power2.out",
+            scale: 1
+          });
+        });
+      }
+
+      if (h2Element) {
+        h2Element.addEventListener('mouseenter', () => {
+          gsap.to(h2Element, { 
+            y: -6, 
+            duration: 0.6, 
+            ease: "power2.out",
+            scale: 1.01
+          });
+        });
+        h2Element.addEventListener('mouseleave', () => {
+          gsap.to(h2Element, { 
+            y: 0, 
+            duration: 0.6, 
+            ease: "power2.out",
+            scale: 1
+          });
+        });
+      }
+
+      if (svgElement) {
+        svgElement.addEventListener('mouseenter', () => {
+          gsap.to(svgElement, { 
+            y: -10, 
+            duration: 0.6, 
+            ease: "power2.out" 
+          });
+        });
+        svgElement.addEventListener('mouseleave', () => {
+          gsap.to(svgElement, { 
+            y: 0, 
+            duration: 0.6, 
+            ease: "power2.out" 
+          });
+        });
+      }
+
+      // Keep background image in same position (no hover animation)
+      // Removed imageElement hover animations
+    };
+
+    // Reset elements when leaving a view
+    const resetViewElements = (viewName) => {
+      let elementsToReset = [];
+      
+      switch(viewName) {
+        case 'work':
+          elementsToReset = [
+            '#carouselExampleCaptions',
+            '.carousel-indicators',
+            '.carousel-inner',
+            '.carousel-caption'
+          ];
+          break;
+        case 'about':
+          elementsToReset = [
+            '.about',
+            '.about h2',
+            '.about p',
+            '.about .content'
+          ];
+          break;
+        case 'contact':
+          elementsToReset = [
+            '.contact .card-content > div',
+            '.contact p',
+            '.contact .content',
+            '.contact button'
+          ];
+          break;
+        default:
+          return;
+      }
+
+      elementsToReset.forEach((selector) => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach((element) => {
+          gsap.set(element, {
+            opacity: 0,
+            y: 20,
+            scale: 0.98
+          });
+        });
+      });
+    };
+
+    // Dynamic content animations for different views
+    const animateViewContent = (viewName) => {
+      let elementsToAnimate = [];
+      
+      switch(viewName) {
+        case 'work':
+          elementsToAnimate = [
+            '#carouselExampleCaptions',
+            '.carousel-indicators',
+            '.carousel-inner',
+            '.carousel-caption'
+          ];
+          break;
+        case 'about':
+          elementsToAnimate = [
+            '.about',
+            '.about h2',
+            '.about p',
+            '.about .content'
+          ];
+          break;
+        case 'contact':
+          elementsToAnimate = [
+            '.contact .card-content > div',
+            '.contact p',
+            '.contact .content',
+            '.contact button'
+          ];
+          break;
+        default:
+          return;
+      }
+
+      // Create timeline for view content
+      const tl = gsap.timeline();
+      
+      elementsToAnimate.forEach((selector, index) => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach((element, elementIndex) => {
+          // Set initial state
+          gsap.set(element, {
+            opacity: 0,
+            y: 20,
+            scale: 0.98
+          });
+          
+          // Animate in
+          tl.to(element, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.6,
+            ease: "power2.out"
+          }, index * 0.1 + elementIndex * 0.05);
+        });
+      });
+    };
+
+
     onMounted(() => {
       setTimeout(() => {
         loading.value = false;
+        // Animate home elements after loading
+        setTimeout(() => {
+          animateHomeElements();
+          // Start hover floating animations after initial animation completes
+          setTimeout(() => {
+            initHoverFloatingAnimations();
+          }, 2000); // Wait for initial animation to complete
+          // Mark first load as complete
+          isFirstLoad.value = false;
+        }, 500);
       }, 500); // Loader duration - reduced for faster display
     });
 
@@ -321,6 +611,27 @@ const app = createApp({
           }
         });
       }
+    });
+
+    // Watch for view changes to trigger animations
+    watch(currentView, (newView, oldView) => {
+      nextTick(() => {
+        // Reset previous view elements first
+        if (oldView && oldView !== 'home') {
+          resetViewElements(oldView);
+        }
+        
+        setTimeout(() => {
+          if (newView === 'home') {
+            // Only animate home elements on first load, not on subsequent clicks
+            if (isFirstLoad.value) {
+              animateHomeElements();
+            }
+          } else {
+            animateViewContent(newView);
+          }
+        }, 300); // Small delay to ensure DOM is ready
+      });
     });
 
     // Return reactive state and methods
