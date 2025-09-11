@@ -240,6 +240,7 @@ body.loaded {
 
 .mobile-screens {
   padding: 42px 0;
+  margin-top: 64px;
   border-radius: 32px;
 }
 
@@ -252,6 +253,20 @@ body.loaded {
 .widgetbook-components {
   margin-top: 80px;
   margin-bottom: 80px;
+}
+
+.web-app-extension h1 {
+  font-size: 5.5em;
+  letter-spacing: 4px;
+  line-height: 88px;
+  color: #7F38FF;
+  opacity: 0.1;
+}
+
+.web-app-extension .body-text {
+  margin-left: 24%;
+  margin-right: 24%;
+  text-align: justify;
 }
     </style>
     <div class="back">
@@ -286,7 +301,7 @@ body.loaded {
         <div class="col-md-5 p-5 d-flex flex-column justify-content-center content">
           <h1 style="font-size: 48px;">Braiding Nairobi</h1>
           <h5 style=" font-size: 24px;">Mobile App + Web App</h5>
-          <p>The Braiding Nairobi App connects clients with professional hair braiders in Nairobi, offering convenient at-home styling and easy appointment booking. Discover features, screenshots, and download options below.</p>
+          <p style="font-size: 100%">The Braiding Nairobi App connects clients with professional hair braiders in Nairobi, offering convenient at-home styling and easy appointment booking. Discover features, screenshots, and download options below.</p>
         </div>
         <div class="col-md-7">
           <video src="img/BN-APP-intro-video.mp4" autoplay loop muted playsinline></video>
@@ -339,37 +354,36 @@ body.loaded {
                 <div class="container-fluid d-flex flex-column align-items-center">
 
                   <div class="row w-100 justify-content-center">
-                    <div class="col-md-8 mobile-screens" style="background-color: #F8F4FF;">
+                    <div class="col-md-6 mobile-screens" style="background-color: #F8F4FF;">
                       <h1 class="text-center">SPLASH SCREEN</h1>
                       <img src="img/BNApp-splash-screen.svg" />
                     </div>
-                  </div>
 
-                  <div class="row w-100 justify-content-center">
-                    <div class="col-md-8 mobile-screens">
+                    <div class="col-md-6 mobile-screens">
                       <h1 class="text-center">SIGNUP SCREEN</h1>
                       <img src="img/BNAPP-signup-screen.svg" />
                     </div>
                   </div>
                   
                   <div class="row w-100 justify-content-center">
-                    <div class="col-md-8 mobile-screens" style="background-color: #F8F4FF;">
+                    <div class="col-md-6 mobile-screens">
+                      <h1 class="text-center">BRAIDERS SCREEN</h1>
+                      <img src="img/BNApp-braider-screen.svg" />
+                    </div>
+
+                    <div class="col-md-6 mobile-screens" style="background-color: #F8F4FF;">
                       <h1 class="text-center">HOME SCREEN</h1>
                       <img src="img/BNApp-Home-Screen.svg" />
                     </div>
                   </div>
 
                   <div class="row w-100 justify-content-center">
-                    <div class="col-md-8 mobile-screens">
-                      <h1 class="text-center">BRAIDERS SCREEN</h1>
-                      <img src="img/BNApp-braider-screen.svg" />
-                    </div>
-                  </div>
-
-                  <div class="row w-100 justify-content-center">
-                    <div class="col-md-8 mobile-screens" style="background-color: #F8F4FF;">
+                    <div class="col-md-6 mobile-screens" style="background-color: #F8F4FF;">
                       <h1 class="text-center">ORDERS SCREEN</h1>
                       <img src="img/BNApp-orders-screen.svg" />
+                    </div>
+
+                    <div class="col-md-6 mobile-screens">
                     </div>
                   </div>
                 </div>
@@ -382,9 +396,50 @@ body.loaded {
 <section>
     <div class="container-fluid web-app-extension">
         <h4>🖥️ Web App Screens</h4>
-        <p class="body-text">I introduced the idea of a web app as an extension of the mobile app to make it easier for users to book appointments on the go, without needing to download anything. This was especially important for international users visiting Nairobi, many of whom couldn’t access the app through their regional app stores.  </p>
-        <img src="img/BN_Web_App_Screens.png" />
-        <p class="body-text">A web app offered a lightweight, accessible solution with minimal development overhead. It also allowed us to maintain a consistent codebase by leveraging Flutter’s cross-platform capabilities for both mobile and web.</p>
+        <p class="body-text">I introduced the idea of a web app as an extension of the mobile app to make it easier for users to book appointments on the go, without needing to download anything. This was especially important for international users visiting Nairobi, many of whom couldn't access the app through their regional app stores.  </p>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <img src="img/Login_Desktop (1).png" />
+            </div>
+            <div class="col-md-4 d-flex justify-content-left align-items-center">
+              <h1>LOGIN <br>SCREEN</h1>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 d-flex justify-content-end align-items-center">
+              <h1>HOME <br>SCREEN</h1>
+            </div>
+            <div class="col-md-8">
+              <img src="img/home_screen.png" />
+            </div>
+          </div>
+
+          <p class="body-text">A web app offered a lightweight, accessible solution with minimal development overhead. It also allowed us to maintain a consistent codebase by leveraging Flutter’s cross-platform capabilities for both mobile and web.</p>
+          <div class="row">
+            <div class="col-md-8 ">
+              <img src="img/Stylist_Screen.png" />
+            </div>
+            <div class="col-md-4 d-flex justify-content-left align-items-center">
+              <h1>STYLIST <br>SCREEN</h1>
+              <!-- <img src="img/Login_screen_desktop.png" /> -->
+            </div>
+          </div>
+
+     
+          <div class="row">
+            <div class="col-md-4 d-flex justify-content-end align-items-center">
+              <h1>SALONS <br>SCREEN</h1>
+              <!-- <img src="img/Login_screen_desktop.png" /> -->
+            </div>
+            <div class="col-md-8">
+              <img src="img/Styles_Screen.png" />
+            </div>
+          </div>
+        </div>
+     
+      
     </div>
 </section>
 
@@ -451,6 +506,13 @@ body.loaded {
             <video src="img/BN-widgetbook-responsiveness.mp4" autoplay muted loop></video>
         </div>
     </section>
+
+    <section>
+      <div class="container-fluid responsiveness d-flex flex-column align-items-center">
+          <h4>Results</h4>
+          <p class="body-text">User Interviews & usability testing are underway ahead of redesign of Braider facing side.</p>
+      </div>
+  </section>
   </main>
   <footer class="py-4 bg-light text-center">
     <p>&copy; 2025 Lulu Mutuli</p>
