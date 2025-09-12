@@ -101,7 +101,7 @@
 
   header {
     text-align: left;
-    background-color: #F8F4FF;
+    background: linear-gradient(135deg, #7F38FF 0%, #87CEEB 30%, #ffffff 70%);
     display: flex;
     justify-content: center;
     margin: 0;
@@ -114,12 +114,18 @@
 
   header video{
     width: 100%;
-    height: 74vh;
+    height: 100%;
     object-fit: cover;
-    margin-top: 8px;
+    margin: 0;
+    border-radius: 20px;
   }
 
-  header .content p,
+  header .content p {
+    margin: 8px 40px;
+    width: 60%;
+    font-size: 20px;
+  }
+  
   header .content h5,
   header .content h1 {
     margin: 8px 40px;
@@ -298,6 +304,30 @@ body.loaded {
   color: #7F38FF;
   opacity: 0.1;
 }
+
+.process h5 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 20px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.process p {
+  text-align: left;
+  margin: 0 20px;
+  font-size: 18px;
+}
+
+.process h4 {
+  margin-bottom: 5vh;
+}
+
+.process {
+  text-align: left;
+  padding: 10vh 0;
+  line-height: 1.3;
+}
     </style>
     <div class="back">
       <a href="index.html"> 
@@ -331,7 +361,7 @@ body.loaded {
         <div class="col-md-5 p-5 d-flex flex-column justify-content-center content">
           <h1 style="font-size: 48px;">Braiding Nairobi</h1>
           <h5 style=" font-size: 24px;">Mobile App + Web App</h5>
-          <p style="font-size: 100%">The Braiding Nairobi App connects clients with professional hair braiders in Nairobi, offering convenient at-home styling and easy appointment booking. Discover features, screenshots, and download options below.</p>
+          <p style="font-size: 20px">The Braiding Nairobi App connects clients with professional hair braiders in Nairobi, offering convenient at-home styling and easy appointment booking. Discover features, screenshots, and download options below.</p>
         </div>
         <div class="col-md-7">
           <video src="img/BN-APP-intro-video.mp4" autoplay loop muted playsinline></video>
@@ -344,8 +374,17 @@ body.loaded {
     <section class="mb-5">
       <div class="container-fluid">
         <div class="row">
+          <div class="col-md-6 mb-5 project-info">
+            <h4 class="app-features"> Project Info</h4>
+            <ul>
+              <li class="project-info"><strong>Role:</strong> Acting CTO + Product Designer</li>
+              <li class="project-info"><strong>Type:</strong> Mobile App + Web App</li>
+              <li class="project-info"><strong>Tools Used: </strong>Flutter, Cursor, Dart, Figma, Git</li>
+            </ul>
+          </div>
+
           <div class="col-md-6">
-            <h4 class="app-features">📱 App Features</h4>
+            <h4 class="app-features">App Features</h4>
             <ul>
               <li>Browse and book top-rated braiders in Nairobi</li>
               <li>View stylist profiles, reviews, and portfolios</li>
@@ -355,36 +394,51 @@ body.loaded {
               <li>Available for iOS and Android</li>
             </ul>
           </div>
-          <div class="col-md-6 mb-5 project-info">
-            
-            <h4 class="app-features"> 📝 Project Info</h4>
-            <ul>
-              <li class="project-info"><strong>Role:</strong> Acting CTO + Product Designer</li>
-              <li class="project-info"><strong>Type:</strong> Mobile App + Web App</li>
-              <li class="project-info"><strong>Tools Used: </strong>Flutter, Cursor, Dart, Figma, Git</li>
-              <li class="project-info"><strong>Task:</strong>
-                <ul>
-                    <li>Redesign of mobile app to be more user friendly and intuitive</li>
-                    <li>Spearheaded the implementation of Little Cab API for streamlined booking in collaboration with founding engineer, CEO and external teams.</li>
-                    <li>Web app extension with flutter for easy access to the app</li>
-                    <li>Created a modular design system and component library based on atomic design principles.</li>
-                    <li>Addition of new feature that allows users to book a braids removal</li>
-                </ul></li>
-            </ul>
-          </div>
+
         </div>
       </div>
     </section>
 
+     <section>
+       <div class="container-fluid process">
+        <h4>Development Process</h4>
+         <div class="row">
+           <div class="col-md-2 text-center">
+             <h5>🔍 <br/> Discovery</h5>
+             <p>Conducted user research to uncover pain points and opportunities.</p>
+           </div>
+           <div class="col-md-2 text-center">
+             <h5>📝 <br/>App Audit</h5>
+             <p>Evaluated usability, accessibility, and design consistency.</p>
+           </div>
+           <div class="col-md-2 text-center">
+             <h5>🎨 <br/>Redesign Proposal</h5>
+             <p>Planned stepwise improvements, starting with the customer-facing interface.</p>
+           </div>
+           <div class="col-md-2 text-center">
+             <h5>🤝 <br/>Stakeholder Collaboration</h5>
+             <p>Engaged external partners to explore automation and workflow optimizations.</p>
+           </div>
+           <div class="col-md-2 text-center">
+             <h5>🧩 <br/>Component Library</h5>
+             <p>Built reusable components with developers for consistent, scalable design.</p>
+           </div>
+           <div class="col-md-2 text-center">
+             <h5>🌐 <br/>Web App Extension</h5>
+             <p>Added a web app to handle international orders and reduce manual processing.</p>
+           </div>
+         </div>
+       </div>
+     </section>
 
     <section>
         <div class="container-fluid ui-improvements">
             <div class="row">
-                <h4> 🖌️ UI Improvements</h4>
+                <h4>UI/UX Improvements</h4>
                 <div class="container-fluid d-flex flex-column align-items-center">
 
                   <div class="row w-100 justify-content-center">
-                    <div class="col-md-6 mobile-screens" style="background-color: #F8F4FF;">
+                    <div class="col-md-6 mobile-screens" style="background: linear-gradient(135deg, #7F38FF 0%, #87CEEB 30%, #ffffff 70%);">
                       <h1 class="text-center">SPLASH SCREEN</h1>
                       <img src="img/BNApp-splash-screen.svg" />
                     </div>
@@ -401,14 +455,14 @@ body.loaded {
                       <img src="img/BNApp-braider-screen.svg" />
                     </div>
 
-                    <div class="col-md-6 mobile-screens" style="background-color: #F8F4FF;">
+                    <div class="col-md-6 mobile-screens" style="background: linear-gradient(135deg, #7F38FF 0%, #87CEEB 30%, #ffffff 70%);">
                       <h1 class="text-center">HOME SCREEN</h1>
                       <img src="img/BNApp-Home-Screen.svg" />
                     </div>
                   </div>
 
                   <div class="row w-100 justify-content-center">
-                    <div class="col-md-6 mobile-screens" style="background-color: #F8F4FF;">
+                    <div class="col-md-6 mobile-screens" style="background: linear-gradient(135deg, #7F38FF 0%, #87CEEB 30%, #ffffff 70%);">
                       <h1 class="text-center">ORDERS SCREEN</h1>
                       <img src="img/BNApp-orders-screen.svg" />
                     </div>
@@ -425,42 +479,45 @@ body.loaded {
   
 <section>
     <div class="container-fluid web-app-extension">
-        <h4>🖥️ Web App Screens</h4>
-        <p class="body-text">I introduced the idea of a web app as an extension of the mobile app to make it easier for users to book appointments on the go, without needing to download anything. This was especially important for international users visiting Nairobi, many of whom couldn't access the app through their regional app stores.  </p>
+        <h4>Web App Screens</h4>
+        <p class="body-text">I proposed a web app extension of the mobile app to make booking appointments easier for users on the go, particularly international visitors to Nairobi who couldn’t access the app through regional app stores. <br><br>The web app provided a lightweight, accessible solution with minimal development overhead, while allowing us to maintain a consistent codebase using Flutter’s cross-platform capabilities. </p>
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-8">
               <img src="img/Login_Desktop (1).png" />
             </div>
-            <div class="col-md-4 d-flex justify-content-left align-items-center">
+            <div class="col-md-4 d-flex flex-column justify-content-center align-items-start">
               <h1>LOGIN <br>SCREEN</h1>
+              <p>The mobile and web apps share content but differ in layout. Using the same design system and component library, we enhanced the web version with additional imagery and a layout container that mirrors the mobile app’s rounded components and subtle box shadows, keeping a consistent visual language across platforms.</p>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-md-4 d-flex justify-content-end align-items-center">
+            <div class="col-md-4 d-flex flex-column justify-content-center align-items-start">
               <h1>HOME <br>SCREEN</h1>
+              <p>The web app version of the home screen leverages additional space on the left panel for promotional content, which when seen on the mobile app is presented as smaller carousel banners. Much of the content on the right hand side is consistent with the mobile app. </p>
             </div>
             <div class="col-md-8">
               <img src="img/home_screen.png" />
             </div>
           </div>
 
-          <p class="body-text">A web app offered a lightweight, accessible solution with minimal development overhead. It also allowed us to maintain a consistent codebase by leveraging Flutter’s cross-platform capabilities for both mobile and web.</p>
           <div class="row">
             <div class="col-md-8 ">
               <img src="img/Stylist_Screen.png" />
             </div>
-            <div class="col-md-4 d-flex justify-content-left align-items-center">
+            <div class="col-md-4 d-flex flex-column justify-content-center align-items-start">
               <h1>STYLIST <br>SCREEN</h1>
+              <p>The screen on the left provides a visual profile of the stylist, and the right hand side is the content of the stylist's portfolio, with an opportunity to book an appointment. The mobile example reverses this layout, keeping the stylists profile at the top, and the portfolio at the bottom.</p>
               <!-- <img src="img/Login_screen_desktop.png" /> -->
             </div>
           </div>
 
      
           <div class="row">
-            <div class="col-md-4 d-flex justify-content-end align-items-center">
+            <div class="col-md-4 d-flex flex-column justify-content-center align-items-start">
               <h1>SALONS <br>SCREEN</h1>
+              <p>Following a similar pattern, the Salons screen highlights the styles selected on the Home page. On the right, a scrollable list of salons offering that style allows users to easily browse and book an appointment.</p>
               <!-- <img src="img/Login_screen_desktop.png" /> -->
             </div>
             <div class="col-md-8">
@@ -475,7 +532,7 @@ body.loaded {
 
     <section class="widgetbook-components">
         <div class="container-fluid">
-            <h4>📁 Widgetbook Components</h4>
+            <h4>Widgetbook Components</h4>
 
             <p class="body-text">I used widgetbook to create a component library for the app. This allowed me to create a consistent design system and component library based on atomic design principles, for mobile and web, consistent with brand identity. I was not familiar with flutter or dart at the time, so I relied heavily on AI tools such as Cursor to help me build this library, accessing the source code for the widget in particular from Figma plugins.</p>
             
@@ -531,7 +588,7 @@ body.loaded {
 
     <section>
         <div class="container-fluid responsiveness d-flex flex-column align-items-center">
-            <h4>📐Responsiveness</h4>
+            <h4>Responsiveness</h4>
             <p class="body-text">The app is responsive and works on all devices, including mobile, tablet and desktop. Though we started with the design of the mobile, we made sure that on smaller screens on web, the mobile app layout would be the same.</p>
             <video src="img/BN-widgetbook-responsiveness.mp4" autoplay muted loop></video>
         </div>
@@ -539,8 +596,12 @@ body.loaded {
 
     <section>
       <div class="container-fluid responsiveness d-flex flex-column align-items-center">
-          <h4>Results</h4>
-          <p class="body-text">User Interviews & usability testing are underway ahead of redesign of Braider facing side.</p>
+          <h4>Next Steps</h4>
+        <ul>
+          <li>User Interviews & usability testing are underway ahead of redesign of Braider facing side.</li>
+          <li>Integration of Little Api for automated booking flow of appointments</li>
+          <li>Usability testing for Customer facing app</li>
+        </ul>
       </div>
   </section>
   </main>
