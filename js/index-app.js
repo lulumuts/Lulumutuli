@@ -1,4 +1,7 @@
 // Vue 3 Portfolio Application
+console.log('Vue app script loaded!');
+console.log('Vue available:', typeof Vue !== 'undefined');
+
 const { createApp, ref, onMounted, computed, watch, nextTick } = Vue;
 
 const app = createApp({
@@ -259,6 +262,8 @@ const app = createApp({
 
     // Navigation function
     const go = (next) => {
+      console.log('Navigation function called with:', next);
+      console.log('Current view before change:', currentView.value);
       // Show SVG transition immediately
       animateSVGTransition(next);
     };
@@ -627,12 +632,17 @@ const app = createApp({
             if (isFirstLoad.value) {
               animateHomeElements();
             }
+        } else if (newView === 'work') {
+            // Work view animations only
+            animateViewContent(newView);
           } else {
             animateViewContent(newView);
           }
         }, 300); // Small delay to ensure DOM is ready
       });
     });
+
+    // Embla code removed per cleanup
 
     // Return reactive state and methods
     return {
@@ -646,10 +656,14 @@ const app = createApp({
       svgOverlay,
       showBlackOverlay,
       blackOverlay,
-      go
+      go,
+      
     };
   }
 });
 
 // Mount the application
+console.log('About to mount Vue app...');
+console.log('App element exists:', !!document.getElementById('app'));
 app.mount('#app');
+console.log('Vue app mounted successfully!');
