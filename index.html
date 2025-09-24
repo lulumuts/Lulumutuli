@@ -135,6 +135,33 @@
   .embla__title-overlay:hover { background: rgba(0, 0, 0, 0.35); }
   .embla__title-overlay:hover svg path { fill: #ffffff; stroke-width: 0; }
 
+  /* Ensure Embla tags are visible and positioned over the video */
+  .embla .tags {
+    position: absolute;
+    bottom: 4vh;
+    left: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    z-index: 20;
+    max-width: 90%;
+  }
+  @media (max-width: 768px) {
+    .embla .tags {
+      bottom: 3vh;
+      left: 2%;
+      gap: 4px;
+      max-width: 95%;
+    }
+  }
+  /* Extra padding specifically for Embla tags */
+  .embla .tags p { padding: 12px 24px; font-size: 16px !important; }
+  @media (max-width: 768px) {
+    .embla .tags p { padding: 8px 16px; font-size: 16px !important; }
+  }
+
+  
+
 
 /* Removed extra space rules to ensure only one gap between slide 6 and 1 */
  .embla__slide.is-in-view { opacity: 1; }
@@ -1146,6 +1173,11 @@ style="position: absolute!important;
     </svg>
                       </a>
                     </div>
+                    <div v-if="i === 0" class="tags" aria-label="Project tags for Braiding Nairobi Revamp">
+                      <p>UI/UX Design</p>
+                      <p>Brand Design</p>
+                      <p>Case Study</p>
+                    </div>
                     <div v-else-if="i === 1" class="embla__title-overlay">
                       <a href="./braidingnairobiapp.html" target="_blank" aria-label="Open Braiding Nairobi App case study">
                            <svg class="redesign bn-app" width="1012" height="65" viewBox="0 0 1012 65" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1203,6 +1235,11 @@ style="position: absolute!important;
     </svg>
                       </a>
                   </div>
+                    <div v-if="i === 1" class="tags" aria-label="Project tags for Braiding Nairobi App">
+                      <p>UI/UX Design</p>
+                      <p>Frontend Development</p>
+                      <p>Design Systems</p>
+                    </div>
                     <div v-else-if="i === 2" class="embla__title-overlay">
                       <a href="./airbridge.html" aria-label="Open Airbridge case study">
                       <svg class="airbridge" viewBox="0 0 168 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1230,6 +1267,11 @@ style="position: absolute!important;
 </svg>
                       </a>
                     </div>
+                    <div v-if="i === 2" class="tags" aria-label="Project tags for Airbridge">
+                      <p>UI/UX Design</p>
+                      <p>Case Study</p>
+                      <p>Frontend Development</p>
+                    </div>
                     <div v-else-if="i === 3" class="embla__title-overlay">
                       <a href="./Kinyozi.html" aria-label="Open Kinyozi case study">
                      <svg class="kinyozi" viewBox="0 0 139 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1252,6 +1294,11 @@ style="position: absolute!important;
 <path d="M132.26 8.072C133.497 8.072 134.404 8.30667 134.98 8.776C135.556 9.24533 135.844 9.88533 135.844 10.696C135.844 11.1867 135.769 11.656 135.62 12.104L132.676 21.672C132.612 21.928 132.58 22.152 132.58 22.344C132.58 22.6213 132.633 22.8453 132.74 23.016C132.846 23.1653 132.996 23.3147 133.188 23.464C133.337 23.6133 133.444 23.7413 133.508 23.848C133.572 23.9333 133.582 24.0507 133.54 24.2C133.433 24.4773 133.22 24.68 132.9 24.808C132.58 24.936 132.089 25 131.428 25H124.132C123.577 25 123.172 24.9147 122.916 24.744C122.66 24.552 122.574 24.3067 122.66 24.008C122.745 23.752 122.969 23.528 123.332 23.336C123.652 23.1653 123.918 22.9627 124.132 22.728C124.345 22.4933 124.526 22.12 124.676 21.608L127.46 12.36C127.524 12.168 127.556 12.008 127.556 11.88C127.556 11.6453 127.502 11.464 127.396 11.336C127.289 11.1867 127.129 11.0373 126.916 10.888C126.702 10.7173 126.553 10.568 126.468 10.44C126.382 10.312 126.372 10.1413 126.436 9.928C126.564 9.43733 127.236 9.01067 128.452 8.648C129.668 8.264 130.937 8.072 132.26 8.072ZM134.404 1C135.236 1 135.929 1.27733 136.484 1.832C137.038 2.36533 137.316 3.02667 137.316 3.816C137.316 4.37067 137.166 4.91467 136.868 5.448C136.59 5.98133 136.185 6.41867 135.652 6.76C135.14 7.08 134.564 7.24 133.924 7.24C133.113 7.24 132.43 6.97333 131.876 6.44C131.342 5.88533 131.065 5.20267 131.044 4.392C131.044 3.85867 131.182 3.336 131.46 2.824C131.737 2.29067 132.132 1.85333 132.644 1.512C133.156 1.17067 133.742 1 134.404 1Z" stroke="white" stroke-width="1" mask="url(#path-1-outside-1_537_1108)"/>
 </svg>
                       </a>
+                    </div>
+                    <div v-if="i === 3" class="tags" aria-label="Project tags for Kinyozi">
+                      <p>UI/UX Design</p>
+                      <p>Case Study</p>
+                      <p>Frontend Development</p>
                     </div>
                     <div v-else-if="i === 4" class="embla__title-overlay">
                       <a href="./redlandroses.html" aria-label="Open Red Lands Roses case study">
@@ -1288,6 +1335,10 @@ style="position: absolute!important;
 </svg>
                       </a>
                     </div>
+                    <div v-if="i === 4" class="tags" aria-label="Project tags for Red Lands Roses">
+                      <p>UI/UX Design</p>
+                      <p>Case Study</p>
+                    </div>
                     <div v-else-if="i === 5" class="embla__title-overlay">
                       <a href="./chewa.html" aria-label="Open Chewa case study">
                         <svg class="chewa" viewBox="0 0 114 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1306,6 +1357,10 @@ style="position: absolute!important;
 <path d="M103.977 8.4075C106.431 8.4075 108.393 8.86617 109.865 9.7835C111.337 10.6795 112.073 12.0555 112.073 13.9115C112.073 14.6155 111.945 15.4155 111.689 16.3115L110.377 20.7275C110.356 20.8128 110.345 20.9195 110.345 21.0475C110.345 21.3888 110.484 21.5595 110.761 21.5595C111.017 21.5595 111.231 21.4528 111.401 21.2395C111.593 21.0048 111.721 20.8875 111.785 20.8875C111.892 20.8875 111.977 20.9622 112.041 21.1115C112.127 21.2608 112.169 21.4315 112.169 21.6235C112.191 22.1995 111.967 22.7862 111.497 23.3835C111.049 23.9808 110.441 24.4715 109.673 24.8555C108.905 25.2395 108.063 25.4315 107.145 25.4315C106.036 25.4315 105.087 25.2288 104.297 24.8235C103.508 24.4182 102.964 23.8208 102.665 23.0315C102.025 23.7995 101.268 24.3968 100.393 24.8235C99.5186 25.2288 98.58 25.4315 97.5773 25.4315C96.4466 25.4315 95.4973 25.2182 94.7293 24.7915C93.9613 24.3435 93.3853 23.7782 93.0013 23.0955C92.6386 22.3915 92.4573 21.6555 92.4573 20.8875C92.4573 20.5462 92.4893 20.2155 92.5533 19.8955C92.8946 18.4235 93.6306 17.3142 94.7613 16.5675C95.9133 15.8208 97.2786 15.4475 98.8573 15.4475C100.628 15.4475 102.367 15.7248 104.073 16.2795L104.873 14.1675C105.151 13.2715 105.289 12.5782 105.289 12.0875C105.268 11.5755 105.097 11.1915 104.777 10.9355C104.457 10.6795 103.967 10.5515 103.305 10.5515C103.433 10.8928 103.497 11.2448 103.497 11.6075C103.497 12.3968 103.199 13.0795 102.601 13.6555C102.004 14.2315 101.151 14.5195 100.041 14.5195C98.996 14.5195 98.1746 14.2955 97.5773 13.8475C97.0013 13.3782 96.7133 12.8022 96.7133 12.1195C96.7133 11.0528 97.3106 10.1675 98.5053 9.4635C99.7 8.7595 101.524 8.4075 103.977 8.4075ZM102.185 18.1035C101.588 18.1035 101.097 18.3382 100.713 18.8075C100.351 19.2555 100.169 19.7462 100.169 20.2795C100.169 20.6208 100.244 20.8982 100.393 21.1115C100.564 21.3248 100.799 21.4315 101.097 21.4315C101.375 21.4315 101.673 21.3248 101.993 21.1115C102.335 20.8768 102.58 20.5355 102.729 20.0875L103.401 18.1995C103.039 18.1355 102.633 18.1035 102.185 18.1035Z" stroke="white" stroke-width="1" mask="url(#path-1-outside-1_538_1115)"/>
 </svg>
                       </a>
+                    </div>
+                    <div v-if="i === 5" class="tags" aria-label="Project tags for Chewa">
+                      <p>UI/UX Design</p>
+                      <p>Case Study</p>
                     </div>
                   </div>
                 </div>
