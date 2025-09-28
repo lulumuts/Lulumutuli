@@ -94,6 +94,38 @@
     justify-content: center;
     max-width: 90%;
   }
+
+  /* SVG Transition Overlay - apply glassmorphism */
+  .svg-transition-overlay {
+    position: fixed;
+    inset: 0;
+    display: none; /* toggled to block in JS */
+    align-items: center;
+    justify-content: center;
+    background: rgba(239, 85, 247, 0.861); /* original pink overlay color */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 9998;
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+  .svg-transition-overlay.show {
+    opacity: 1;
+  }
+  .transition-text-container {
+    position: relative;
+    z-index: 9999;
+  }
+  .transition-text {
+    color: white;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 250ms ease;
+  }
+  .transition-text.show { opacity: 1; }
   .embla__title-overlay img, .embla__title-overlay svg {
     display: block;
     width: min(70vw, 680px);

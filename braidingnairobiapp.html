@@ -36,6 +36,10 @@
     margin: 0;
     right: 0;
   }
+    .ui-improvements {
+        padding: 100px 20px;
+    }
+    
     .ui-improvements img{
         width: 110%;
     }
@@ -79,6 +83,22 @@
       margin-left: -22px;
       
   }
+
+  .project-info ul {
+    padding-left: 40px !important;
+  }
+
+  @media (max-width: 768px) {
+    .project-info ul {
+      padding-left: 40px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .project-info ul {
+      padding-left: 40px !important;
+    }
+  }
  
   li { 
     font-size: 20px;
@@ -104,12 +124,15 @@
     background-image: url('img/pexels-codioful-7130555.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin: 40px 80px;
+    border-radius: 20px;
+    height: 70vh;
+    border: 1px solid rgba(58, 15, 136, 0.3);
   }
 
   header .content {
     padding: 20px;
-    padding-left: 150px!important;
+    padding-left: 40px;
   }
 
   header video{
@@ -120,15 +143,112 @@
     border-radius: 20px;
   }
 
+  header .container-fluid,
+  header .row {
+    height: 100%;
+  }
+
+  header .col-md-6 {
+    height: 100%;
+  }
+
+
   header .content p {
-    margin: 8px 40px;
-    width: 60%;
+    margin: 8px 0;
+    padding-left: 20px;
+    width: 85%;
     font-size: 20px;
+    text-align: justify;
   }
   
   header .content h5,
   header .content h1 {
-    margin: 8px 40px;
+    margin: 8px 0;
+    padding-left: 20px;
+  }
+
+  /* Responsive header margins and heights */
+  @media (max-width: 1200px) {
+    header {
+      margin: 40px 60px;
+      height: 65vh;
+    }
+  }
+
+  @media (max-width: 768px) {
+    header {
+      margin: 20px 15px;
+      height: 60vh;
+    }
+    
+    header .content {
+      padding: 15px;
+      padding-left: 20px;
+    }
+
+    .project-info {
+      padding-left: 40px !important;
+    }
+    
+    header .content p {
+      margin: 8px 0;
+      padding-left: 15px;
+      width: 85%;
+      font-size: 18px;
+      text-align: justify;
+    }
+    
+    header .content h5,
+    header .content h1 {
+      margin: 8px 0;
+      padding-left: 15px;
+    }
+    
+    header .content h1 {
+      font-size: 32px;
+    }
+    
+    header .content h5 {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header {
+      margin: 10px 5px;
+      height: 55vh;
+    }
+    
+    header .content {
+      padding: 10px;
+      padding-left: 15px;
+    }
+
+    .project-info {
+      padding-left: 40px !important;
+    }
+    
+    header .content p {
+      margin: 8px 0;
+      padding-left: 10px;
+      width: 85%;
+      font-size: 16px;
+      text-align: justify;
+    }
+    
+    header .content h5,
+    header .content h1 {
+      margin: 8px 0;
+      padding-left: 10px;
+    }
+    
+    header .content h1 {
+      font-size: 24px;
+    }
+    
+    header .content h5 {
+      font-size: 16px;
+    }
   }
 .line-svg {
   display: block;
@@ -250,6 +370,11 @@ body.loaded {
   border-radius: 32px;
 }
 
+.mobile-screens.with-shadow {
+  background-color: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
 .mobile-screens img {
   padding: 24px;
   width: 100%;
@@ -270,23 +395,24 @@ body.loaded {
 }
 
 .web-app-extension .body-text {
-  margin-left: 24%;
-  margin-right: 24%;
+  width: 60vh;
   text-align: justify;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .widgetbook-components .body-text {
-  margin-left: 24%;
-  margin-right: 24%;
-  margin-bottom: 60px;
+  width: 60vh;
   text-align: justify;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .responsiveness .body-text {
-  margin-left: 24%;
-  margin-right: 24%;
-  margin-bottom: 60px;
+  width: 60vh;
   text-align: justify;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .widgetbook-components h1 {
@@ -306,7 +432,7 @@ body.loaded {
 }
 
 .process h5 {
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 400;
   margin: 0 20px;
   margin-bottom: 16px;
@@ -316,7 +442,7 @@ body.loaded {
 .process p {
   text-align: left;
   margin: 0 20px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .process h4 {
@@ -325,9 +451,100 @@ body.loaded {
 
 .process {
   text-align: left;
-  padding: 10vh 0;
+  padding: 8vh 0 10vh 0;
   line-height: 1.3;
 }
+.discovery-text {
+  font-weight: 500;
+  text-align: left;
+}
+
+.discovery .body-text {
+  margin-left: 24%;
+  margin-right: 24%;
+  text-align: justify;
+}
+
+.discovery h2 {
+margin-bottom: 56px;
+text-align: center;
+font-size: 48px;
+}
+
+.discovery .col-md-7 h2 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.discovery .body-text {
+  width: 100%;
+  text-align: justify;
+  margin: 0;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.project-info-section {
+  background-color: #F5F0FF;
+  padding: 60px 20px;
+  border-radius: 15px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.project-info-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-proposal-section {
+  background-color: #F5F0FF;
+  padding: 100px 20px;
+  border-radius: 15px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.feature-proposal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-proposal-content h4 {
+  margin-bottom: 40px;
+}
+
+.feature-proposal-content .col-md-6 p {
+  width: 85%;
+}
+
+.project-info h4 {
+  padding-left: 0;
+}
+
+.project-info ul {
+  padding-left: 40px !important;
+}
+
+.project-info li {
+  padding-left: 0;
+}
+
+@media (max-width: 768px) {
+  .project-info ul {
+    padding-left: 40px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-info ul {
+    padding-left: 40px !important;
+  }
+}
+
     </style>
     <div class="back">
       <a href="index.html"> 
@@ -358,12 +575,12 @@ body.loaded {
   <header class="">
     <div class="container-fluid py-0">
       <div class="row">
-        <div class="col-md-5 p-5 d-flex flex-column justify-content-center content">
+        <div class="col-md-6 p-5 d-flex flex-column justify-content-center content">
           <h1 style="font-size: 48px;">Braiding Nairobi</h1>
           <h5 style=" font-size: 24px;">Mobile App + Web App</h5>
           <p style="font-size: 20px">The Braiding Nairobi App connects clients with professional hair braiders in Nairobi, offering convenient at-home styling and easy appointment booking. Discover features, screenshots, and download options below.</p>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-6">
           <video src="img/BN-APP-intro-video.mp4" autoplay loop muted playsinline></video>
         </div>
       </div>
@@ -371,35 +588,48 @@ body.loaded {
   </header>
 
   <main class="container my-5">
-    <section class="mb-5">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 mb-5 project-info">
-            <h4 class="app-features"> Project Info</h4>
-            <ul>
-              <li class="project-info"><strong>Role:</strong> Acting CTO + Product Designer</li>
-              <li class="project-info"><strong>Type:</strong> Mobile App + Web App</li>
-              <li class="project-info"><strong>Tools Used: </strong>Flutter, Cursor, Dart, Figma, Git</li>
-            </ul>
-          </div>
 
-          <div class="col-md-6">
-            <h4 class="app-features">App Features</h4>
-            <ul>
-              <li>Browse and book top-rated braiders in Nairobi</li>
-              <li>View stylist profiles, reviews, and portfolios</li>
-              <li>Easy in-app appointment scheduling</li>
-              <li>Secure payment options</li>
-              <li>Track your booking and get reminders</li>
-              <li>Available for iOS and Android</li>
-            </ul>
-          </div>
-
+      <section>
+        <div class="container-fluid intro d-flex flex-column align-items-center" style="padding: 20px 0;">
+          <p style="width: 60vh; text-align: justify; margin-top: 10vh; margin-bottom: 10px;">Joining Braiding Nairobi after launch created a great opportunity for me to audit existing functionality, and also review user data and user behaviour. After redesigning the website, I put a plan together to improve the User's experience of the app.</p>
+          <img src="img/BNOrders-screen.png" style="width:72vh; margin: -10vh auto auto auto;"/>
         </div>
-      </div>
-    </section>
+      </section>
 
-     <section>
+      <section class="mb-5">
+        <div class="container-fluid project-info-section">
+          <div class="project-info-content">
+            <div class="row">
+              <div class="col-md-6 mb-5 project-info">
+                <h4 class="app-features"> Project Info</h4>
+                <ul>
+                  <li class="project-info"><strong>Role:</strong> Acting CTO + Product Designer</li>
+                  <li class="project-info"><strong>Type:</strong> Mobile App + Web App</li>
+                  <li class="project-info"><strong>Tools Used: </strong>Flutter, Cursor, Dart, Figma, Git</li>
+                </ul>
+                
+                <h4 class="app-features">Key Users</h4>
+                <ul>
+                  <li>Clients</li>
+                  <li>Braiders</li>
+                </ul>
+              </div>
+
+              <div class="col-md-6">
+               <h4 class="app-features">Client Features</h4>
+               <ul>
+                 <li>Browse and book top-rated braiders in Nairobi</li>
+                 <li>View stylist profiles, reviews, and portfolios</li>
+                 <li>Easy in-app appointment scheduling</li>
+                 <li>Secure payment options</li>
+                 <li>Track your booking and get reminders</li>
+                 <li>Available for iOS and Android</li>
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+      </section>
        <div class="container-fluid process">
         <h4>Development Process</h4>
          <div class="row">
@@ -412,7 +642,7 @@ body.loaded {
              <p>Evaluated usability, accessibility, and design consistency.</p>
            </div>
            <div class="col-md-2 text-center">
-             <h5>🎨 <br/>Redesign Proposal</h5>
+             <h5>🎨 <br/>Feature Proposal</h5>
              <p>Planned stepwise improvements, starting with the customer-facing interface.</p>
            </div>
            <div class="col-md-2 text-center">
@@ -420,25 +650,55 @@ body.loaded {
              <p>Engaged external partners to explore automation and workflow optimizations.</p>
            </div>
            <div class="col-md-2 text-center">
-             <h5>🧩 <br/>Component Library</h5>
-             <p>Built reusable components with developers for consistent, scalable design.</p>
-           </div>
-           <div class="col-md-2 text-center">
              <h5>🌐 <br/>Web App Extension</h5>
              <p>Added a web app to handle international orders and reduce manual processing.</p>
+           </div>
+           <div class="col-md-2 text-center">
+             <h5>🧩 <br/>Component Library</h5>
+             <p>Built reusable components with developers for consistent, scalable design.</p>
            </div>
          </div>
        </div>
      </section>
 
+
+      <section class="mb-5">
+       <div class="container-fluid discovery">
+       <h2>Discovery Output</h2>
+         <div class="row">
+          
+           <div class="col-md-5">
+             <img src="img/Home-screen-BN.png" style="width: 120%; height: auto; margin-left: -10%;" />
+           </div>
+           <div class="col-md-7">
+            
+               <div class="body-text">
+                 <p>I began by reviewing existing user interviews and app-usage data to understand behaviors, pain points, and opportunities in hair-care booking. </p>
+               <p class="discovery-text">Two Pain points discovered:</p>
+               <ol>
+                <li>Limited Availability: The mobile app isn’t accessible in some regions, leaving visitors to Nairobi unable to book. </li>
+                <li>Low Engagement: Users typically braid their hair only once a month, resulting in infrequent app use.</li>
+               </ol>
+
+               <p class="discovery-text">Opportunities discovered:</p>
+               <ol>
+                <li>Web Booking Extension: Build a lightweight Flutter web app so travelers can book appointments without the native app. </li>
+                <li>Repair Booking Feature: Add an easy “repairs/undo” option so users can quickly schedule touch-ups at any salon, increasing convenience and repeat usage.</li>
+               </ol>
+             </div>
+           </div>
+         </div>
+       </div>
+      </section>
     <section>
         <div class="container-fluid ui-improvements">
             <div class="row">
-                <h4>UI/UX Improvements</h4>
+                <h4>App Audit</h4>
+                <p style="width: 60vh; text-align: justify; margin: auto; margin-bottom: 20px;">The following is a summary of the key areas of improvement for the mobile app that not only created consistency in the rebranding but also improved the user experience.</p>
                 <div class="container-fluid d-flex flex-column align-items-center">
 
                   <div class="row w-100 justify-content-center">
-                    <div class="col-md-6 mobile-screens" style="background-image: url('img/pexels-codioful-7130555.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                    <div class="col-md-6 mobile-screens with-shadow">
                       <h1 class="text-center">SPLASH SCREEN</h1>
                       <img src="img/BNApp-splash-screen.svg" />
                     </div>
@@ -455,14 +715,14 @@ body.loaded {
                       <img src="img/BNApp-braider-screen.svg" />
                     </div>
 
-                    <div class="col-md-6 mobile-screens" style="background-image: url('img/pexels-codioful-7130555.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                    <div class="col-md-6 mobile-screens with-shadow">
                       <h1 class="text-center">HOME SCREEN</h1>
                       <img src="img/BNApp-Home-Screen.svg" />
                     </div>
                   </div>
 
                   <div class="row w-100 justify-content-center">
-                    <div class="col-md-6 mobile-screens" style="background-image: url('img/pexels-codioful-7130555.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                    <div class="col-md-6 mobile-screens with-shadow">
                       <h1 class="text-center">ORDERS SCREEN</h1>
                       <img src="img/BNApp-orders-screen.svg" />
                     </div>
@@ -476,8 +736,29 @@ body.loaded {
         </div>
     </section>
 
+    <section class="mb-5 mt-5">
+        <div class="container-fluid feature-proposal-section">
+            <div class="feature-proposal-content">
+                <h4>Feature Proposal</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/Braids_removal.png" style="width: 100%; height: auto;" />
+                    </div>
+                    <div class="col-md-6">
+                        <h5> Proposed Feature & A/B Test</h5>
+                        <p>
+                         
+I introduced a “Repair & Touch-Up” booking option to make it easier for users to schedule quick hair fixes between full braiding sessions. <br/><br/>An A/B test would compare the current app (Group A) with the new feature (Group B), measuring repeat bookings and app engagement. The hypothesis: increased convenience will improve retention, with insights guiding future iterations
+                        </p>
+             
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
   
-<section>
+<section class="mt-5">
     <div class="container-fluid web-app-extension">
         <h4>Web App Screens</h4>
         <p class="body-text">I proposed a web app extension of the mobile app to make booking appointments easier for users on the go, particularly international visitors to Nairobi who couldn’t access the app through regional app stores. <br><br>The web app provided a lightweight, accessible solution with minimal development overhead, while allowing us to maintain a consistent codebase using Flutter’s cross-platform capabilities. </p>
@@ -598,6 +879,7 @@ body.loaded {
       <div class="container-fluid responsiveness d-flex flex-column align-items-center">
           <h4>Next Steps</h4>
         <ul>
+          <li>A/B testing of new feature</li>
           <li>User Interviews & usability testing are underway ahead of redesign of Braider facing side.</li>
           <li>Integration of Little Api for automated booking flow of appointments</li>
           <li>Usability testing for Customer facing app</li>
