@@ -207,19 +207,42 @@
 
   header {
     text-align: left;
-    background-image: url('img/pexels-armin-rimoldi-5301538 (1).jpg'); background-size: cover; background-position: top center; background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     margin: 40px 150px;
     border-radius: 20px;
-    height: 70vh;
+    height: 80vh;
     border: 1px solid rgba(58, 15, 136, 0.3);
     box-shadow: 0 10px 30px rgba(127, 56, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
   }
 
   header .content {
     padding: 20px;
     padding-left: 40px;
+    color: white;
   }
 
   header video{
@@ -258,7 +281,7 @@
   @media (max-width: 1200px) {
     header {
       margin: 40px 60px;
-      height: 60vh;
+      height: 70vh;
     }
   }
 
@@ -697,8 +720,8 @@ font-size: 48px;
  
      .layer {
        position: absolute;
-       width: 22vh;
-       height: 500px;
+       width: 260px;
+       height: 528px;
        opacity: 0.85;
        border-radius: 12px;
        background-color: #fff;
@@ -708,7 +731,7 @@ font-size: 48px;
      .layer1 { top: 60px; left: 0; background-color: #fff; }
      .layer2 { top: 350px; right: 0; background-color: #fff; }
      .layer3 { top: 330px; left: 35%; background-color: #fff; }
-     .layer4 { top: 360px; right: 18%; background-color: #fff; }
+     .layer4 { top: 360px; right: 20%; background-color: #fff; }
      .layer5 { top: 420px; left: 10%; background-color: #fff; }
 
      /* Ensure images fill coloured boxes */
@@ -916,12 +939,16 @@ font-size: 48px;
     </div>
   </header> -->
 
-  <!-- New Header with Updated Background Image -->
+  <!-- New Header with Background Video -->
   <header class="">
+    <video autoplay muted loop playsinline>
+      <source src="img/BraidingNairobiIntro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
     <div class="container-fluid py-0">
       <div class="row">
         <div class="col-md-6">
-          <!-- <video src="img/BN-APP-intro-video.mp4" autoplay loop muted playsinline></video> -->
+          <!-- Empty column for layout -->
         </div>
         <div class="col-md-6 p-5 d-flex flex-column justify-content-center content">
           <h1 style="font-size: 48px;">Braiding Nairobi</h1>
