@@ -653,3 +653,51 @@ h2 {
     width: 30px !important;
   }
 }
+
+@media (max-width: 900px) {
+  .line-drawing-demo svg {
+    width: 38vh;
+    margin-top: 32vh;
+  }
+  
+  .card .background-image {
+    width: 35vh;
+    left: 26vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .line-drawing-demo svg {
+    width: 28vh;
+    margin-top: 30vh;
+  }
+  
+  .card .background-image {
+    width: 25vh;
+    left: 22vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .line-drawing-demo svg {
+    width: 26vh;
+    margin-top: 29vh;
+  }
+  
+  .card .background-image {
+    width: 22vh;
+    left: 21vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .line-drawing-demo svg {
+    width: 24vh;
+    margin-top: 28vh;
+  }
+  
+  .card .background-image {
+    width: 20vh;
+    left: 20vw;
+  }
+}
