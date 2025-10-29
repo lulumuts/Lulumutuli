@@ -1497,3 +1497,171 @@ section.hero {
   }
 }
 
+/* Statistics Cards */
+.stat-card {
+  border: 2px solid #7F38FF;
+  border-radius: 15px;
+  padding: 30px 20px;
+  background-color: transparent;
+}
+
+.stat-number {
+  font-size: 48px !important;
+  font-weight: 700 !important;
+  color: #7F38FF !important;
+  margin-bottom: 6px !important;
+}
+
+.stat-label {
+  font-size: 24px !important;
+  color: #7F38FF !important;
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+/* Responsive Statistics Cards */
+/* Large screens */
+@media (min-width: 1600px) {
+  .stat-number {
+    font-size: 64px !important;
+  }
+  
+  .stat-label {
+    font-size: 32px !important;
+  }
+  
+  .stat-card {
+    padding: 40px 30px !important;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .stat-number {
+    font-size: 56px !important;
+  }
+  
+  .stat-label {
+    font-size: 28px !important;
+  }
+  
+  .stat-card {
+    padding: 35px 25px !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .stat-number {
+    font-size: 52px !important;
+  }
+  
+  .stat-label {
+    font-size: 26px !important;
+  }
+  
+  .stat-card {
+    padding: 32px 22px !important;
+  }
+}
+
+/* Cards between 1300px and 800px */
+@media (min-width: 901px) and (max-width: 1300px) {
+  .stat-number {
+    font-size: 38px !important;
+  }
+  
+  .stat-label {
+    font-size: 18px !important;
+  }
+  
+  .stat-card {
+    padding: 20px 12px !important;
+  }
+  
+  .col-md-2.col-sm-6 {
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+  .stat-number {
+    font-size: 36px !important;
+  }
+  
+  .stat-label {
+    font-size: 16px !important;
+  }
+  
+  .stat-card {
+    padding: 18px 10px !important;
+  }
+  
+  .col-md-2.col-sm-6 {
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+  }
+}
+
+/* Medium to small screens */
+@media (max-width: 900px) {
+  .stat-number {
+    font-size: 40px !important;
+  }
+  
+  .stat-label {
+    font-size: 20px !important;
+  }
+  
+  .stat-card {
+    padding: 25px 15px !important;
+  }
+  
+  /* Make stat cards wider on tablets */
+  .col-md-2.col-sm-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .stat-number {
+    font-size: 36px !important;
+  }
+  
+  .stat-label {
+    font-size: 18px !important;
+  }
+  
+  .stat-card {
+    padding: 20px 15px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .stat-number {
+    font-size: 32px !important;
+  }
+  
+  .stat-label {
+    font-size: 16px !important;
+  }
+  
+  .stat-card {
+    padding: 18px 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-number {
+    font-size: 28px !important;
+  }
+  
+  .stat-label {
+    font-size: 14px !important;
+  }
+  
+  .stat-card {
+    padding: 15px 10px !important;
+  }
+}
+
